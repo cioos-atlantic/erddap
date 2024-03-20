@@ -1,0 +1,391 @@
+<dataset type="EDDTableFromMultidimNcFiles" datasetID="bio_moored_mtr" active="false">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/dfo/bio/moored</fileDir>
+    <fileNameRegex>MTR.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+    <att name="cdm_data_type">station</att>
+    <att name="chief_scientist">Dave Hebert</att>
+    <att name="Conventions">CF-1.7</att>
+    <att name="country_code">1810</att>
+    <att name="creator_type">person</att>
+    <att name="cruise_name">St. Anns Bank</att>
+    <att name="cruise_number">HUD2015030</att>
+    <att name="data_type">MTR</att>
+    <att name="date_modified">Mon Aug 20 12:10:29 2018</att>
+    <att name="EVENT_COMMENTS_1"> : </att>
+    <att name="geospatial_lat_max" type="double">46.255217</att>
+    <att name="geospatial_lat_min" type="double">46.255217</att>
+    <att name="geospatial_lat_units">degrees_north</att>
+    <att name="geospatial_lon_max" type="double">-59.141283</att>
+    <att name="geospatial_lon_min" type="double">-59.141283</att>
+    <att name="geospatial_lon_units">degrees_east</att>
+    <att name="geospatial_vertical_max" type="double">75.0</att>
+    <att name="geospatial_vertical_min" type="double">75.0</att>
+    <att name="geospatial_vertical_positive">down</att>
+    <att name="geospatial_vertical_units">metres</att>
+    <att name="history">Wed Aug 22 15:19:39 2018: C:\nco\ncks.exe -x -v ELTMEP01 - - overwrite C:/nco/MTR_HUD2015030_1898_10588081_1800.nc C:/nco/MTR_HUD2015030_1898_10588081_1800.nc
+Wed Aug 22 15:19:39 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/MTR_HUD2015030_1898_10588081_1800.nc C:/nco/MTR_HUD2015030_1898_10588081_1800.nc</att>
+    <att name="inst_type">HOBO</att>
+    <att name="institution">Bedford Institute of Oceanography, DFO</att>
+    <att name="latitude" type="double">46.255217</att>
+    <att name="longitude" type="double">-59.141283</att>
+    <att name="model">U22-001</att>
+    <att name="mooring_number">1898</att>
+    <att name="NCO">20180822</att>
+    <att name="ODF_HISTORY_1">CREATION_DATE : 01-NOV-2016 14:21:01.78</att>
+    <att name="ODF_HISTORY_10">PROCESS_009 : Edit Cruise: Field &quot;Cruise_Name&quot; has been changed from &quot; &quot; to &quot;St. Anns Bank&quot;.</att>
+    <att name="ODF_HISTORY_11">PROCESS_010 : Edit Cruise: Field &quot;Cruise_Description&quot; has been changed from &quot; &quot; to &quot;Atlantic Zonal Monitoring Program (AZMP) Fall 2015&quot;.</att>
+    <att name="ODF_HISTORY_12">PROCESS_011 : Edit Event: Field &quot;Data_Type&quot; has been changed from &quot; &quot; to &quot;MTR&quot;.</att>
+    <att name="ODF_HISTORY_13">PROCESS_012 : Edit Event: Field &quot;Event_Number&quot; has been changed from &quot; &quot; to &quot;1898&quot;.</att>
+    <att name="ODF_HISTORY_14">PROCESS_013 : Edit Event: Field &quot;Start_Date_Time&quot; has been changed from &quot; &quot; to &quot;23-SEP-2015 12:00:00&quot;.</att>
+    <att name="ODF_HISTORY_15">PROCESS_014 : Edit Event: Field &quot;End_Date_Time&quot; has been changed from &quot; &quot; to &quot;17-OCT-2016 12:34:41&quot;.</att>
+    <att name="ODF_HISTORY_16">PROCESS_015 : Edit Event: Field &quot;Initial_Latitude&quot; has been changed from &quot;-99&quot; to &quot;46.255217&quot;.</att>
+    <att name="ODF_HISTORY_17">PROCESS_016 : Edit Event: Field &quot;End_Latitude&quot; has been changed from &quot;-99&quot; to &quot;46.255217&quot;.</att>
+    <att name="ODF_HISTORY_18">PROCESS_017 : Edit Event: Field &quot;Initial_Longitude&quot; has been changed from &quot;-99&quot; to &quot;-59.141283&quot;.</att>
+    <att name="ODF_HISTORY_19">PROCESS_018 : Edit Event: Field &quot;End_Longitude&quot; has been changed from &quot;-99&quot; to &quot;-59.141283&quot;.</att>
+    <att name="ODF_HISTORY_2">PROCESS_001 : Generation</att>
+    <att name="ODF_HISTORY_20">PROCESS_019 : Edit Event: Field &quot;Sampling_Interval&quot; has been changed from &quot;-99&quot; to &quot;1800&quot;.</att>
+    <att name="ODF_HISTORY_21">PROCESS_020 : Edit Event: Field &quot;Sounding&quot; has been changed from &quot;-99&quot; to &quot;118&quot;.</att>
+    <att name="ODF_HISTORY_22">PROCESS_021 : Edit Event: Field &quot;Depth_Off_Bottom&quot; has been changed from &quot;-99&quot; to &quot;43&quot;.</att>
+    <att name="ODF_HISTORY_23">PROCESS_022 : Edit Event: Field &quot;Min_Depth&quot; has been changed from &quot;-99&quot; to &quot;75&quot;.</att>
+    <att name="ODF_HISTORY_24">PROCESS_023 : Edit Event: Field &quot;Max_Depth&quot; has been changed from &quot;-99&quot; to &quot;75&quot;.</att>
+    <att name="ODF_HISTORY_25">PROCESS_024 : Edit Event: Field &quot;Event_Qualifier1&quot; has been changed from &quot; &quot; to &quot;10588081&quot;.</att>
+    <att name="ODF_HISTORY_26">PROCESS_025 : Edit Event: Field &quot;Event_Qualifier2&quot; has been changed from &quot; &quot; to &quot;1800&quot;.</att>
+    <att name="ODF_HISTORY_27">PROCESS_026 : Edit Instrument: Field &quot;Inst_Type&quot; has been changed from &quot; &quot; to &quot;HOBO&quot;.</att>
+    <att name="ODF_HISTORY_28">PROCESS_027 : Edit Instrument: Field &quot;Model&quot; has been changed from &quot; &quot; to &quot;U22-001&quot;.</att>
+    <att name="ODF_HISTORY_29">PROCESS_028 : Edit Instrument: Field &quot;Serial_Number&quot; has been changed from &quot; &quot; to &quot;10588081&quot;.</att>
+    <att name="ODF_HISTORY_3">PROCESS_002 : Edit Cruise: Field &quot;Country_Institute_Code&quot; has been changed from &quot; &quot; to &quot;1810&quot;.</att>
+    <att name="ODF_HISTORY_30">PROCESS_029 : Edit Record: Field &quot;Num_Calibration&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_31">PROCESS_030 : Edit Record: Field &quot;Num_Swing&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_32">PROCESS_031 : Edit Record: Field &quot;Num_History&quot; has been changed from 1 to 1.</att>
+    <att name="ODF_HISTORY_33">PROCESS_032 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 0 to 18725.</att>
+    <att name="ODF_HISTORY_34">PROCESS_033 : Edit Record: Field &quot;Num_Param&quot; has been changed from 1 to 1.</att>
+    <att name="ODF_HISTORY_35">PROCESS_034 : Add_Parameter: A.Data.SYTM_01 = evalin(&#39;caller&#39;,&#39;sytm&#39;);</att>
+    <att name="ODF_HISTORY_36">PROCESS_035 : Edit Record: Field &quot;Num_Calibration&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_37">PROCESS_036 : Edit Record: Field &quot;Num_Swing&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_38">PROCESS_037 : Edit Record: Field &quot;Num_History&quot; has been changed from 1 to 1.</att>
+    <att name="ODF_HISTORY_39">PROCESS_038 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 18725 to 18725.</att>
+    <att name="ODF_HISTORY_4">PROCESS_003 : Edit Cruise: Field &quot;Cruise_Number&quot; has been changed from &quot; &quot; to &quot;HUD2015030&quot;.</att>
+    <att name="ODF_HISTORY_40">PROCESS_039 : Edit Record: Field &quot;Num_Param&quot; has been changed from 2 to 2.</att>
+    <att name="ODF_HISTORY_41">PROCESS_040 : Add_Parameter: A.Data.TEMP_01 = evalin(&#39;caller&#39;,&#39;z{3}(:,1)&#39;);</att>
+    <att name="ODF_HISTORY_42">PROCESS_041 : Edit Parameter (TEMP_01): Field &quot;Depth&quot; has been changed from &quot;0&quot; to &quot;75&quot;.</att>
+    <att name="ODF_HISTORY_43">PROCESS_042 : Edit Parameter (SYTM_01): Field &quot;Depth&quot; has been changed from &quot;0&quot; to &quot;75&quot;.</att>
+    <att name="ODF_HISTORY_44">PROCESS_043 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 18725 to 17627.</att>
+    <att name="ODF_HISTORY_45">PROCESS_044 : Edit Record: Field &quot;Num_Calibration&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_46">PROCESS_045 : Edit Record: Field &quot;Num_Swing&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_47">PROCESS_046 : Edit Record: Field &quot;Num_History&quot; has been changed from 1 to 1.</att>
+    <att name="ODF_HISTORY_48">PROCESS_047 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 17627 to 17627.</att>
+    <att name="ODF_HISTORY_49">PROCESS_048 : Edit Record: Field &quot;Num_Param&quot; has been changed from 2 to 2.</att>
+    <att name="ODF_HISTORY_5">PROCESS_004 : Edit Cruise: Field &quot;Organization&quot; has been changed from &quot; &quot; to &quot;DFO BIO&quot;.</att>
+    <att name="ODF_HISTORY_50">PROCESS_049 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 17627 to 17618.</att>
+    <att name="ODF_HISTORY_51">PROCESS_050 : Edit Record: Field &quot;Num_Calibration&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_52">PROCESS_051 : Edit Record: Field &quot;Num_Swing&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_53">PROCESS_052 : Edit Record: Field &quot;Num_History&quot; has been changed from 1 to 1.</att>
+    <att name="ODF_HISTORY_54">PROCESS_053 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 17618 to 17618.</att>
+    <att name="ODF_HISTORY_55">PROCESS_054 : Edit Record: Field &quot;Num_Param&quot; has been changed from 2 to 2.</att>
+    <att name="ODF_HISTORY_56">PROCESS_055 : Edit Record: Field &quot;Num_Calibration&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_57">PROCESS_056 : Edit Record: Field &quot;Num_Swing&quot; has been changed from 0 to 0.</att>
+    <att name="ODF_HISTORY_58">PROCESS_057 : Edit Record: Field &quot;Num_History&quot; has been changed from 1 to 1.</att>
+    <att name="ODF_HISTORY_59">PROCESS_058 : Edit Record: Field &quot;Num_Cycle&quot; has been changed from 17618 to 17618.</att>
+    <att name="ODF_HISTORY_6">PROCESS_005 : Edit Cruise: Field &quot;Start_Date&quot; has been changed from &quot; &quot; to &quot;20-SEP-2014&quot;.</att>
+    <att name="ODF_HISTORY_60">PROCESS_059 : Edit Record: Field &quot;Num_Param&quot; has been changed from 2 to 2.</att>
+    <att name="ODF_HISTORY_61">CREATION_DATE : 01-NOV-2016 14:47:05.74</att>
+    <att name="ODF_HISTORY_62">PROCESS_001 : 01-NOV-2016: Data Processed by R.Pettipas of BIO-OESD.</att>
+    <att name="ODF_HISTORY_63">PROCESS_002 : 01-NOV-2016: Pre and Post deployment records removed.</att>
+    <att name="ODF_HISTORY_7">PROCESS_006 : Edit Cruise: Field &quot;End_Date&quot; has been changed from &quot; &quot; to &quot;11-OCT-2015&quot;.</att>
+    <att name="ODF_HISTORY_8">PROCESS_007 : Edit Cruise: Field &quot;Platform&quot; has been changed from &quot; &quot; to &quot;CCGS Hudson&quot;.</att>
+    <att name="ODF_HISTORY_9">PROCESS_008 : Edit Cruise: Field &quot;Chief_Scientist&quot; has been changed from &quot; &quot; to &quot;Dave Hebert&quot;.</att>
+    <att name="platform">St. Anns Bank</att>
+    <att name="sampling_interval">1800.000000</att>
+    <att name="serial_number">10588081</att>
+    <att name="sounding" type="double">118.0</att>
+    <att name="time_coverage_duration">P367.021D</att>
+    <att name="time_coverage_end">2016-09-24T17:00:00+0000</att>
+    <att name="time_coverage_start">2015-09-23T16:30:00+0000</att>
+    <att name="water_depth" type="double">118.0</att>
+</sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+    <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+    <att name="subsetVariables">station_id, longitude, latitude</att>
+-->
+    <addAttributes>
+      <att name="cdm_data_type">TimeSeries</att>
+      <att name="cdm_timeseries_variables">station,latitude,longitude</att>
+      <att name="Conventions">CF-1.7, COARDS, ACDD-1.3</att>
+      <att name="creator_name">Bedford Institute of Oceanography, DFO</att>
+      <att name="date_modified">2018-08-20T12:10:29Z</att>
+      <att name="EVENT_COMMENTS_1">:</att>
+      <att name="infoUrl">???</att>
+      <att name="keywords">bedford, data, department, dfo, dtut8601, fisheries, identifier, institute, latitude, local, longitude, name, ocean, oceanography, oceans, platform, platform_name, source, station, TEMP_01, temperature, time, time_string</att>
+      <att name="license">[standard]</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">cruise_name,cruise_number,chief_scientist,inst_type,serial_number,model,station</att>
+      <att name="summary">Bedford Institute of Oceanography, Department of Fisheries and Oceans (DFO) data from a local source.</att>
+      <att name="time_coverage_end">2016-09-24T17:00:00Z</att>
+      <att name="time_coverage_start">2015-09-23T16:30:00Z</att>
+      <att name="title">Maritimes region MRT data</att>
+      <att name="country_code">1810</att>
+      <!-- Nulled global attributes -->
+      <att name="data_type">null</att>
+      <att name="EVENT_COMMENTS_1">null</att>
+      <att name="history">null</att>
+      <att name="latitude">null</att>
+      <att name="longitude">null</att>
+      <att name="NCO">null</att>
+      <att name="ODF_HISTORY_1">null</att>
+      <att name="ODF_HISTORY_10">null</att>
+      <att name="ODF_HISTORY_11">null</att>
+      <att name="ODF_HISTORY_12">null</att>
+      <att name="ODF_HISTORY_13">null</att>
+      <att name="ODF_HISTORY_14">null</att>
+      <att name="ODF_HISTORY_15">null</att>
+      <att name="ODF_HISTORY_16">null</att>
+      <att name="ODF_HISTORY_17">null</att>
+      <att name="ODF_HISTORY_18">null</att>
+      <att name="ODF_HISTORY_19">null</att>
+      <att name="ODF_HISTORY_2">null</att>
+      <att name="ODF_HISTORY_20">null</att>
+      <att name="ODF_HISTORY_21">null</att>
+      <att name="ODF_HISTORY_22">null</att>
+      <att name="ODF_HISTORY_23">null</att>
+      <att name="ODF_HISTORY_24">null</att>
+      <att name="ODF_HISTORY_25">null</att>
+      <att name="ODF_HISTORY_26">null</att>
+      <att name="ODF_HISTORY_27">null</att>
+      <att name="ODF_HISTORY_28">null</att>
+      <att name="ODF_HISTORY_29">null</att>
+      <att name="ODF_HISTORY_3">null</att>
+      <att name="ODF_HISTORY_30">null</att>
+      <att name="ODF_HISTORY_31">null</att>
+      <att name="ODF_HISTORY_32">null</att>
+      <att name="ODF_HISTORY_33">null</att>
+      <att name="ODF_HISTORY_34">null</att>
+      <att name="ODF_HISTORY_35">null</att>
+      <att name="ODF_HISTORY_36">null</att>
+      <att name="ODF_HISTORY_37">null</att>
+      <att name="ODF_HISTORY_38">null</att>
+      <att name="ODF_HISTORY_39">null</att>
+      <att name="ODF_HISTORY_4">null</att>
+      <att name="ODF_HISTORY_40">null</att>
+      <att name="ODF_HISTORY_41">null</att>
+      <att name="ODF_HISTORY_42">null</att>
+      <att name="ODF_HISTORY_43">null</att>
+      <att name="ODF_HISTORY_44">null</att>
+      <att name="ODF_HISTORY_45">null</att>
+      <att name="ODF_HISTORY_46">null</att>
+      <att name="ODF_HISTORY_47">null</att>
+      <att name="ODF_HISTORY_48">null</att>
+      <att name="ODF_HISTORY_49">null</att>
+      <att name="ODF_HISTORY_5">null</att>
+      <att name="ODF_HISTORY_50">null</att>
+      <att name="ODF_HISTORY_51">null</att>
+      <att name="ODF_HISTORY_52">null</att>
+      <att name="ODF_HISTORY_53">null</att>
+      <att name="ODF_HISTORY_54">null</att>
+      <att name="ODF_HISTORY_55">null</att>
+      <att name="ODF_HISTORY_56">null</att>
+      <att name="ODF_HISTORY_57">null</att>
+      <att name="ODF_HISTORY_58">null</att>
+      <att name="ODF_HISTORY_59">null</att>
+      <att name="ODF_HISTORY_6">null</att>
+      <att name="ODF_HISTORY_60">null</att>
+      <att name="ODF_HISTORY_61">null</att>
+      <att name="ODF_HISTORY_62">null</att>
+      <att name="ODF_HISTORY_63">null</att>
+      <att name="ODF_HISTORY_7">null</att>
+      <att name="ODF_HISTORY_8">null</att>
+      <att name="ODF_HISTORY_9">null</att>
+      <att name="sampling_interval">null</att>
+      <att name="sounding" type="double">null</att>
+      <att name="water_depth" type="double">null</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>***fileName,(.*),1</sourceName>
+      <destinationName>filename</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:cruise_name</sourceName>
+      <destinationName>cruise_name</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:cruise_number</sourceName>
+      <destinationName>cruise_number</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:chief_scientist</sourceName>
+      <destinationName>chief_scientist</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:inst_type</sourceName>
+      <destinationName>inst_type</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:model</sourceName>
+      <destinationName>model</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:serial_number</sourceName>
+      <destinationName>serial_number</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>station</sourceName>
+      <destinationName>station</destinationName>
+      <dataType>String</dataType>
+      <!-- sourceAttributes>
+        <att name="cf_role">timeseries_id</att>
+        <att name="latitiude" type="double">46.255217</att>
+        <att name="long_name">station</att>
+        <att name="longitude" type="double">-59.141283</att>
+        <att name="standard_name">platform_name</att>
+        <att name="units">counts</att>
+    </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>lat</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+        <att name="axis">Y</att>
+        <att name="long_name">latitude</att>
+        <att name="sdn_parameter_name">Latitude north</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALATZZ01</att>
+        <att name="sdn_uom_name">Degrees north</att>
+        <att name="sdn_uom_urn">SDN:P06:DEGN</att>
+        <att name="standard_name">latitude</att>
+        <att name="units">degrees_north</att>
+    </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">90.0</att>
+        <att name="colorBarMinimum" type="double">-90.0</att>
+        <att name="ioos_category">Location</att>
+        <att name="long_name">Latitude</att>
+        <att name="sdn_P02_urn">SDN:P02::ALAT</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>lon</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+        <att name="axis">X</att>
+        <att name="long_name">longitude</att>
+        <att name="sdn_parameter_name">Longitude east</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
+        <att name="sdn_uom_name">Degrees east</att>
+        <att name="sdn_uom_urn">SDN:P06::DEGE</att>
+        <att name="standard_name">longitude</att>
+        <att name="units">degrees_east</att>
+    </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">180.0</att>
+        <att name="colorBarMinimum" type="double">-180.0</att>
+        <att name="ioos_category">Location</att>
+        <att name="long_name">Longitude</att>
+        <att name="sdn_P02_urn">SDN:P02::ALAT</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+        <att name="calendar">gregorian</att>
+        <att name="long_name">time</att>
+        <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+    </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Time</att>
+        <att name="standard_name">time</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>variable:TEMP_01:sensor_depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+        <att name="calendar">gregorian</att>
+        <att name="long_name">time</att>
+        <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+    </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">depth</att>
+        <att name="standard_name">depth</att>
+        <att name="units">m</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_01</sourceName>
+      <destinationName>TEMPPR01</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+        <att name="_FillValue" type="double">1.0E35</att>
+        <att name="data_max" type="double">5.205</att>
+        <att name="data_min" type="double">-0.339</att>
+        <att name="generic_name">temperature</att>
+        <att name="long_name">temperature</att>
+        <att name="sdn_parameter_name">Temperature of the water body</att>
+        <att name="sdn_parameter_urn">SDN:P01::TEMPPR01</att>
+        <att name="sdn_uom_name">Degrees Celsius</att>
+        <att name="sdn_uom_urn">UPAA</att>
+        <att name="sensor_depth" type="double">75.0</att>
+        <att name="sensor_type">U22-001</att>
+        <att name="serial_number">10588081</att>
+        <att name="units">degrees C</att>
+        <att name="valid_max" type="double">-10000.0</att>
+        <att name="valid_min" type="double">10000.0</att>
+    </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">40.0</att>
+        <att name="colorBarMinimum" type="double">-10.0</att>
+        <att name="ioos_category">Temperature</att>
+        <att name="sdn_P02_urn">SDN:P02::TEMP</att>
+        <att name="units">degree_C</att>
+        <att name="sensor_depth">null</att>
+        <att name="sensor_type">null</att>
+        <att name="serial_number">null</att>
+      </addAttributes>
+    </dataVariable>
+  </dataset>
+
+  

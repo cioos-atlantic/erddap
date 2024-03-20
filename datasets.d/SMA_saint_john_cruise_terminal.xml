@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_saint_john_cruise_terminal" active="true">
+    <!-- Diamond Jubilee Cruise Ship Terminal Meteorological Station -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_saint_john_cruise_terminal</sourceUrl>
+  </dataset>
+  

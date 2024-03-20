@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="DFO_Sutron_NHARB" active="true">
+    <!-- Placentia Bay: North Harbour - NHARB -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/DFO_Sutron_NHARB</sourceUrl>
+  </dataset>
+  

@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="sma_negl_postville_nlqu0001" active="true">
+    <!-- NEGL, Postville, Nunatsiavut (NLQU0001) -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/sma_negl_postville_nlqu0001</sourceUrl>
+  </dataset>
+  

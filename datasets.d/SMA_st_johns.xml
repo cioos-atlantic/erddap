@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_st_johns" active="true">
+    <!-- St. John&#39;s Buoy -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_st_johns</sourceUrl>
+  </dataset>
+  

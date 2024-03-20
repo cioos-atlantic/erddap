@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_bay_of_islands" active="true">
+    <!-- Bay of Islands Buoy -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_bay_of_islands</sourceUrl>
+  </dataset>
+  

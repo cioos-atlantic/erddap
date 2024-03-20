@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_saint_john_wharf" active="true">
+    <!-- Potash Terminal Tide and Meteorological Station -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_saint_john_wharf</sourceUrl>
+  </dataset>
+  

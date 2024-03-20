@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_corner_brook_wharf" active="true">
+    <!-- Corner Brook Tide Station -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_corner_brook_wharf</sourceUrl>
+  </dataset>
+  

@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SmartAtlantic_XEOS_hk4_buoy" active="true">
+    <!-- XEOS HK4 Buoy Wave Sensor -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SmartAtlantic_XEOS_hk4_buoy</sourceUrl>
+  </dataset>
+  

@@ -1,0 +1,606 @@
+<dataset type="EDDTableFromNcFiles" datasetID="nafc_multispecies_ctd_profiles" active="false">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/dfo/nafc/ctd/multispecies</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="_NCProperties">version=2,netcdf=4.9.3-development,hdf5=1.12.2</att>
+        <att name="air_dry_temp_celsius" type="double">13.6</att>
+        <att name="air_wet_temp_celsius" type="double">13.0</att>
+        <att name="call_sign">CGDG</att>
+        <att name="card_1_id">1</att>
+        <att name="card_4_id">4</att>
+        <att name="card_8_id" type="long">8</att>
+        <att name="chan_cnt" type="long">3</att>
+        <att name="chan_ids">#DT- - - - - - - - - - - - - - - - -</att>
+        <att name="cloud" type="long">8</att>
+        <att name="comment">C SEGB-FC 01    </att>
+        <att name="Conventions">CF-1.6,ACDD-1.3</att>
+        <att name="country_of_origin">Canada</att>
+        <att name="data_format">A</att>
+        <att name="depth" type="long">3000</att>
+        <att name="direction">D</att>
+        <att name="fish_set" type="long">3</att>
+        <att name="format">C</att>
+        <att name="geospatial_lat_max" type="double">42.6245</att>
+        <att name="geospatial_lat_min" type="double">42.6245</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-48.795</att>
+        <att name="geospatial_lon_min" type="double">-48.795</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="double">752.055819185392</att>
+        <att name="geospatial_vertical_min" type="double">1.9911377060476896</att>
+        <att name="geospatial_vertical_positive">down</att>
+        <att name="geospatial_vertical_units">m</att>
+        <att name="history">...</att>
+        <att name="platform_name">Hudson</att>
+        <att name="platform_owner">Canadian Coast Guard</att>
+        <att name="platform_type">Offshore Research Vessel</att>
+        <att name="pressure_bars" type="double">1005.6</att>
+        <att name="probe">XBT07</att>
+        <att name="scan_cnt" type="long">1180</att>
+        <att name="scan_rate" type="double">0.0</att>
+        <att name="sdn_platform_urn">SDN:C17::18HU</att>
+        <att name="ship_code">20</att>
+        <att name="source">/srv/data/raw/dfo/nafc/ctd/azmp/2000/20004023.p2000</att>
+        <att name="station" type="long">23</att>
+        <att name="strata_number" type="long">0</att>
+        <att name="sub_interval" type="long">1</att>
+        <att name="swell_dir" type="long">24</att>
+        <att name="swell_height" type="long">2</att>
+        <att name="swell_period" type="long">14</att>
+        <att name="time">2000-11-03T16:00:00Z</att>
+        <att name="time_coverage_duration">P0DT0H0M0S</att>
+        <att name="time_coverage_end">2000-11-03T16:00:00</att>
+        <att name="time_coverage_start">2000-11-03T16:00:00</att>
+        <att name="trip" type="long">4</att>
+        <att name="waves_height" type="long">1</att>
+        <att name="waves_period" type="long">12</att>
+        <att name="wind_dir" type="long">140</att>
+        <att name="wind_speed_knots" type="long">15</att>
+        <att name="wmo_platform_code" type="double">5405279.0</att>
+        <att name="ww_code" type="long">47</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="_NCProperties">null</att>
+        <att name="cdm_data_type">Profile</att>
+        <att name="cdm_profile_variables">station,latitude,longitude,time,id,platform_name,wmo_platform_code,platform_call_sign,dfo_nafc_platform_code,dfo_nafc_platform_name,fishing_strata,sub_interval,sounder_depth,trip,air_pressure,air_dry_temp_celsius,air_wet_temp_celsius,cloud_coverage,swell_dir,swell_height,swell_period,waves_height,waves_period,instrument,wind_dir,wind_speed_knots</att>
+        <att name="comment">null</att>
+        <att name="Conventions">CF-1.6,ACDD-1.3, COARDS</att>
+        <att name="format">null</att>
+        <att name="history">null</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">DFO NAFC</att>
+        <att name="keywords">count, data, depth, digiquartz, earth, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, file, index, its, its-90, latitude, local, longitude, ocean, oceans, p-file, PRESPR01, pressure, row, scan, science, sea, sea_water_pressure, sea_water_temperature, seawater, segb, segb-fc, source, statistics, temperature, TEMPS901, time, water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="original_header">null</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="subsetVariables">wmo_platform_code,platform_name,platform_call_sign,dfo_nafc_platform_code,dfo_nafc_platform_name,station,trip</att>
+        <att name="summary">DFO Newfoundland AZMP dataset.</att>
+        <att name="title">Newfoundland and Labrador Region Multispecies CTD Profiles</att>
+        <att name="card_1_id">null</att>
+        <att name="card_4_id">null</att>
+        <att name="card_8_id">null</att>
+        <att name="chan_cnt">null</att>
+        <att name="chan_ids">null</att>
+        <att name="country_of_origin">null</att>
+        <att name="data_format">null</att>
+        <att name="ices_platform_code">null</att>
+        <att name="latitude">null</att>
+        <att name="longitude">null</att>
+        <att name="max_depth">null</att>
+        <att name="min_depth">null</att>
+        <att name="scan_cnt">null</att>
+        <att name="scan_rate">null</att>
+        <att name="ww_code">null</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>***fileName,(.*).nc,1</sourceName>
+        <destinationName>id</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">Profile ID</att>
+        <att name="cf_role">profile_id</att>
+        <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:platform_name</sourceName>
+        <destinationName>platform_name</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">Platform Name</att>
+        <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:wmo_platform_code</sourceName>
+        <destinationName>wmo_platform_code</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">WMO Platform Code</att>
+        <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:call_sign</sourceName>
+        <destinationName>platform_call_sign</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">Platform Call Sign</att>
+        <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:dfo_nafc_platform_code</sourceName>
+      <destinationName>dfo_nafc_platform_code</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="long_name">DFO NAFC Platform Code</att>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>global:dfo_nafc_platform_name</sourceName>
+      <destinationName>dfo_nafc_platform_name</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="long_name">DFO NAFC Platform Name</att>
+        <att name="ioos_category">Identifier</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:station</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Station</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:fishing_strata</sourceName>
+        <destinationName>fishing_strata</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Fising Strata</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:sub_interval</sourceName>
+        <destinationName>sub_interval</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Sub Interval</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:sounder_depth</sourceName>
+        <destinationName>sounder_depth</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Station Depth</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">m</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:set_number</sourceName>
+        <destinationName>set_number</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Set Number</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:trip</sourceName>
+        <destinationName>trip</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Trip</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>global:pressure_bars</sourceName>
+        <destinationName>air_pressure</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Air Pressure</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">bars</att>
+        <att name="standard_name">air_pressure_at_mean_sea_level</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:air_dry_temp_celsius</sourceName>
+        <destinationName>air_dry_temp_celsius</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Air Dry Temperature</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">degrees_celsius</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:air_wet_temp_celsius</sourceName>
+        <destinationName>air_wet_temp_celsius</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Air Wet Temperature</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">degrees_celsius</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:cloud</sourceName>
+        <destinationName>cloud_coverage</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Cloud Coverage</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:swell_dir</sourceName>
+        <destinationName>swell_dir</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Swell Direction</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">degrees_true_north</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:swell_height</sourceName>
+        <destinationName>swell_height</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Swell Height</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">m</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:swell_period</sourceName>
+        <destinationName>swell_period</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Swell Period</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">s</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:waves_height</sourceName>
+        <destinationName>waves_height</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Wave Height</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">m</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:waves_period</sourceName>
+        <destinationName>waves_period</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Wave Period</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">s</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:instrument</sourceName>
+        <destinationName>instrument</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">Instrument</att>
+        <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:wind_dir</sourceName>
+        <destinationName>wind_dir</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Wind Direction</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">degrees_true_north</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:wind_speed_knots</sourceName>
+        <destinationName>wind_speed_knots</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Wind Speed</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="units">knots</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:cast_type</sourceName>
+        <destinationName>cast_type</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">Cast Type</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="flag_values">V T</att>
+        <att name="flag_meaning">vertical tow</att>
+        </addAttributes>
+    </dataVariable>
+        <dataVariable>
+        <sourceName>global:cast_direction</sourceName>
+        <destinationName>cast_direction</destinationName>
+        <dataType>String</dataType>
+        <addAttributes>
+        <att name="long_name">Cast Direction</att>
+        <att name="ioos_category">Identifier</att>
+        <att name="flag_values">U D B</att>
+        <att name="flag_meaning">up down both</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Latitude</att>
+        <att name="actual_range">[47.35833333 47.35833333]</att>
+        <att name="coverage_content_type">coordinate</att>
+        <att name="legacy_p_code">latitude</att>
+        <att name="variable_name">latitude</att>
+        <att name="coords">True</att>
+        <att name="standard_name">latitude</att>
+        <att name="units">degrees_north</att>
+        <att name="sdn_uom_urn">SDN:P06::DEGN</att>
+        <att name="sdn_uom_name">Degrees north</att>
+        <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Longitude</att>
+        <att name="actual_range">[-51.40833333 -51.40833333]</att>
+        <att name="coverage_content_type">coordinate</att>
+        <att name="legacy_p_code">longitude</att>
+        <att name="variable_name">longitude</att>
+        <att name="coords">True</att>
+        <att name="standard_name">longitude</att>
+        <att name="units">degrees_east</att>
+        <att name="sdn_uom_urn">SDN:P06::DEGN</att>
+        <att name="sdn_uom_name">Degrees east</att>
+        <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Time</att>
+        <att name="coverage_content_type">coordinate</att>
+        <att name="legacy_p_code">time</att>
+        <att name="variable_name">time</att>
+        <att name="coords">True</att>
+        <att name="standard_name">time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>scan</sourceName>
+        <destinationName>scan</destinationName>
+        <dataType>int</dataType>
+        <addAttributes>
+        <att name="long_name">Scan Count</att>
+        <att name="actual_range">[  3 265]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">scan</att>
+        <att name="variable_name">scan</att>
+        <att name="seabird_name">scan</att>
+        <att name="ioos_category">Unknown</att>
+        <att name="_FillValue" type="int">2147483647</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="actual_range">[  1.99026889 174.1936488 ]</att>
+        <att name="coverage_content_type">coordinate</att>
+        <att name="legacy_p_code">pres</att>
+        <att name="standard_name">depth</att>
+        <att name="units">m</att>
+        <att name="sdn_uom_urn">SDN:P06::ULAA</att>
+        <att name="sdn_uom_name">Metres</att>
+        <att name="seabird_name">depth</att>
+        <att name="positive">down</att>
+        <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PRESPR01</sourceName>
+        <destinationName>PRESPR01</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Pressure, Digiquartz</att>
+        <att name="actual_range">[  2.007 175.732]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">pres</att>
+        <att name="standard_name">sea_water_pressure</att>
+        <att name="units">dbar</att>
+        <att name="sdn_uom_urn">SDN:P06::UPBL</att>
+        <att name="sdn_uom_name">Decibar</att>
+        <att name="seabird_name">prDM</att>
+        <att name="sdn_parameter_name">Pressure (spatial coordinate) exerted by the water body by profiling pressure sensor and correction to read zero at sea level</att>
+        <att name="sdn_parameter_urn">SDN:P01::PRESPR01</att>
+        <att name="comments">Digiquartz pressure sensor</att>
+        <att name="definition">The force per unit area exerted by the water column on a mobile sensor located in the water column.</att>
+        <att name="bodc_alternative_label">Pres_Z</att>
+        <att name="instrument">Digiquartz</att>
+        <att name="ioos_category">Pressure</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TEMPS901</sourceName>
+        <destinationName>TEMPS901</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Temperature [ITS-90]</att>
+        <att name="actual_range">[-1.385  3.548]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">temp</att>
+        <att name="standard_name">sea_water_temperature</att>
+        <att name="units">degrees_celsius</att>
+        <att name="sdn_uom_urn">SDN:P06::UPAA</att>
+        <att name="sdn_uom_name">Degrees Celsius</att>
+        <att name="seabird_name">t090C</att>
+        <att name="sdn_parameter_name">Temperature (ITS-90) of the water body by CTD or STD</att>
+        <att name="sdn_parameter_urn">SDN:P01::TEMPS901</att>
+        <att name="comments">1st sensor</att>
+        <att name="bodc_alternative_label">CTDTmp90</att>
+        <att name="ioos_category">Temperature</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CNDCST01</sourceName>
+        <destinationName>CNDCST01</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Conductivity</att>
+        <att name="actual_range">[2.638 2.968]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">cond</att>
+        <att name="standard_name">sea_water_electrical_conductivity</att>
+        <att name="units">S/m</att>
+        <att name="sdn_uom_urn">SDN:P06::UECA</att>
+        <att name="sdn_uom_name">Siemens per metre</att>
+        <att name="seabird_name">c0S/m</att>
+        <att name="sdn_parameter_name">Electrical conductivity of the water body by CTD</att>
+        <att name="sdn_parameter_urn">SDN:P01::CNDCST01</att>
+        <att name="comments">1st sensor</att>
+        <att name="bodc_alternative_label">CTDCond</att>
+        <att name="ioos_category">Other</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PSALST01</sourceName>
+        <destinationName>PSALST01</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Salinity, Practical</att>
+        <att name="actual_range">[31.271 33.329]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">sal</att>
+        <att name="standard_name">sea_water_practical_salinity</att>
+        <att name="units">PSU</att>
+        <att name="sdn_uom_urn">SDN:P06::UUUU</att>
+        <att name="sdn_uom_name">Dimensionless</att>
+        <att name="seabird_name">sal00</att>
+        <att name="sdn_parameter_name">Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm</att>
+        <att name="sdn_parameter_urn">SDN:P01::PSALST01</att>
+        <att name="comments">1st sensor</att>
+        <att name="definition">This is the preferred term for this definition. Alternative term PSALST02 is included to cover cases where there are two sensors of the same type contributing to the data set and referential integrity considerations prevent a usage of a single code.</att>
+        <att name="bodc_alternative_label">P_sal_CTD</att>
+        <att name="ioos_category">Salinity</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SIGTEQST</sourceName>
+        <destinationName>SIGTEQST</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Sigma-T</att>
+        <att name="actual_range">[24.789 26.774]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">sigmat</att>
+        <att name="standard_name">sea_water_sigma_t</att>
+        <att name="units">kg/m^3</att>
+        <att name="sdn_uom_urn">SDN:P06::UKMC</att>
+        <att name="sdn_uom_name">Kilograms per cubic metre</att>
+        <att name="sdn_parameter_name">Sigma-T of the water body by computation from salinity and temperature using UNESCO algorithm</att>
+        <att name="sdn_parameter_urn">SDN:P01::SIGTEQST</att>
+        <att name="definition">    Computed by UNESCO SVAN function using in-situ temperature</att>
+        <att name="bodc_alternative_label">Sigma-T</att>
+        <att name="ioos_category">Other</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CPHLPR01</sourceName>
+        <destinationName>CPHLPR01</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Fluorescence</att>
+        <att name="actual_range">[0.012 0.243]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">flor</att>
+        <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+        <att name="units">mg/m^3</att>
+        <att name="sdn_uom_urn">SDN:P06::UMMC</att>
+        <att name="sdn_uom_name">Milligrams per cubic metre</att>
+        <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate &gt;unknown phase] by in-situ chlorophyll fluorometer</att>
+        <att name="sdn_parameter_urn">SDN:P01::CPHLPR01</att>
+        <att name="comments">1st sensor</att>
+        <att name="definition">In-situ fluorometer with either manufacturer, laboratory or sample calibration applied.</att>
+        <att name="bodc_alternative_label">chl-a_water_ISfluor</att>
+        <att name="ioos_category">Other</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DWIRRXUD</sourceName>
+        <destinationName>DWIRRXUD</destinationName>
+        <dataType>float</dataType>
+        <addAttributes>
+        <att name="long_name">Par/Irradiance, Biospherical/Licor</att>
+        <att name="actual_range">[  1.375 236.4  ]</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="legacy_p_code">par</att>
+        <att name="standard_name">downwelling_photon_spherical_irradiance_in_sea_water</att>
+        <att name="units">&#181;einsteins/s/m^2</att>
+        <att name="sdn_uom_name">downwelling_photon_spherical_irradiance_in_sea_water</att>
+        <att name="seabird_name">par</att>
+        <att name="sdn_parameter_name">Downwelling vector irradiance as energy of electromagnetic radiation (PAR wavelengths) in the water body by cosine-collector radiometer</att>
+        <att name="sdn_parameter_urn">SDN:P01::DWIRRXUD</att>
+        <att name="comments">Biospherical, Licor, or Chelsea sensor; 1st sensor</att>
+        <att name="bodc_alternative_label">SubSurDWVectPAR</att>
+        <att name="instrument">Biospherical/Licor</att>
+        <att name="ioos_category">Optical Properties</att>
+        </addAttributes>
+    </dataVariable>
+  </dataset>
+  

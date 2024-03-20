@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="sma_negl_north_west_river_nlqu0007" active="true">
+    <!-- NEGL, North West River, Labrador (NLQU0007) -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/sma_negl_north_west_river_nlqu0007</sourceUrl>
+  </dataset>
+  

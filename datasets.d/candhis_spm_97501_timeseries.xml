@@ -1,0 +1,247 @@
+<dataset type="EDDTableFromAsciiFiles" datasetID="candhis_spm_97501_timeseries" active="true">
+    <reloadEveryNMinutes>60</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/candhis_spm/timeseries/</fileDir>
+    <fileNameRegex>97501_timeseries_\d+\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>UTF-8</charset>
+    <columnSeparator/>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <sortedColumnSourceName>timestamp</sortedColumnSourceName>
+    <sortFilesBySourceNames>timestamp</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+      </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+          <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+          <att name="subsetVariables">station_id, longitude, latitude</att>
+      -->
+    <addAttributes>
+      <att name="cdm_data_type">TimeSeries</att>
+      <att name="cdm_timeseries_variables">station_id,longitude,latitude</att>
+      <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+      <att name="creator_name">Cerema</att>
+      <att name="creator_type">institution</att>
+      <att name="creator_url">https://candhis.cerema.fr/</att>
+      <att name="infoUrl">https://candhis.cerema.fr/_public_/campagne.php?Y2FtcD05NzUwMQ==</att>
+      <att name="institution">Cerema</att>
+      <att name="keywords">average, buoy, data, density, direction, earth, Earth Science &gt; Oceans &gt; Ocean Waves &gt; Swells, Earth Science &gt; Oceans &gt; Ocean Waves &gt; Wave Period, hm0, internal, max, miquelon, ocean, oceanography, oceans, peak, peak_power_spectral_density, period, physical, physical oceanography, pierre, power, science, sea, sea_surface_swell_wave_period, sea_surface_temp_avg, sig, spectral, spread, surface, surface waves, swell, swells, temperature, time, timestamp, timestamp_internal, wave, wave_direction_peak_spectral, wave_ht_max, wave_ht_sig, wave_ht_sig_Hm0, wave_period, wave_period_avg, wave_period_peak, wave_spread_peak, waves</att>
+      <att name="keywords_vocabulary">GCMD Science Keywords</att>
+      <att name="license">[standard]</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="summary">St. Pierre et Miquelon Wave Buoy</att>
+      <att name="title">St. Pierre et Miquelon Wave Buoy</att>
+      <att name="testOutOfDate">now-1hour</att>
+      <att name="instrument">Houlographe Datawell DWR MkIII 70</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>=97501</sourceName>
+      <destinationName>station_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Identifier</att>
+        <att name="long_name">Station ID</att>
+        <att name="long_name_fr">Code campagne</att>
+        <att name="cf_role">timeseries_id</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>timestamp</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>String</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Time</att>
+        <att name="long_name">Timestamp</att>
+        <att name="source_name">timestamp</att>
+        <att name="standard_name">time</att>
+        <att name="time_precision">1970-01-01T00:00:00Z</att>
+        <att name="units">yyyy-MM-dd'T'HH:mm:ss'Z'</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>=46.7000</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="long_name">Latitude</att>
+        <att name="units">degrees_north</att>
+        <att name="standard_name">latitude</att>
+        <att name="ioos_category">Location</att>
+        <att name="coverage_content_type">coordinate</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>=-56.1833</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="long_name">Longitude</att>
+        <att name="units">degrees_east</att>
+        <att name="standard_name">longitude</att>
+        <att name="ioos_category">Location</att>
+        <att name="coverage_content_type">coordinate</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_ht_sig</sourceName>
+      <destinationName>wave_ht_sig</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Wave Ht Sig</att>
+        <att name="units">m</att>
+        <att name="standard_name">sea_surface_wave_significant_height</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_ht_max</sourceName>
+      <destinationName>wave_ht_max</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Wave Ht Max</att>
+        <att name="units">m</att>
+        <att name="standard_name">sea_surface_wave_maximum_height</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_period_avg</sourceName>
+      <destinationName>wave_period_avg</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">20.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Sea Surface Swell Wave Period</att>
+        <att name="units">s</att>
+        <att name="standard_name">sea_surface_swell_wave_period</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>timestamp_internal</sourceName>
+      <destinationName>timestamp_internal</destinationName>
+      <dataType>String</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Time</att>
+        <att name="long_name">Timestamp Internal</att>
+        <att name="standard_name">time</att>
+        <att name="time_precision">1970-01-01T00:00:00Z</att>
+        <att name="units">yyyy-MM-dd'T'HH:mm:ss'Z'</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_ht_sig_Hm0</sourceName>
+      <destinationName>wave_ht_sig_Hm0</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Wave Ht Sig Hm0</att>
+        <att name="units">m</att>
+        <att name="standard_name">sea_surface_wave_significant_height</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_period</sourceName>
+      <destinationName>wave_period</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">20.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Sea Surface Swell Wave Period</att>
+        <att name="units">s</att>
+        <att name="standard_name">sea_surface_swell_wave_period</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_period_peak</sourceName>
+      <destinationName>wave_period_peak</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">20.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Sea Surface Swell Wave Period</att>
+        <att name="units">s</att>
+        <att name="standard_name">sea_surface_swell_wave_period</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_direction_peak_spectral</sourceName>
+      <destinationName>wave_direction_peak_spectral</destinationName>
+      <dataType>short</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="short">32767</att>
+        <att name="colorBarMaximum" type="double">360.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Wave Direction Peak Spectral</att>
+        <att name="units">spectral</att>
+        <att name="standard_name">sea_surface_wave_directional_spread_at_variance_spectral_density_maximum</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>wave_spread_peak</sourceName>
+      <destinationName>wave_spread_peak</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Wave Spread Peak</att>
+        <att name="units">degree</att>
+        <att name="standard_name">sea_surface_wave_directional_spread</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_surface_temp_avg</sourceName>
+      <destinationName>sea_surface_temp_avg</destinationName>
+      <dataType>float</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Surface Waves</att>
+        <att name="long_name">Sea Surface Temp Avg</att>
+        <att name="units">degree_C</att>
+        <att name="standard_name">sea_surface_temperature</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>peak_power_spectral_density</sourceName>
+      <destinationName>peak_power_spectral_density</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+          </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Physical Oceanography</att>
+        <att name="long_name">Peak Power Spectral Density</att>
+        <att name="standard_name">sea_surface_wave_energy_at_variance_spectral_density_maximum</att>
+        <att name="units">m2 Hz-1</att>
+      </addAttributes>
+    </dataVariable>
+  </dataset>
+  

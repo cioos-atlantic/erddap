@@ -1,0 +1,6 @@
+<dataset type="EDDTableFromErddap" datasetID="cna_werc_weather_10-min_avg" active="true">
+    <!-- 10-Minute Average Weather Data, Lord's Cove -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/cna_werc_weather_10-min_avg</sourceUrl>
+  </dataset>
+
+  

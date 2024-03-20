@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_head_of_placentia_bay-come_by_chance_point" active="true">
+    <!-- Head of Placentia Bay Buoy -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_head_of_placentia_bay-come_by_chance_point</sourceUrl>
+  </dataset>
+  

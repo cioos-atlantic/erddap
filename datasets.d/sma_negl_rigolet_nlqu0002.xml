@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="sma_negl_rigolet_nlqu0002" active="true">
+    <!-- NEGL, Rigolet, Nunatsiavut (NLQU0002) -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/sma_negl_rigolet_nlqu0002</sourceUrl>
+  </dataset>
+  

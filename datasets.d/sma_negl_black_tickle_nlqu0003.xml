@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="sma_negl_black_tickle_nlqu0003" active="true">
+    <!-- NEGL, Black Tickle-Domino, NunatuKavut (NLQU0003) -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/sma_negl_black_tickle_nlqu0003</sourceUrl>
+  </dataset>
+  

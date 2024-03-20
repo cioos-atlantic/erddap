@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_port_aux_basqes_wharf" active="true">
+    <!-- Channel-Port Aux Basques Tide Station -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_port_aux_basqes_wharf</sourceUrl>
+  </dataset>
+  

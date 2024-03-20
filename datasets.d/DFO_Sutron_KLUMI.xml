@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="DFO_Sutron_KLUMI" active="true">
+    <!-- Placentia Bay: Ragged Islands - KLUMI -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/DFO_Sutron_KLUMI</sourceUrl>
+  </dataset>
+  

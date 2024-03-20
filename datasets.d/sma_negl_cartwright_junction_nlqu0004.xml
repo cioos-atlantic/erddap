@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="sma_negl_cartwright_junction_nlqu0004" active="true">
+    <!-- NEGL, Cartwright Junction, NunatuKavut (NLQU0004) -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/sma_negl_cartwright_junction_nlqu0004</sourceUrl>
+  </dataset>
+  

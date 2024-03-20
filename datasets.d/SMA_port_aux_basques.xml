@@ -1,0 +1,5 @@
+<dataset type="EDDTableFromErddap" datasetID="SMA_port_aux_basques" active="true">
+    <!-- Channel-Port Aux Basques Buoy -->
+    <sourceUrl>https://www.smartatlantic.ca/erddap/tabledap/SMA_port_aux_basques</sourceUrl>
+  </dataset>
+  
