@@ -3,7 +3,7 @@ services:
     container_name: "docker_erddap"
     restart: unless-stopped
     build:
-      dockerfile: ./Dockerfile
+      dockerfile: ../Dockerfile
     ports:
       - "8080:8080"
     environment:
