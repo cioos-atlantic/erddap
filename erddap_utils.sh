@@ -1,5 +1,5 @@
 export ERDDAP_AX_DIR=/opt/applications/docker-erddap
-export ERDDAP_DIR=/opt/applications/docker-erddap/erddap
+export ERDDAP_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 export ERDDAP_DATASETS_XML=${ERDDAP_DIR}/content/datasets.xml
 export ERDDAP_DATASETSD_DIR=${ERDDAP_DIR}/datasets.d
 export ERDDAP_DATA_DIR=/srv/data/erddap
@@ -41,10 +41,36 @@ erddap_dataset_ids() {
 
 erddap_restart() {
     pushd $ERDDAP_DIR
-    sudo docker compose restart docker_erddap
+    sudo docker compose restart
     popd
 }
 
 erddap_generate_datasetsd(){
     sudo bash ${ERDDAP_AX_DIR}/datasets.d.sh -d ${ERDDAP_DIR}/datasets.d -o ${ERDDAP_DIR}/content/datasets.xml -w
+}
+
+erddap_refresh_dataset() {
+    dataset_id=$1
+    hard_flag_file=${ERDDAP_DIR}/erddap/data/hardFlag/${dataset_id}
+    echo "Creating the following hard flag file to force hard refresh of all data for dataset $dataset_id"
+    echo $hard_flag_file
+    sudo touch $hard_flag_file
+    echo "Restart ERDDAP to complete the dataset refresh"
+}
+
+erddap_refresh_metadata() {
+    dataset_id=$1
+    flag_file=${ERDDAP_DIR}/erddap/data/flag/${dataset_id}
+    echo "Creating the flag file to notify ERDDAP to refresh its metadata contents as soon as possible for dataset $dataset_id"
+    echo $flag_file
+    sudo touch $flag_file
+    echo "ERDDAP metadata contents for this dataset should be updated shortly."
+}
+
+erddap_dasdds() {
+    # Once a dataset's XML is present in datasets.xml, use DasDds.sh on 
+    # the dataset's id to test data loading with modified file/path regexes.
+    pushd $ERDDAP_DIR
+    sudo bash DasDds.sh
+    popd
 }
