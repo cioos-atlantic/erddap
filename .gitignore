@@ -1,2 +1,27 @@
-.env
 erddapData
+
+.idea
+*.iml
+.project
+
+# Ignore env configuration
+.env
+
+# Ignore the datasets directory
+# Separate version-controlled scripts should be used to re-fetch any data to be cached there.
+/datasets/
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Mac-created folder
+.DS_Store
+
+# In erddap/content, copy setup_(dev|prod).xml to setup.xml based on environment
+erddap/content/setup.xml
