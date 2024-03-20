@@ -74,3 +74,11 @@ erddap_dasdds() {
     sudo bash DasDds.sh
     popd
 }
+
+erddap_archive_a_dataset() {
+    # Once a dataset's XML is present in datasets.xml, use ArchiveADataset.sh
+    # on the dataset's id to archive and place in erddapData/ArchiveADataset
+    pushd $ERDDAP_DIR
+    sudo bash ArchiveADataset.sh
+    popd
+}
