@@ -8,10 +8,6 @@ logs
 # Ignore env configuration
 .env
 
-# Ignore the datasets directory
-# Separate version-controlled scripts should be used to re-fetch any data to be cached there.
-/datasets/
-
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -25,7 +21,7 @@ logs
 .DS_Store
 
 # In erddap/content, copy setup_(dev|prod).xml to setup.xml based on environment
-erddap/content/setup.xml
+content/setup.xml
 
 # Rebuild datasets.xml with datasetsd.sh
 content/datasets.xml
