@@ -3,21 +3,22 @@ services:
     container_name: "docker_erddap"
     restart: unless-stopped
     build:
-      dockerfile: ../Dockerfile
+      context: ../
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
       ERDDAP_baseUrl: "https://test.cioosatlantic.ca"
-      EDDAP_baseHttpsUrl: "https://test.cioosatlantic.ca"
+      ERDDAP_baseHttpsUrl: "https://test.cioosatlantic.ca"
       ERDDAP_DATASETS_standardPrivacyPolicy: "<h1>Any and all usage of this data is permitted.</h1>"
       DATASETSD_MARK_REMOVED_DATASETS_INACTIVE: "1"
       DATASETSD_REFRESH_MISSING_DATASETS: "1"
       DISABLE_CORS: "1"
     volumes:
-      - "${PWD}/erddap/conf/config.sh:/usr/local/tomcat/bin/config.sh"
-      - "${PWD}/erddap/conf/setenv.sh:/usr/local/tomcat/bin/setenv.sh"
-      - "${PWD}/erddap/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"
-      - "${PWD}/erddap/content:/usr/local/tomcat/content/erddap"
+      - "${PWD}/conf/config.sh:/usr/local/tomcat/bin/config.sh"
+      - "${PWD}/conf/setenv.sh:/usr/local/tomcat/bin/setenv.sh"
+      - "${PWD}/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"
+      - "${PWD}/content:/usr/local/tomcat/content/erddap"
     #healthcheck to check ERDDAP landing page. the check provides the added bonus
     #of triggering ERDDAP initialization before the first user visit
     healthcheck:
