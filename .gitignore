@@ -26,3 +26,6 @@ logs
 
 # In erddap/content, copy setup_(dev|prod).xml to setup.xml based on environment
 erddap/content/setup.xml
+
+# Rebuild datasets.xml with datasetsd.sh
+content/datasets.xml
