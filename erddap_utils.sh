@@ -31,6 +31,10 @@ erddap_chown_content() {
     sudo chown -R $USER ${ERDDAP_DIR}/content
 }
 
+erddap_chown_conf() {
+    sudo chown -R $USER ${ERDDAP_DIR}/conf
+}
+
 erddap_index_html() {
     curl "$ERDDAP_URL/index.html"
 }
@@ -80,5 +84,11 @@ erddap_archive_a_dataset() {
     # on the dataset's id to archive and place in erddapData/ArchiveADataset
     pushd $ERDDAP_DIR
     sudo bash ArchiveADataset.sh
+    popd
+}
+
+erddap_generate_datasets_xml() {
+    pushd $ERDDAP_DIR
+    sudo bash GenerateDatasetsXml.sh
     popd
 }
