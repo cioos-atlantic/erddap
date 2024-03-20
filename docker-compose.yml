@@ -18,9 +18,11 @@ services:
       - "${PWD}/conf/setenv.sh:/usr/local/tomcat/bin/setenv.sh"
       - "${PWD}/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"
       - "${PWD}/content:/usr/local/tomcat/content/erddap"
-      - "${DATASETS_DIR}:/datasets"
+      - "${PWD}/erddapData:/erddapData"
     #healthcheck to check ERDDAP landing page. the check provides the added bonus
     #of triggering ERDDAP initialization before the first user visit
     healthcheck:
       test: ["CMD", "curl", "-f", "${ERDDAP_baseUrl}/erddap/index.html"]
+      start_period: 1m30s
       interval: 30s
+      retries: 3
