@@ -8,9 +8,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      ERDDAP_baseUrl: "https://test.cioosatlantic.ca"
-      ERDDAP_baseHttpsUrl: "https://test.cioosatlantic.ca"
-      ERDDAP_DATASETS_standardPrivacyPolicy: "<h1>Any and all usage of this data is permitted.</h1>"
+      ERDDAP_baseUrl: ${ERDDAP_baseUrl}
+      ERDDAP_baseHttpsUrl: ${ERDDAP_baseHttpsUrl}
       DATASETSD_MARK_REMOVED_DATASETS_INACTIVE: "1"
       DATASETSD_REFRESH_MISSING_DATASETS: "1"
       DISABLE_CORS: "1"
@@ -19,8 +18,9 @@ services:
       - "${PWD}/conf/setenv.sh:/usr/local/tomcat/bin/setenv.sh"
       - "${PWD}/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt"
       - "${PWD}/content:/usr/local/tomcat/content/erddap"
+      - "${DATASETS_DIR}:/datasets"
     #healthcheck to check ERDDAP landing page. the check provides the added bonus
     #of triggering ERDDAP initialization before the first user visit
     healthcheck:
       test: ["CMD", "curl", "-f", "${ERDDAP_baseUrl}/erddap/index.html"]
-      interval: 10s
+      interval: 30s
