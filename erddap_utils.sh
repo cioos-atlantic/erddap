@@ -55,7 +55,7 @@ erddap_generate_datasetsd(){
 
 erddap_refresh_dataset() {
     dataset_id=$1
-    hard_flag_file=${ERDDAP_DIR}/erddap/data/hardFlag/${dataset_id}
+    hard_flag_file=${ERDDAP_DIR}/erddapData/hardFlag/${dataset_id}
     echo "Creating the following hard flag file to force hard refresh of all data for dataset $dataset_id"
     echo $hard_flag_file
     sudo touch $hard_flag_file
@@ -64,7 +64,7 @@ erddap_refresh_dataset() {
 
 erddap_refresh_metadata() {
     dataset_id=$1
-    flag_file=${ERDDAP_DIR}/erddap/data/flag/${dataset_id}
+    flag_file=${ERDDAP_DIR}/erddapData/flag/${dataset_id}
     echo "Creating the flag file to notify ERDDAP to refresh its metadata contents as soon as possible for dataset $dataset_id"
     echo $flag_file
     sudo touch $flag_file
