@@ -1,0 +1,307 @@
+<!-- CMAR sensor string eda5-aubu: START -->
+<dataset active="true" datasetID="eda5-aubu" type="EDDTableFromAsciiFiles">
+  <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+  <updateEveryNMillis>10000</updateEveryNMillis>
+  <fileDir>/datasets/cmar/nsodp-sensor-strings/eda5-aubu/</fileDir>
+  <fileNameRegex>.*[0-9][0-9]\.csv</fileNameRegex>
+  <recursive>true</recursive>
+  <pathRegex>.*</pathRegex>
+  <metadataFrom>last</metadataFrom>
+  <standardizeWhat>0</standardizeWhat>
+  <charset>ISO-8859-1</charset>
+  <columnSeparator>,</columnSeparator>
+  <columnNamesRow>1</columnNamesRow>
+  <firstDataRow>2</firstDataRow>
+  <sortedColumnSourceName>timestamp_utc</sortedColumnSourceName>
+  <sortFilesBySourceNames>timestamp_utc</sortFilesBySourceNames>
+  <fileTableInMemory>false</fileTableInMemory>
+  <accessibleViaFiles>true</accessibleViaFiles>
+  <defaultDataQuery>&amp;time&gt;=min(time)</defaultDataQuery>
+  <addAttributes>
+    <att name="cdm_data_type">TimeSeries</att>
+    <att name="cdm_timeseries_variables">waterbody,station,sensor_type,sensor_serial_number</att>
+    <att name="Conventions">COARDS, CF-1.6, ACDD-1.3</att>
+    <att name="creator_name">CMAR</att>
+    <att name="creator_type">institution</att>
+    <att name="infoUrl">https://cmar.ca/coastal-monitoring-program/</att>
+    <att name="institution">CMAR</att>
+    <att name="license">Nova Scotia Open Government Licence</att>
+    <att name="sourceUrl">(local files)</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v55</att>
+    <att name="subsetVariables">waterbody, station, sensor_type, sensor_serial_number,lease,string_configuration,qc_flag_dissolved_oxygen,qc_flag_dissolved_oxygen_uncorrected,qc_flag_salinity,qc_flag_sensor_depth_measured,qc_flag_temperature,depth_crosscheck_flag</att>
+    <att name="contributor_name">Centre for Marine Applied Research (CMAR)</att>
+    <att name="contributor_role">owner</att>
+    <att name="creator_email">info(at)cmar.ca</att>
+    <att name="creator_type">person</att>
+    <att name="date_created">2020-10-15T16:14:32+0000</att>
+    <att name="geospatial_lat_max">44.57130379</att>
+    <att name="geospatial_lat_min">44.433344</att>
+    <att name="geospatial_lon_max">-64.017382</att>
+    <att name="geospatial_lon_min">-64.25171</att>
+    <att name="geospatial_vertical_max">40.0</att>
+    <att name="geospatial_vertical_min">1.0</att>
+    <att name="institution">Centre for Marine Applied Research (CMAR)</att>
+    <att name="instrument">hobo-10034842,hobo-10034873,aquameasure-670369,aquameasure-670370,aquameasure-670371,aquameasure-670372,aquameasure-670368,hobo-10755247,hobo-10194920,hobo-10777103,hobo-10777109,aquameasure-670295,aquameasure-670296,vr2ar-547088,hobo-10755227,hobo-10755242,hobo-10817399,vr2ar-547091,aquameasure-670298,aquameasure-670297,vr2ar-547087,aquameasure-670351,hobo-10194899,hobo-10779129,hobo-10817503,aquameasure-670299,aquameasure-670350,vr2ar-547094,aquameasure-670366,aquameasure-670365,aquameasure-670354,hobo-20291423,hobo-20291484,hobo-20291429,hobo-20291428,hobo-20291449,hobo-20291433,aquameasure-670355,aquameasure-670356,hobo-10034850,hobo-10755213,hobo-10755251,aquameasure-680154,aquameasure-675010,hobo-20495251,aquameasure-670379,hobo-10755230,hobo-20291422,hobo-20291450,hobo-20291485,hobo-20495212,hobo-20495253,hobo-20291477,hobo-20687286,hobo-20495244,hobo-10755265,hobo-20687285,vr2ar-548036,aquameasure-670380,vr2ar-548041,hobo-20291467,hobo-20804688,hobo-20820377,hobo-20834033,hobo-20495248,hobo-20834024,hobo-20827226,hobo-20834026,hobo-20291475,hobo-20834028,hobo-20834029,hobo-20900974,hobo-20922072,hobo-21043074,hobo-21043077,vr2ar-549341,hobo-20900975,hobo-20922071,hobo-21043066,hobo-20900965,hobo-21043069,hobo-21043075,hobo-21043083,aquameasure-675014,aquameasure-675008,hobo-20834030,vr2ar-548042,hobo-20495228,hobo-21082882,hobo-21082891,hobo-21083051,hobo-20291452,hobo-21043067,hobo-21083048,vr2ar-548039,hobo-20308050,hobo-21083049,hobo-21152416,vr2ar-549345,hobo-10817496,hobo-20291487,hobo-21082887,hobo-21083050,hobo-21152432,vr2ar-550757,hobo-20308042,hobo-20495209,hobo-21043068,hobo-21082880,hobo-21152426,hobo-20291444,hobo-20763565,hobo-20900985,hobo-21082888,hobo-20495235,hobo-20763559,hobo-20820380,hobo-20291431,hobo-21082886,vr2ar-547097,hobo-20291482,hobo-21043079,hobo-20330416,hobo-20820324,hobo-21155068,hobo-21488192,hobo-10817401,hobo-20291440,hobo-20291488,hobo-21309145,hobo-20291476,hobo-21152417,aquameasure-675018,hobo-20291446,hobo-20308047,hobo-21082881,hobo-21465783,vr2ar-548603,hobo-21465779,hobo-21465797,hobo-21465806,vr2ar-548585,hobo-21155090,hobo-21465762,hobo-21465790,hobo-21465794,hobo-21465795,hobo-21465745,hobo-21465746,hobo-21465801,hobo-21434535,hobo-21429533,vr2ar-600015</att>
+    <att name="keywords">coastal monitoring program,lunenburg county,aquaculture,climate change,coast,dissolved oxygen,downloadable data,ecosystem,environment,environmental monitoring,essential ocean variables,fisheries,nova scotia,oceanography,salinity,temperature,water quality,cmar,centre for marine applied research,ocean,buoy,mooring</att>
+    <att name="publisher_email">info(at)cmar.ca</att>
+    <att name="publisher_institution">Centre for Marine Applied Research (CMAR)</att>
+    <att name="publisher_name">Centre for Marine Applied Research (CMAR)</att>
+    <att name="summary">The Centre for Marine Applied Research&#8217;s (CMAR) Coastal Monitoring Program provides high resolution data on ocean variables from around the coast of Nova Scotia. The program was initiated by the Nova Scotia Department of Fisheries and Aquaculture in the early 1990s. In 2019, CMAR assumed responsibility for the program and expanded its scope and mandate. Through the Water Quality Branch of the program, CMAR collects temperature, dissolved oxygen, and salinity data using sensors deployed on &#8220;sensor strings&#8221;. A sensor string typically consists of a line anchored to the sea floor by an acoustic release and suspended by a sub-surface buoy, with sensors attached at various depths below the surface (as measured at low tide). Alternatively, a string may be attached to surface moorings, including floating docks, buoys, and equipment. Sensor strings are deployed for several months, and data are measured every 1 minute to 1 hour. Sensors are retrieved for data offload by triggering the acoustic release when applicable, by directly removing from surface moorings, or occasionally by divers or grappling methods. Automated Quality Control tests have been applied to the data to identify outlying and unexpected observations. The results of these tests are summarized in the &#8220;qc_flag&#8221; columns of the dataset. Each data point is assigned a flag value of &#8220;Pass&#8221;, &#8220;Suspect/Of Interest&#8221;, &#8220;Fail&#8221;, or &#8220;Not Evaluated&#8221;. Observations flagged as &#8220;Pass&#8221; passed all tests and can be included in analyses. Dissolved oxygen observations flagged as &#8220;Suspect/Of Interest&#8221; likely indicate biofouling signals and should be excluded from analysis or used with extreme caution. Observations for other variables flagged as &#8220;Suspect/Of Interest&#8221; should be reviewed before being included in analyses. Observations flagged as &#8220;Fail&#8221; should be excluded from most analyses. Some tests cannot be applied to certain observations, which will be flagged as &#8220;Not Evaluated&#8221;. These observations can typically be included in analyses. Flags should be used as a guide only, and data users are responsible for evaluating the quality of the data prior to use in any analysis. For more information about the Quality Control tests, visit the CMAR Data Governance website (https://dempsey-cmar.github.io/cmp-data-governance/pages/cmp_about.html). The Coastal Monitoring Program Water Quality data is organized by county. These datasets are very large, typically exceeding the number of rows that can be viewed in Excel. CMAR recommends filtering the data to the waterbody, station, depth, quality control flag, and/or time period of interest before exporting. A chart derived from the dataset also allows for interactive filtering and export (https://data.novascotia.ca/d/xg2s-uhbg). The "Nova Scotia Water Quality Data: Station Locations" dataset on this Portal shows additional locations with available Water Quality data collected through CMAR&#8217;s Coastal Monitoring Program (https://data.novascotia.ca/Nature-and-Environment/Coastal-Monitoring-Program-Station-Locations/cjfb-f4d4). Summary reports by county are available on the CMAR website (https://cmar.ca/coastal-monitoring-program/). Data can also be downloaded from the ERDAPP server through the Canadian Integrated Ocean Observing System (CIOOS) platform (https://catalogue.cioosatlantic.ca/dataset?q=cmar). Data collection and retrieval are ongoing. The datasets and reports may be revised pending ongoing data collection and analyses. If you have accessed any Coastal Monitoring Program data, CMAR would appreciate your feedback:&#160;https://docs.google.com/forms/d/e/1FAIpQLSe3TD6umrsVVKnQL13VVMJIpckCi2ctONJsgN7_g-4c-tKTuw/viewform. Please acknowledge the Centre for Marine Applied Research in any published material that uses this data. Contact&#160;info@cmar.ca&#160;for more information.</att>
+    <att name="title">Lunenburg County Water Quality Data</att>
+  </addAttributes>
+  <dataVariable>
+    <sourceName>waterbody</sourceName>
+    <destinationName>waterbody</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Unknown</att>
+      <att name="long_name">Waterbody</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>station</sourceName>
+    <destinationName>station</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="cf_role">timeseries_id</att>
+      <att name="ioos_category">Identifier</att>
+      <att name="long_name">Station</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>lease</sourceName>
+    <destinationName>lease</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Unknown</att>
+      <att name="long_name">Lease</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>latitude</sourceName>
+    <destinationName>latitude</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att type="double" name="colorBarMaximum">90.0</att>
+      <att type="double" name="colorBarMinimum">-90.0</att>
+      <att name="ioos_category">Location</att>
+      <att name="long_name">Latitude</att>
+      <att name="standard_name">latitude</att>
+      <att name="units">degrees_north</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>longitude</sourceName>
+    <destinationName>longitude</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att type="double" name="colorBarMaximum">180.0</att>
+      <att type="double" name="colorBarMinimum">-190.0</att>
+      <att name="ioos_category">Location</att>
+      <att name="long_name">Longitude</att>
+      <att name="standard_name">longitude</att>
+      <att name="units">degrees_east</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>deployment_start_date</sourceName>
+    <destinationName>deployment_start_date</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Time</att>
+      <att name="long_name">Deployment Start Date</att>
+      <att name="source_name">deployment_start_date</att>
+      <att name="time_precision">1970-01-01</att>
+      <att name="units">yyyy-MM-dd</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>deployment_end_date</sourceName>
+    <destinationName>deployment_end_date</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Time</att>
+      <att name="long_name">Deployment End Date</att>
+      <att name="source_name">deployment_end_date</att>
+      <att name="time_precision">1970-01-01</att>
+      <att name="units">yyyy-MM-dd</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>string_configuration</sourceName>
+    <destinationName>string_configuration</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Unknown</att>
+      <att name="long_name">String Configuration</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>sensor_type</sourceName>
+    <destinationName>sensor_type</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Unknown</att>
+      <att name="long_name">Sensor Type</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>sensor_serial_number</sourceName>
+    <destinationName>sensor_serial_number</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Unknown</att>
+      <att name="long_name">Sensor Serial Number</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>timestamp_utc</sourceName>
+    <destinationName>time</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ioos_category">Time</att>
+      <att name="long_name">Timestamp</att>
+      <att name="source_name">timestamp_utc</att>
+      <att name="standard_name">time</att>
+      <att name="time_precision">1970-01-01T00:00:00Z</att>
+      <att name="units">yyyy-MM-dd'T'HH:mm:ss</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>sensor_depth_at_low_tide_m</sourceName>
+    <destinationName>depth</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att type="double" name="colorBarMaximum">8000.0</att>
+      <att type="double" name="colorBarMinimum">-8000.0</att>
+      <att name="colorBarPalette">TopographyDepth</att>
+      <att name="ioos_category">Location</att>
+      <att name="long_name">Sensor depth at low tide</att>
+      <att name="standard_name">depth</att>
+      <att name="units">m</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>depth_crosscheck_flag</sourceName>
+    <destinationName>depth_crosscheck_flag</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ancillary_variables">sensor_depth_at_low_tide_m</att>
+      <att name="ioos_category">Quality</att>
+      <att name="long_name">Depth Crosscheck Flag</att>
+      <att name="standard_name">quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>dissolved_oxygen_percent_saturation</sourceName>
+    <destinationName>dissolved_oxygen</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="ioos_category">Dissolved O2</att>
+      <att name="long_name">Volume Fraction Of Oxygen In Sea Water</att>
+      <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+      <att name="units">% saturation</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>dissolved_oxygen_uncorrected_mg_per_l</sourceName>
+    <destinationName>dissolved_oxygen_uncorrected</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="ioos_category">Dissolved O2</att>
+      <att name="long_name">Mass Concentration of Oxygen in Sea Water</att>
+      <att name="standard_name">mass_concentration_of_oxygen_in_sea_water</att>
+      <att name="units">mg/L</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>salinity_psu</sourceName>
+    <destinationName>salinity</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="ioos_category">Salinity</att>
+      <att name="long_name">Salinity</att>
+      <att name="units">PSU</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>sensor_depth_measured_m</sourceName>
+    <destinationName>sensor_depth_measured</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att type="double" name="colorBarMaximum">8000.0</att>
+      <att type="double" name="colorBarMinimum">-8000.0</att>
+      <att name="ioos_category">Location</att>
+      <att name="long_name">Depth measured by sensor</att>
+      <att name="units">m</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>temperature_degree_c</sourceName>
+    <destinationName>temperature</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att type="float" name="_FillValue">NaN</att>
+      <att name="ioos_category">Temperature</att>
+      <att name="long_name">Sea Water Temperature</att>
+      <att name="standard_name">sea_water_temperature</att>
+      <att name="units">degrees_Celsius</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>qc_flag_dissolved_oxygen_percent_saturation</sourceName>
+    <destinationName>qc_flag_dissolved_oxygen</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ancillary_variables">dissolved_oxygen_percent_saturation</att>
+      <att name="ioos_category">Quality</att>
+      <att name="long_name">Quality Flag for Parameter: Dissolved Oxygen (Percent Saturation)</att>
+      <att name="standard_name">quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>qc_flag_dissolved_oxygen_uncorrected_mg_per_l</sourceName>
+    <destinationName>qc_flag_dissolved_oxygen_uncorrected</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ancillary_variables">dissolved_oxygen_uncorrected_mg_per_l</att>
+      <att name="ioos_category">Quality</att>
+      <att name="long_name">Quality Flag for Parameter: Dissolved Oxygen Uncorrected (mg/L)</att>
+      <att name="standard_name">quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>qc_flag_salinity_psu</sourceName>
+    <destinationName>qc_flag_salinity</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ancillary_variables">salinity_psu</att>
+      <att name="ioos_category">Quality</att>
+      <att name="long_name">Quality Flag for Parameter: Salinity (PSU)</att>
+      <att name="standard_name">quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>qc_flag_sensor_depth_measured_m</sourceName>
+    <destinationName>qc_flag_sensor_depth_measured</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ancillary_variables">sensor_depth_measured_m</att>
+      <att name="ioos_category">Quality</att>
+      <att name="long_name">Quality Flag for Parameter: Sensor Depth Measured (m)</att>
+      <att name="standard_name">quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>qc_flag_temperature_degree_c</sourceName>
+    <destinationName>qc_flag_temperature</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="ancillary_variables">temperature_degree_c</att>
+      <att name="ioos_category">Quality</att>
+      <att name="long_name">Quality Flag for Parameter: Temperature (Degree Celsius)</att>
+      <att name="standard_name">quality_flag</att>
+    </addAttributes>
+  </dataVariable>
+</dataset>
+<!-- CMAR sensor string eda5-aubu: END -->
