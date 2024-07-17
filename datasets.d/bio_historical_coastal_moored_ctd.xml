@@ -4,7 +4,7 @@
     <fileDir>/datasets/dfo/bio/moored/</fileDir>
     <fileNameRegex>(MCTD|MTR).*\.nc</fileNameRegex>
     <recursive>true</recursive>
-    <pathRegex>.*([0-9]{4})\/(|(mctd|mtr)\/(|historical_coastal\/))</pathRegex>
+    <pathRegex>.*([0-9]{4})\/(|(mctd|mtr)\/(|historical_coastal\/|Coastal\/))</pathRegex>
     <metadataFrom>last</metadataFrom>
     <standardizeWhat>0</standardizeWhat>
     <removeMVRows>true</removeMVRows>
