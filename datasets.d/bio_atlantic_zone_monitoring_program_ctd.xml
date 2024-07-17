@@ -208,6 +208,14 @@
       </addAttributes>
     </dataVariable>
     <dataVariable>
+      <sourceName>global:processing_level</sourceName>
+      <destinationName>processing_level</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="ioos_category">Other</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
       <sourceName>latitude</sourceName>
       <destinationName>latitude</destinationName>
       <dataType>float</dataType>
@@ -1197,6 +1205,50 @@
         <att name="ioos_category">Quality</att>
         <att name="cell_method">null</att>
         <att name="legacy_gf3_code">QPHPH_01</att>
+        <att name="resolution">1</att>
+        <att name="coverage_content_type">qualityInformation</att>
+        <att name="flag_values" type="intList">0 1 2 3 4 5 9</att>
+        <att name="flag_meanings">not_evaluated correct inconsistent_with_other_values doubtful erroneous modified missing</att>
+        <att name="_FillValue" type="int">9</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TURBNTU01</sourceName>
+      <destinationName>TURBNTU01</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+        <att name="_FillValue" type="double">NaN</att>
+        <att name="actual_range" type="doubleList">7.545393 9.3981276</att>
+        <att name="coordinates">longitude time latitude</att>
+        <att name="coverage_content_type">physicalMeasurement</att>
+        <att name="ioos_category">Total Suspended Matter</att>
+        <att name="legacy_gf3_code">TUR4_01</att>
+        <att name="long_name">Turbidity of water in the water body</att>
+        <att name="resolution" type="double">1.0E-7</att>
+        <att name="sdn_parameter_name">Turbidity of water in the water body</att>
+        <att name="sdn_parameter_urn">SDN:P01::TURBXX01</att>
+        <att name="sdn_uom_name">Nephelometric Turbidity Units</att>
+        <att name="sdn_uom_urn">SDN:P06::USTU</att>
+        <att name="standard_name">sea_water_turbidity</att>
+        <att name="units">NTU</att>
+      </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">9.5</att>
+        <att name="colorBarMinimum" type="double">7.5</att>
+        <att name="coordinates">null</att>
+        <att name="resolution">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>QTURB_01</sourceName>
+      <destinationName>QTURB_01</destinationName>
+      <dataType>int</dataType>
+      <addAttributes>
+        <att name="long_name">Quality Flag for Parameter: Turbidity of water in the water body</att>
+        <att name="standard_name">status_flag</att>
+        <att name="ioos_category">Quality</att>
+        <att name="cell_method">null</att>
+        <att name="legacy_gf3_code">QTURB_01</att>
         <att name="resolution">1</att>
         <att name="coverage_content_type">qualityInformation</att>
         <att name="flag_values" type="intList">0 1 2 3 4 5 9</att>
