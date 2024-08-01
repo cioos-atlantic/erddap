@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NORMAL="-server -Xms8G -Xmx8G"
+NORMAL="-server -Xms4G -Xmx12G"
 HEAP_DUMP="-XX:+HeapDumpOnOutOfMemoryError"
 HEADLESS="-Djava.awt.headless=true"
 CONTENT_ROOT="-DerddapContentDirectory=$CATALINA_HOME/content/erddap"
