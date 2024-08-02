@@ -1,0 +1,77 @@
+# Basic ERDDAP settings
+erddap_url: https://cioosatlantic.ca/erddap
+protocol: tabledap
+dataset: nafc_nsrf_ctd_profiles
+
+# A list of constraints to be applied to the dataset
+# the format should reflect the conventions of ERDDAPy
+constraints: {
+  time>=: '2023-01-01T00:00:00Z',
+  latitude>=: 47.534,
+  latitude<=: 47.559,
+  longitude>=: -52.599,
+  longitude<=: -52.574,
+}
+
+# ERDDAP dataset variable that defines the filename
+variable: id
+
+# A list of file types to be identified
+# 
+# extension: the file extension that the regex pattern should be applied 
+#            to (can be a regex in itself)
+# 
+# file_pattern: a regex used to identify and extract groups for replacement in 
+#               output paths
+# 
+# groups: 1 or more named groups that can be extracted from file_pattern, they 
+#         will be refernced in the data_root and output_root paths, such 
+#         groups will be referenced by using double underscores (__) before and
+#         after the group names in those paths.
+#         Example: a group named "test" would be referenced as "__test__"
+file_conventions:
+  - {
+      extension: 'pcnv', 
+      file_pattern: '.*_(?P<year>\d+)_\d+\.pcnv\.nc', 
+      group: 'year'
+    }
+  - {
+      extension: 'p\d+', 
+      file_pattern: '.*\.p(?P<year>\d+)\.nc', 
+      group: 'year'
+    }
+
+# Root directory of source files
+data_root: /srv/data/erddap/dfo/nafc/ctd/nsrf/__year__
+
+# Root output directory for the generated symlinks
+output_root: ./test-links/station_27_dataset/nsrf/__year__
+
+# Valid values can be "symlink" or "ncml", if left blank, "symlink" is assumed as 
+# a default value.
+output_type: symlink
+
+# (OPTIONAL)
+# If output_type = ncml, then the following can be used to specify the name of 
+# the ncml file, otherwise it defaults to the value of dataset with .ncml 
+# appended.
+# 
+# NOTE: This value is ignored if output_type = "symlink"
+ncml_filename: test_file.ncml
+
+# (OPTIONAL)
+# The following two settings reflect the nature of creating symlinks to be 
+# referenced by ERDDAP running in a docker container.  The symlinks need to 
+# point to where the files WILL BE in the container and not necessarily on the 
+# host system.
+# 
+# As such, the root of those links must be substituted to locations that don't 
+# exist on the host system but where they will be found inside of docker.
+# 
+# NOTE: Both values must be specified for this feature to operate
+
+# Directory prefix to be replaced
+real_output_root: /srv/data/erddap
+
+# Replacement value for real_output_root 
+erddap_data_root: /datasets
