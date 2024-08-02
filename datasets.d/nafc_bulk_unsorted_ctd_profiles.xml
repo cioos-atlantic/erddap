@@ -1,7 +1,7 @@
-<dataset type="EDDTableFromNcFiles" datasetID="nafc_nsrf_ctd_profiles" active="true">
+<dataset type="EDDTableFromNcFiles" datasetID="nafc_bulk_unsorted_ctd_profiles" active="true">
   <reloadEveryNMinutes>10080</reloadEveryNMinutes>
   <updateEveryNMillis>10000</updateEveryNMillis>
-  <fileDir>/datasets/dfo/nafc/ctd/nsrf</fileDir>
+  <fileDir>/datasets/dfo/nafc/ctd/bulk_unsorted</fileDir>
   <fileNameRegex>.*</fileNameRegex>
   <recursive>true</recursive>
   <pathRegex>.*</pathRegex>
@@ -89,6 +89,8 @@
     <att name="sourceUrl">(local files)</att>
     <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
     <att name="subsetVariables">wmo_platform_code,platform_name,platform_call_sign,dfo_nafc_platform_code,station</att>
+    <att name="summary">DFO Newfoundland Bulk Unsorted dataset.</att>
+    <att name="title">Newfoundland and Labrador Region Bulk Unsorted CTD Profiles</att>
     <att name="card_1_id">null</att>
     <att name="card_4_id">null</att>
     <att name="card_8_id">null</att>
@@ -104,32 +106,6 @@
     <att name="scan_cnt">null</att>
     <att name="scan_rate">null</att>
     <att name="ww_code">null</att>
-    <att name="creator_url">https://meds-sdmm.dfo-mpo.gc.ca/</att>
-    <att name="creator_institution">Fisheries and Oceans Canada</att>
-    <att name="publisher_email">Stephen.Snook@dfo-mpo.gc.ca</att>
-    <att name="publisher_institution">Fisheries and Oceans Canada</att>
-    <att name="publisher_url">https://www.dfo-mpo.gc.ca/index-eng.html</att>
-    <att name="date_created">2024-02-29</att>
-    <att name="geospatial_lat_max">66.16</att>
-    <att name="geospatial_lat_min">57.71</att>
-    <att name="geospatial_lon_max">-55.75</att>
-    <att name="geospatial_lon_min">-69.92</att>
-    <att name="geospatial_vertical_min">1.0</att>
-    <att name="geospatial_vertical_max">760.0</att>
-    <att name="institution">DFO NAFC</att>
-    <att name="license">https://open.canada.ca/en/open-government-licence-canada</att>
-    <att name="id">584b3c0c-fd99-435a-a6ef-9a470ee2c800</att>
-    <att name="naming_authority">ca.cioos</att>
-    <att name="references">https://doi.org/</att>
-    <att name="keywords">atmospheric pressure,chlorophyll a,climate change,fluorescence,salinity,sea ice,water density,wind,Northern Shrimp Research Foundation,NSRF,physical-chemical,Northwest Atlantic Ocean,Newfoundland and Labrador,Eastern Assessment Zone,Western Assessment Zone</att>
-    <att name="platform">ship</att>
-    <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
-    <att name="summary">The Northern Shrimp Research Foundation (NSRF) was established in 2002 to address gaps in scientific data and research in the North in collaboration with the Department of Fisheries and Oceans Canada (DFO). The NSRF conducts shrimp research surveys in the Eastern Assessment zone (EAZ) and Western Assessment zone (WAZ). Using a DFO designed shock-absorbing CTD sled containing a Seabird model SBE-19plus CTD the NSRF shrimp surveys collect physical oceanographic data (e.g., T, S) at each fishing set since 2005. The package attached to the trawl head-ropes records time, water pressure, temperature, and conductivity for the duration of the fishing set.
-
-  In addition, the NSRF survey collects CTD data and water samples from vertical rosette profiles since 2022 in collaboration with the Atlantic Zone Monitoring Program (AZMP). This sampling is conducted according to standard procedures developed by AZMP and includes the collection of CTD profiles and water samples for the determination of physical (e.g., T, S), chemical (e.g., nutrients), and biological (chl a) variables and vertical ring net tows.
-
-  This record includes data that is collected from surveys jointly conducted by the Department of Fisheries and Oceans Canada (DFO) and the Northern Shrimp Research Foundation (NSRF) from 2005 to present.</att>
-    <att name="title">Northern Shrimp Research Foundation (NSRF) CTD Profiles</att>
   </addAttributes>
   <dataVariable>
     <sourceName>***fileName,(.*).nc,1</sourceName>
