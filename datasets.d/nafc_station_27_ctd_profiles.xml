@@ -104,7 +104,7 @@
         <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
         <att name="subsetVariables">wmo_platform_code,platform_name,platform_call_sign,dfo_nafc_platform_code,station</att>
-        <att name="summary"Historical Station 27 data (1946 - 1997) collected from multiple sources provide to NL region by MEDS.</att>
+        <att name="summary">Historical Station 27 data (1946 - 1997) collected from multiple sources provide to NL region by MEDS.</att>
         <att name="title">Newfoundland and Labrador Region Historical Station 27 Hydrographic Data</att>
     </addAttributes>
   <dataVariable>
