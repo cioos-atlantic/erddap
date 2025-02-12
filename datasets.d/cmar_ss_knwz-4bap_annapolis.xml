@@ -186,7 +186,7 @@
     <destinationName>depth_crosscheck_flag</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="ancillary_variables">sensor_depth_at_low_tide_m</att>
+      <att name="ancillary_variables">depth</att>
       <att name="ioos_category">Quality</att>
       <att name="long_name">Depth Crosscheck Flag</att>
       <att name="standard_name">quality_flag</att>
@@ -210,7 +210,8 @@
     <addAttributes>
       <att name="ioos_category">Salinity</att>
       <att name="long_name">Salinity</att>
-      <att name="units">PSU</att>
+      <att name="standard_name">sea_water_salinity</att>
+      <att name="units">1e-3</att>
     </addAttributes>
   </dataVariable>
   <dataVariable>
@@ -242,7 +243,7 @@
     <destinationName>qc_flag_dissolved_oxygen</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="ancillary_variables">dissolved_oxygen_percent_saturation</att>
+      <att name="ancillary_variables">dissolved_oxygen</att>
       <att name="ioos_category">Quality</att>
       <att name="long_name">Quality Flag for Parameter: Dissolved Oxygen (Percent Saturation)</att>
       <att name="standard_name">quality_flag</att>
@@ -253,7 +254,7 @@
     <destinationName>qc_flag_salinity</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="ancillary_variables">salinity_psu</att>
+      <att name="ancillary_variables">salinity</att>
       <att name="ioos_category">Quality</att>
       <att name="long_name">Quality Flag for Parameter: Salinity (PSU)</att>
       <att name="standard_name">quality_flag</att>
@@ -264,7 +265,7 @@
     <destinationName>qc_flag_sensor_depth_measured</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="ancillary_variables">sensor_depth_measured_m</att>
+      <att name="ancillary_variables">sensor_depth_measured</att>
       <att name="ioos_category">Quality</att>
       <att name="long_name">Quality Flag for Parameter: Sensor Depth Measured (m)</att>
       <att name="standard_name">quality_flag</att>
@@ -275,7 +276,7 @@
     <destinationName>qc_flag_temperature</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="ancillary_variables">temperature_degree_c</att>
+      <att name="ancillary_variables">temperature</att>
       <att name="ioos_category">Quality</att>
       <att name="long_name">Quality Flag for Parameter: Temperature (Degree Celsius)</att>
       <att name="standard_name">quality_flag</att>
