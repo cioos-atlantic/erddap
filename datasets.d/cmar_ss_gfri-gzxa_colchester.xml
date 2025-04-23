@@ -177,7 +177,7 @@
     <destinationName>depth_crosscheck_flag</destinationName>
     <dataType>String</dataType>
     <addAttributes>
-      <att name="ancillary_variables">sensor_depth_at_low_tide_m</att>
+      <att name="ancillary_variables">depth</att>
       <att name="ioos_category">Quality</att>
       <att name="long_name">Depth Crosscheck Flag</att>
       <att name="standard_name">quality_flag</att>
