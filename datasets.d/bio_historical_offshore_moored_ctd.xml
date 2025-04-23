@@ -2,9 +2,9 @@
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/datasets/dfo/bio/moored/</fileDir>
-    <fileNameRegex>MCTD.*\.nc</fileNameRegex>
+    <fileNameRegex>(MCTD|MTR|MCM).*\.nc</fileNameRegex>
     <recursive>true</recursive>
-    <pathRegex>.*([0-9]{4})\/(|mctd\/(|historical_offshore\/))</pathRegex>
+    <pathRegex>.*([0-9]{4})\/(|(mctd|mtr|mcm)\/(|historical_offshore\/))</pathRegex>
     <metadataFrom>last</metadataFrom>
     <standardizeWhat>0</standardizeWhat>
     <removeMVRows>true</removeMVRows>
