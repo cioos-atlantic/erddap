@@ -1,0 +1,1813 @@
+  <!-- BIO AZMP BOTTLE TEST: START -->
+  <dataset type="EDDTableFromAsciiFiles" datasetID="bio_atlantic_zone_monitoring_program_bottle" active="true">
+      <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+      <updateEveryNMillis>10000</updateEveryNMillis>
+      <fileDir>/datasets/dfo/bio/bottle/</fileDir>
+      <fileNameRegex>.*</fileNameRegex>
+      <recursive>true</recursive>
+      <pathRegex>.*</pathRegex>
+      <metadataFrom>last</metadataFrom>
+      <standardizeWhat>0</standardizeWhat>
+      <charset>ISO-8859-1</charset>
+      <columnSeparator>,</columnSeparator>
+      <columnNamesRow>1</columnNamesRow>
+      <firstDataRow>2</firstDataRow>
+      <sortedColumnSourceName>DATETIME</sortedColumnSourceName>
+      <sortFilesBySourceNames>DATETIME</sortFilesBySourceNames>
+      <fileTableInMemory>false</fileTableInMemory>
+      <!-- sourceAttributes>
+      </sourceAttributes -->
+      <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+          <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+          <att name="subsetVariables">station_id, longitude, latitude</att>
+      -->
+      <addAttributes>
+          <att name="cdm_data_type">TimeSeriesProfile</att>
+          <att name="cdm_timeseries_variables">mission_descriptor,mission_name,station,latitude,longitude</att>
+          <att name="cdm_profile_variables">event_id,time</att>
+          <att name="Conventions">CF-1.6,ACDD-1.3,IOOS-1.2</att>
+          <att name="featureType">TimeSeriesProfile</att>
+          <att name="id">BBMP_Bottle_data_2019_present.csv</att>
+          <att name="infoUrl">???</att>
+          <att name="institution">DFO BIO</att>
+          <att name="keywords">nitrate, nitrite, silicate, phosphate, oxygen, subSurface Salinity,bottle, conductivity, data, density, depth, salinity, nutrients, Niskin, bottle"</att>
+          <att name="keywords_vocabulary">GCMD Science Keywords</att>
+          <att name="license">https://open.canada.ca/en/open-government-licence-canada</att>
+          <att name="naming_authority">ca.gc.bio</att>
+          <att name="organization">Fisheries and Oceans Canada</att>
+          <att name="organization_fr">P&#234;ches et Oc&#233;ans Canada</att>
+          <att name="processing_level">Pre and Post deployment records removed and spike removal</att>
+          <att name="project">Bedford Basin Monitoring Program (BBMP)</att>
+          <att name="program">Atlantic Zone Monitoring Program (AZMP)</att>
+          <att name="sourceUrl">(local files)</att>
+          <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+          <att name="subsetVariables">mission_descriptor,mission_name, institute, event_id, sample_id, QC</att>
+          <att name="summary">Bedford Basin Monitoring Program (BBMP) data from Niskin bottle samples, from Conductivity, Temperature, Depth (CTD) rosette and wire, Atlantic Zone Monitoring Program (AZMP), Department of Fisheries and Oceans (DFO) BIO 2019 to present</att>
+          <att name="title">Bedford Basin Monitoring Program (BBMP) Niskin bottle samples, Atlantic Zone Monitoring Program (AZMP), DFO BIO</att>
+          <att name="instrument_type">Niskin Bottle</att>
+          <att name="sampling_interval">0</att>
+          <att name="country_code">1810</att>
+          <att name="sdn_country_id">SDN:C18::18</att>
+          <att name="sdn_country_vocabulary">http://vocab.nerc.ac.uk/collection/C18/current/</att>
+          <att name="cruise_number">BCDyyyy667</att>
+          <att name="cruise_name">Bedford Basin Monitoring Program</att>
+          <att name="station_number">HL00</att>
+          <att name="data_type">Niskin Bottle</att>
+          <att name="longitude">-63.6403</att>
+          <att name="latitude">44.6937</att>
+          <att name="sounding">71</att>
+          <att name="water_depth">71</att>
+          <att name="chief_scientist">Lindsay Beazley</att>
+          <att name="institution">DFO BIO</att>
+          <att name="sdn_institution_id">SDN:EDMO::1811</att>
+          <att name="sdn_institution_vocabulary">https://edmo.seadatanet.org, EUROPEAN DIRECTORY OF MARINE ORGANISATIONS (EDMO)"</att>
+          <att name="source">BBMP_Bottle_data_2019_present.csv</att>
+          <att name="date_created">2024-06-25T20:00:00</att>
+          <att name="standard_name_vocabulary">CF Standard Name Table v80</att>
+          <att name="creator_type">person</att>
+          <att name="creator_name">Diana Cardoso</att>
+          <att name="creator_country">Canada</att>
+          <att name="creator_email">BIO.Datashop@dfo-mpo.gc.ca</att>
+          <att name="creator_institution">Bedford Institute of Oceanography</att>
+          <att name="creator_address">P.O. Box 1006, 1 Challenger Dr."</att>
+          <att name="creator_city">Dartmouth</att>
+          <att name="creator_sector">gov_federal</att>
+          <att name="creator_url">https://www.bio.gc.ca/index-en.php</att>
+          <att name="publisher_name">Fisheries and Oceans Canada (DFO)</att>
+          <att name="publisher_country">Canada</att>
+          <att name="publisher_email">BIO.Datashop@dfo-mpo.gc.ca</att>
+          <att name="publisher_institution">Bedford Institute of Oceanography</att>
+          <att name="publisher_type">institution</att>
+          <att name="publisher_sector">gov_federal</att>
+          <att name="publisher_url">https://www.bio.gc.ca/index-en.php</att>
+          <att name="sdn_custodian_id">SDN:EDMO::1811</att>
+          <att name="sdn_originator_id">SDN:EDMO::1811</att>
+          <att name="sdn_creator_id">SDN:EDMO::1811</att>
+          <att name="sdn_publisher_id">SDN:EDMO::1811</att>
+          <att name="sdn_distributor_id">SDN:EDMO::1979</att>
+          <att name="location_description">Bedford Basin</att>
+          <att name="mission_description">Bedford Basin Monitoring Program (BBMP)</att>
+          <att name="platform">Niskin Bottle</att>
+          <att name="platform_name">Niskin Bottle</att>
+          <att name="platform_id"></att>
+          <att name="sdn_platform_id">SDN:L22::TOOL0412</att>
+          <att name="sdn_platform_vocabulary">https://vocab.nerc.ac.uk/collection/L22/current/</att>
+          <att name="sdn_deployment_platform_id">SDN:L06::31</att>
+          <att name="sdn_deployment_platform_vocabulary">https://vocab.nerc.ac.uk/collection/L06/current/</att>
+          <att name="sdn_instrument_id">SDN:L22::TOOL0412</att>
+          <att name="instrument">Niskin Bottle water sample</att>
+          <att name="sdn_instrument_vocabulary">http://vocab.nerc.ac.uk/collection/L22/current/</att>
+          <att name="sdn_device_category_id">SDN:L05::30</att>
+          <att name="sdn_device_category_vocabulary">http://vocab.nerc.ac.uk/collection/L05/current/</att>
+          <att name="geospatial_lat_min">44.6937</att>
+          <att name="geospatial_lat_max">44.6937</att>
+          <att name="geospatial_lat_units">degrees_north</att>
+          <att name="geospatial_lon_min">-63.6403</att>
+          <att name="geospatial_lon_max">-63.6403</att>
+          <att name="geospatial_lon_units">degrees_east</att>
+          <att name="geospatial_vertical_max">71</att>
+          <att name="geospatial_vertical_min">71</att>
+          <att name="geospatial_vertical_units">metres</att>
+          <att name="geospatial_vertical_positive">down</att>
+          <att name="geospatial_bounds">POINT(44.6937  -63.6403)</att>
+          <att name="geospatial_bounds_crs">EPSG:4326</att>
+          <att name="geospatial_bounds_vertical_crs">EPSG:5831</att>
+          <att name="date_modified">2024-06-25T20:00:00</att>
+      </addAttributes>
+      <dataVariable>
+          <sourceName>MISSION_DESCRIPTOR</sourceName>
+          <destinationName>mission_descriptor</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="cf_role">timeseries_id</att>
+              <att name="ioos_category">Identifier</att>
+              <att name="long_name">MISSION DESCRIPTOR</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>MISSION_NAME</sourceName>
+          <destinationName>mission_name</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="ioos_category">Identifier</att>
+              <att name="long_name">MISSION NAME</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>INSTITUTE</sourceName>
+          <destinationName>institute</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">INSTITUTE</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>EVENT_ID</sourceName>
+          <destinationName>event_id</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="cf_role">profile_id</att>
+              <att name="ioos_category">Identifier</att>
+              <att name="long_name">EVENT ID</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>SAMPLE_ID</sourceName>
+          <destinationName>sample_id</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="ioos_category">Identifier</att>
+              <att name="long_name">SAMPLE ID</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>STATION</sourceName>
+          <destinationName>station</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="ioos_category">Identifier</att>
+              <att name="long_name">STATION</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>LATDEC</sourceName>
+          <destinationName>latitude</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="colorBarMaximum" type="double">90.0</att>
+              <att name="colorBarMinimum" type="double">-90.0</att>
+              <att name="ioos_category">Location</att>
+              <att name="long_name">Latitude</att>
+              <att name="source_name">LATDEC</att>
+              <att name="standard_name">latitude</att>
+              <att name="units">degrees_north</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>LONGDEC</sourceName>
+          <destinationName>longitude</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="colorBarMaximum" type="double">180.0</att>
+              <att name="colorBarMinimum" type="double">-180.0</att>
+              <att name="ioos_category">Location</att>
+              <att name="long_name">Longitude</att>
+              <att name="source_name">LONGDEC</att>
+              <att name="standard_name">longitude</att>
+              <att name="units">degrees_east</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>DATETIME</sourceName>
+          <destinationName>time</destinationName>
+          <dataType>String</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="ioos_category">Time</att>
+              <att name="long_name">datetime</att>
+              <att name="source_name">DATETIME</att>
+              <att name="standard_name">time</att>
+              <att name="time_precision">1970-01-01T00:00:00Z</att>
+              <att name="units">yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>DEPTH</sourceName>
+          <destinationName>depth</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="colorBarMaximum" type="double">8000.0</att>
+              <att name="colorBarMinimum" type="double">-8000.0</att>
+              <att name="colorBarPalette">TopographyDepth</att>
+              <att name="ioos_category">Location</att>
+              <att name="long_name">Depth</att>
+              <att name="positive">down</att>
+              <att name="standard_name">depth</att>
+              <att name="units">m</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>QC</sourceName>
+          <destinationName>QC</destinationName>
+          <dataType>byte</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="byte">127</att>
+              <att name="colorBarMaximum" type="double">150.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Quality</att>
+              <att name="long_name">QC</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Ag-particulate2 | Ag-particulate</sourceName>
+          <destinationName>Ag_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ag-particulate2</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Al-particulate4 | Al-particulate</sourceName>
+          <destinationName>Al_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Al-particulate4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Alkalinity | Alkalinity</sourceName>
+          <destinationName>Alkalinity</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">CO2</att>
+              <att name="long_name">Alkalinity</att>
+              <att name="sdn_parameter_name">Total alkalinity per unit mass of the water body</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/MDMAP014/</att>
+              <att name="sdn_parameter_urn">SDN:P01::MDMAP014</att>
+              <att name="units">µmol/kg</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Alkalinity_umol/kg | Alkalinity</sourceName>
+          <destinationName>Alkalinity_umol_kg</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">CO2</att>
+              <att name="long_name">Total Alkalinity Umol/kg</att>
+              <att name="sdn_parameter_name">Total alkalinity per unit mass of the water body</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/MDMAP014/</att>
+              <att name="sdn_parameter_urn">SDN:P01::MDMAP014</att>
+              <att name="units">µmol/kg</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>As-particulate4 | As-particulate</sourceName>
+          <destinationName>As_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">As-particulate4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Ba-particulate4 | Ba-particulate</sourceName>
+          <destinationName>Ba_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ba-particulate4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Be-particulate4 | Be-particulate</sourceName>
+          <destinationName>Be_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Be-particulate4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Bi-particulate2 | Bi-particulate</sourceName>
+          <destinationName>Bi_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Bi-particulate2</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Ca-particulate4 | Ca-particulate</sourceName>
+          <destinationName>Ca_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ca-particulate4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Cd-filtered5 | Cd</sourceName>
+          <destinationName>Cd</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Cd-filtered5</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Cd-particulate3 | Cd-particulate</sourceName>
+          <destinationName>Cd_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Cd-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>Chl_a | Chlorophyll A</sourceName>
+          <destinationName>Chlorophyll_A</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">30.0</att>
+              <att name="colorBarMinimum" type="double">0.03</att>
+              <att name="colorBarScale">Log</att>
+              <att name="ioos_category">Ocean Color</att>
+              <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CPHLFLP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CNDCST01</att>
+              <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>Chl_a_Holm-Hansen_F | Chlorophyll A</sourceName>
+          <destinationName>Chlorophyll_A</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">30.0</att>
+              <att name="colorBarMinimum" type="double">0.03</att>
+              <att name="colorBarScale">Log</att>
+              <att name="ioos_category">Ocean Color</att>
+              <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and fluorometry</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CPHLFLP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CNDCST01</att>
+              <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+              <att name="units">mg/m3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>Chl_a_Holm-Hansen_sF | Chlorophyll A</sourceName>
+          <destinationName>Chlorophyll_A_Holm_Hansen_sF</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">30.0</att>
+              <att name="colorBarMinimum" type="double">0.03</att>
+              <att name="colorBarScale">Log</att>
+              <att name="ioos_category">Ocean Color</att>
+              <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+              <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>Chl_Fluor_Voltage | CHL-SENSOR insitu</sourceName>
+          <destinationName>CHL_SENSOR_insitu</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Optical Properties</att>
+              <att name="long_name">Chl Fluor Voltage</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Co-particulate3 | Co-particulate</sourceName>
+          <destinationName>Co_particulate3</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Co-particulate</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>conductivity_CTD | conductivity_CTD</sourceName>
+          <destinationName>conductivity_CTD</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">40.0</att>
+              <att name="colorBarMinimum" type="double">30.0</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">Sea Water Electrical Conductivity</att>
+              <att name="sdn_parameter_name">Electrical conductivity of the water body by CTD</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CNDCST01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CNDCST01</att>
+              <att name="standard_name">sea_water_electrical_conductivity</att>
+              <att name="units">S/m</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Cr-particulate3 | Cr-particulate</sourceName>
+          <destinationName>Cr_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Cr-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Cu-filtered6 | Cu</sourceName>
+          <destinationName>Cu</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Cu-filtered6</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Cu-particulate3 | Cu-particulate</sourceName>
+          <destinationName>Cu_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Cu-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Fe-filtered5 | Fe</sourceName>
+          <destinationName>Fe</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Fe-filtered5</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Fe-particulate3 | Fe-particulate</sourceName>
+          <destinationName>Fe_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Fe-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_ACAROT | HPLC_ACAROT</sourceName>
+          <destinationName>HPLC_ACAROT</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC ACAROT (alpha-Carotene)</att>
+              <att name="sdn_parameter_name">Concentration of unidentified carotene isomer per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CARXHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CARXHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_ALLOX | HPLC_ALLOX</sourceName>
+          <destinationName>HPLC_ALLOX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC ALLOX (alloxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of alloxanthin {CAS 28380-31-6} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/ALLOHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::ALLOHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_ASTAX | HPLC_ASTAX</sourceName>
+          <destinationName>HPLC_ASTAX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC ASTAX</att>
+              <att name="sdn_parameter_name">Concentration standard deviation of astaxanthin {CAS 472-61-7} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/ASTAXHSD/</att>
+              <att name="sdn_parameter_urn">SDN:P01::ASTAXHSD</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_BCAROT | HPLC_BCAROT</sourceName>
+          <destinationName>HPLC_BCAROT</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC BCAROT (beta carotene)</att>
+              <att name="sdn_parameter_name">Concentration of beta,beta-carotene {beta-carotene CAS 7235-40-7} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/BBCAHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::BBCAHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_BUT19 | HPLC_BUT19</sourceName>
+          <destinationName>HPLC_BUT19</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC BUT19 (19'butanoyloxyfucoxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of 19'-butanoyloxyfucoxanthin {But-fuco(BF) CAS 111234-30-1} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/BUTAHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::BUTAHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_BUTLIKE | HPLC_BUTLIKE</sourceName>
+          <destinationName>HPLC_BUTLIKE</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC BUTLIKE</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_CHLA | HPLC_CHLA</sourceName>
+          <destinationName>HPLC_CHLA</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">30.0</att>
+              <att name="colorBarMinimum" type="double">0.03</att>
+              <att name="colorBarScale">Log</att>
+              <att name="ioos_category">Ocean Color</att>
+              <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+              <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CPHLHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CPHLHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_CHLB | HPLC_CHLB</sourceName>
+          <destinationName>HPLC_CHLB</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC CHLB</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-b {chl-b CAS 519-62-0} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CHLBHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CHLBHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_CHLC12 | HPLC_CHLC12</sourceName>
+          <destinationName>HPLC_CHLC12</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC CHLC12 (Chlorophyll c1+c2)</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-c1+c2 per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/C1C2HPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::C1C2HPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_CHLC3 | HPLC_CHLC3</sourceName>
+          <destinationName>HPLC_CHLC3</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC CHLC3 (Chlorophyll c3)</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-c3 {chl-c3} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CLC3HPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CLC3HPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_CHLIDEA | HPLC_CHLIDEA</sourceName>
+          <destinationName>HPLC_CHLIDEA</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC CHLIDEA</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyllide-a {CAS 14897-06-4} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CIDAHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CIDAHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_DIADINOX | HPLC_DIADINOX</sourceName>
+          <destinationName>HPLC_DIADINOX_HPLC_DIADINOX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC DIADINOX (diadinoxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of diadinoxanthin {CAS 18457-54-0} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/DIADHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::DIADHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_DIATOX | HPLC_DIATOX</sourceName>
+          <destinationName>HPLC_DIATOX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC DIATOX (diatoxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of diatoxanthin {CAS 31063-73-7} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/DIATHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::DIATHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_FUCOX | HPLC_FUCOX</sourceName>
+          <destinationName>HPLC_FUCOX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC FUCOX (fucoxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of fucoxanthin {CAS 3351-86-8} per unit volume of the water body [particulate >GF/F phase] by filtration, methanol extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/FUCXMHP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::FUCXMHP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_HEX19 | HPLC_HEX19</sourceName>
+          <destinationName>HPLC_HEX19</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC HEX19 (19'hexanoyloxyfucoxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of 19'-hexanoyloxyfucoxanthin {CAS 60147-85-5} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/HEXOHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::HEXOHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_HEXLIKE | HPLC_HEXLIKE</sourceName>
+          <destinationName>HPLC_HEXLIKE</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC HEXLIKE</att>
+              <att name="sdn_parameter_name">Concentration of hexanoyloxyfucoxanthin-like pigment per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/HEXLHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::HEXLHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_HEXLIKE2</sourceName>
+          <destinationName>HPLC_HEXLIKE2</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC HEXLIKE2</att>
+              <att name="sdn_parameter_name">Concentration of hexanoyloxyfucoxanthin-like pigment per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/HEXLHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::HEXLHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_PERID | HPLC_PERID</sourceName>
+          <destinationName>HPLC_PERID</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC PERID (peridinin)</att>
+              <att name="sdn_parameter_name">Concentration of peridinin-like pigment per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PERLHPP1//</att>
+              <att name="sdn_parameter_urn">SDN:P01::PERLHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_PHAEO | HPLC_PHAEO</sourceName>
+          <destinationName>HPLC_PHAEO</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC PHAEO (phaeophorbide, Phaeophytin)</att>
+              <att name="sdn_parameter_name">Concentration of carotene+phaeophytin per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CRPHHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CRPHHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_PRASINOX | HPLC_PRASINOX</sourceName>
+          <destinationName>HPLC_PRASINOX_HPLC_PRASINOX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC PRASINOX   HPLC PRASINOX</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_PYROPHAE | HPLC_PYROPHAE</sourceName>
+          <destinationName>HPLC_PYROPHAE_HPLC_PYROPHAE</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC PYROPHAE   HPLC PYROPHAE</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_VIOLAX | HPLC_VIOLAX</sourceName>
+          <destinationName>HPLC_VIOLAX_HPLC_VIOLAX</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC VIOLAX   HPLC VIOLAX</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>HPLC_ZEA | HPLC_ZEA</sourceName>
+          <destinationName>HPLC_ZEA</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">HPLC ZEA (zeaxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of zeaxanthin {CAS 144-68-3} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/ZEOXHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::ZEOXHPP1</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>K-particulate3 | K-particulate</sourceName>
+          <destinationName>K_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">K-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Li-particulate3 | Li-particulate</sourceName>
+          <destinationName>Li_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Li-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Mg-particulate3 | Mg-particulate</sourceName>
+          <destinationName>Mg_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Mg-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Mn-filtered4 | Mn</sourceName>
+          <destinationName>Mn_filtered4</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Mn-filtered4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Mn-filtered5 | Mn</sourceName>
+          <destinationName>Mn_filtered5</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Mn-filtered5</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Mn-particulate3 | Mn-particulate</sourceName>
+          <destinationName>Mn_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Mn-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Mo-particulate3 | Mo-particulate</sourceName>
+          <destinationName>Mo_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Mo-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Na-particulate3 | Na-particulate</sourceName>
+          <destinationName>Na_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Na-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>NH3_0 | Ammonia</sourceName>
+          <destinationName>Ammonia</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">5.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Ammonium In Sea Water</att>
+              <att name="sdn_parameter_name">Concentration of ammonium {NH4+ CAS 14798-03-9} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/AMONAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::AMONAATX</att>
+              <att name="standard_name">mole_concentration_of_ammonium_in_sea_water</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>NH3_3 | Ammonia</sourceName>
+          <destinationName>Ammonia_3</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">5.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Ammonium In Sea Water</att>
+              <att name="sdn_parameter_name">Concentration of ammonium {NH4+ CAS 14798-03-9} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/AMONAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::AMONAATX</att>
+              <att name="standard_name">mole_concentration_of_ammonium_in_sea_water</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>NH3_Tech_F | Ammonia</sourceName>
+          <destinationName>Ammonia</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">5.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Ammonium In Sea Water</att>
+              <att name="sdn_parameter_name">Concentration of ammonium {NH4+ CAS 14798-03-9} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/AMONAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::AMONAATX</att>
+              <att name="standard_name">mole_concentration_of_ammonium_in_sea_water</att>
+              <att name="units">µmol/L</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Ni-filtered5 | Ni</sourceName>
+          <destinationName>Ni</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ni-filtered5</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Ni-particulate3 | Ni-particulate</sourceName>
+          <destinationName>Ni_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ni-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>NO2_0 | Nitrite</sourceName>
+          <destinationName>Nitrite</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">1.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Nitrite In Sea Water</att>
+              <att name="standard_name">mole_concentration_of_nitrite_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of nitrite {NO2- CAS 14797-65-0} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NTRIAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::NTRIAATX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>NO2_Tech_F | Nitrite</sourceName>
+          <destinationName>Nitrite</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">1.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Nitrite In Sea Water</att>
+              <att name="standard_name">mole_concentration_of_nitrite_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of nitrite {NO2- CAS 14797-65-0} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NTRIAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::NTRIAATX</att>
+              <att name="units">µmol/L</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>NO2NO3_0 | Nitrate</sourceName>
+          <destinationName>Nitrate</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">50.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Nitrate In Sea Water</att>
+              <att name="standard_name">mole_concentration_of_nitrate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of nitrate+nitrite {NO3+NO2} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NTRZAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::NTRZAATX</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>NO2NO3_Alp_F | Nitrate</sourceName>
+          <destinationName>Nitrate_Alp_F</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">50.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Nitrate In Sea Water</att>
+              <att name="standard_name">mole_concentration_of_nitrate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of nitrate+nitrite {NO3+NO2} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NTRZAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::NTRZAATX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>NO2NO3_Tech_F | Nitrate</sourceName>
+          <destinationName>Nitrate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">50.0</att>
+              <att name="colorBarMinimum" type="double">0.0</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mole Concentration Of Nitrate In Sea Water</att>
+              <att name="standard_name">mole_concentration_of_nitrate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of nitrate+nitrite {NO3+NO2} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NTRZAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::NTRZAATX</att>
+              <att name="units">µmol/L</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>O2_CTD_mLL | O2</sourceName>
+          <destinationName>O2_CTD_mLL</destinationName>
+          <dataType>double</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="double">NaN</att>
+              <att name="ioos_category">Dissolved O2</att>
+              <att name="long_name">O2 CTD M LL</att>
+              <att name="sdn_parameter_name">Concentration of oxygen {O2 CAS 7782-44-7} per unit volume of the water body [dissolved plus reactive particulate phase] by in-situ sensor</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/DOXYZZ01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::DOXYZZ01</att>
+              <att name="units">ml/L</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>O2_Electrode | O2</sourceName>
+          <destinationName>O2_Electrode</destinationName>
+          <dataType>double</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="double">NaN</att>
+              <att name="ioos_category">Dissolved O2</att>
+              <att name="long_name">O2 Electrode</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>O2_Electrode_mll | O2 mL/L</sourceName>
+          <destinationName>O2_mL_L</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved O2</att>
+              <att name="long_name">O2 Electrode mL/L</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>O2_Electrode_T | O2</sourceName>
+          <destinationName>O2_Electrode_T</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved O2</att>
+              <att name="long_name">O2 Electrode T</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>O2_Winkler | O2</sourceName>
+          <destinationName>O2_Winkler</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved O2</att>
+              <att name="long_name">O2 Winkler</att>
+              <att name="sdn_parameter_name">Concentration of oxygen {O2 CAS 7782-44-7} per unit volume of the water body [dissolved plus reactive particulate phase] by Winkler titration</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/DOXYWITX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::DOXYWITX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>O2_Winkler_Auto | O2</sourceName>
+          <destinationName>O2_Winkler_Auto</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved O2</att>
+              <att name="long_name">O2 Winkler Auto</att>
+              <att name="sdn_parameter_name">Concentration of oxygen {O2 CAS 7782-44-7} per unit volume of the water body [dissolved plus reactive particulate phase] by Winkler titration</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/DOXYWITX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::DOXYWITX</att>
+              <att name="units">ml/L</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>P-particulate3 | P-particulate</sourceName>
+          <destinationName>P_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">P-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>PAR | PAR</sourceName>
+          <destinationName>PAR</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Optical Properties</att>
+              <att name="long_name">PAR</att>
+              <att name="sdn_parameter_name">Irradiance as photons of electromagnetic radiation (PAR wavelengths)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PFDPAR01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PFDPAR01</att>
+              <att name="units">PPFD</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>PAR_4pi_Index1 | PAR_4pi_Index</sourceName>
+          <destinationName>PAR_4pi_Index</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Optical Properties</att>
+              <att name="long_name">PAR 4pi Index</att>
+              <att name="sdn_parameter_name">Irradiance as photons of electromagnetic radiation (PAR wavelengths)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PFDPAR01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PFDPAR01</att>
+              <att name="units">PPFD</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>PAR_on_Deck | PAR</sourceName>
+          <destinationName>PAR_on_Deck</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Optical Properties</att>
+              <att name="long_name">PAR On Deck</att>
+              <att name="sdn_parameter_name">Irradiance as photons of electromagnetic radiation (PAR wavelengths)</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PFDPAR01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PFDPAR01</att>
+              <att name="units">PPFD</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Pb-filtered4 | Pb</sourceName>
+          <destinationName>Pb</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Pb-filtered4</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Pb-particulate3 | Pb-particulate</sourceName>
+          <destinationName>Pb_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Pb-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>pCO2 | CO2 (pH)</sourceName>
+          <destinationName>CO2_pH</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">CO2</att>
+              <att name="long_name">CO2 (pH)</att>
+              <att name="sdn_parameter_name">Partial pressure of carbon dioxide {CO2 CAS 124-38-9} {pCO2} in the water body by gas chromatography</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PCO2GC01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PCO2GC01</att>
+              <att name="units">µatm</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>pH_CTD_nocal | pH</sourceName>
+          <destinationName>pH_CTD_nocal</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">pH CTD Nocal</att>
+              <att name="sdn_parameter_name">pH (unspecified scale) of the water body by pH electrode</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/PHXXPR01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PHXXPR01</att>
+              <att name="units">pH</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>pH_invitro_temp | pH_invitro_temp</sourceName>
+          <destinationName>pH_invitro_temp</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">pH Invitro Temp</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>pH_invitro_total_f | pH</sourceName>
+          <destinationName>pH_invitro_total_f</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">pH Invitro Total F</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Phaeo | Phaeophytin</sourceName>
+          <destinationName>Phaeophytin</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Phaeophytin (phaeopigments)</att>
+              <att name="sdn_parameter_name">Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate &gt;unknown phase]</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PHAEZZXX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PHAEZZXX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>Phaeo_Holm-HansenF | Phaeophytin</sourceName>
+          <destinationName>Phaeophytin</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Phaeo Holm-Hansen F</att>
+              <att name="sdn_parameter_name">Concentration of phaeopigments {pheopigments} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and spectrophotometry and processing following the Lorenzen protocol</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PHAESPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PHAESPP1</att>
+              <att name="units">mg/m3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>PO4_0 | Phosphate</sourceName>
+          <destinationName>Phosphate</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mass Concentration Of Phosphate In Sea Water</att>
+              <att name="standard_name">mass_concentration_of_phosphate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of phosphate {PO43- CAS 14265-44-2} per unit volume of the water body [unknown phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PHOSAAZX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PHOSAAZX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>PO4_Tech_F | Phosphate</sourceName>
+          <destinationName>Phosphate_Tech_F</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mass Concentration Of Phosphate In Sea Water</att>
+              <att name="standard_name">mass_concentration_of_phosphate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of phosphate {PO43- CAS 14265-44-2} per unit volume of the water body [unknown phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PHOSAAZX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PHOSAAZX</att>
+              <att name="units">µmol/L</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>POC_CHN_mg/m3 | POC</sourceName>
+          <destinationName>POC</destinationName>
+          <dataType>double</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="double">NaN</att>
+              <att name="ioos_category">Ocean Color</att>
+              <att name="long_name">POC (particulate organic carbon)</att>
+              <att name="sdn_parameter_name">Concentration of total carbon {total_C CAS 7440-44-0} {POC} per unit volume of the water body [particulate >GF/F phase] by filtration, no acidification and elemental analysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CORGCNP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CORGCNP1</att>
+              <att name="units">mg/m3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>POH | POH</sourceName>
+          <destinationName>POH</destinationName>
+          <dataType>float</dataType>
+          <sourceAttributes>
+          </sourceAttributes>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">POH (particulate organic hydrogen)</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>PON_CHN_mg/m3 | PON</sourceName>
+          <destinationName>PON</destinationName>
+          <dataType>double</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="double">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">PON CHN Mg/m3</att>
+              <att name="sdn_parameter_name">Concentration of total nitrogen {total_N} {PON} per unit volume of the water body [particulate >GF/F phase] by filtration and elemental analysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NTOTCNP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::NTOTCNP1</att>
+              <att name="units">mg/m3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Pressure | Pressure</sourceName>
+          <destinationName>Pressure</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Pressure</att>
+              <att name="long_name">Pressure</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Ru-particulate3 | Ru-particulate</sourceName>
+          <destinationName>Ru_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ru-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Salinity_CTD | Salinity</sourceName>
+          <destinationName>Salinity_CTD</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">37.0</att>
+              <att name="colorBarMinimum" type="double">32.0</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">Sea Water Practical Salinity</att>
+              <att name="standard_name">sea_water_practical_salinity</att>
+              <att name="units">PSU</att>
+              <att name="sdn_parameter_name">Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PSALST01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PSALST01</att>
+              <att name="units">PSS</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>Salinity_CTD PSS | Salinity</sourceName>
+          <destinationName>Salinity_CTD_PSS</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">37.0</att>
+              <att name="colorBarMinimum" type="double">32.0</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">Sea Water Practical Salinity</att>
+              <att name="standard_name">sea_water_practical_salinity</att>
+              <att name="units">PSU</att>
+              <att name="sdn_parameter_name">Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PSALST01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PSALST01</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>Salinity_CTDloop | Salinity</sourceName>
+          <destinationName>Salinity_CTDloop</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">37.0</att>
+              <att name="colorBarMinimum" type="double">32.0</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">Sea Water Practical Salinity</att>
+              <att name="standard_name">sea_water_practical_salinity</att>
+              <att name="units">PSU</att>
+              <att name="sdn_parameter_name">Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/PSALST01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PSALST01</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>Salinity_Sal_PSS | Salinity</sourceName>
+          <destinationName>Salinity_Sal_PSS</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">37.0</att>
+              <att name="colorBarMinimum" type="double">32.0</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">Sea Water Practical Salinity</att>
+              <att name="standard_name">sea_water_practical_salinity</att>
+              <att name="units">PSU</att>
+              <att name="sdn_parameter_name">Salinity of the water body by bench salinometer</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/SSALBSTX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::SSALBSTX</att>
+              <att name="units">PSS</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>Salinity_Sal_PSS_Cal | Salinity</sourceName>
+          <destinationName>Salinity_Sal_PSS_Cal</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="colorBarMaximum" type="double">37.0</att>
+              <att name="colorBarMinimum" type="double">32.0</att>
+              <att name="ioos_category">Salinity</att>
+              <att name="long_name">Sea Water Practical Salinity</att>
+              <att name="standard_name">sea_water_practical_salinity</att>
+              <att name="units">PSU</att>
+              <att name="sdn_parameter_name">Salinity of the water body by bench salinometer</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/SSALBSTX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::SSALBSTX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>Sb-particulate3 | Sb-particulate</sourceName>
+          <destinationName>Sb_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Sb-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>SiO4_0 | Silicate</sourceName>
+          <destinationName>Silicate</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mass Concentration Of Silicate In Sea Water</att>
+              <att name="standard_name">mass_concentration_of_silicate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of silicate {SiO44- CAS 17181-37-2} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/SLCAAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::SLCAAATX</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>SiO4_Alp_F | Silicate</sourceName>
+          <destinationName>Silicate_Alp_F</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mass Concentration Of Silicate In Sea Water</att>
+              <att name="standard_name">mass_concentration_of_silicate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of silicate {SiO44- CAS 17181-37-2} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/SLCAAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::SLCAAATX</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>SiO4_Tech_F | Silicate</sourceName>
+          <destinationName>Silicate_Tech_F</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Dissolved Nutrients</att>
+              <att name="long_name">Mass Concentration Of Silicate In Sea Water</att>
+              <att name="standard_name">mass_concentration_of_silicate_in_sea_water</att>
+              <att name="sdn_parameter_name">Concentration of silicate {SiO44- CAS 17181-37-2} per unit volume of the water body [dissolved plus reactive particulate phase] by colorimetric autoanalysis</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/SLCAAATX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::SLCAAATX</att>
+              <att name="units">µmol/L</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Sn-particulate3 | Sn-particulate</sourceName>
+          <destinationName>Sn_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Sn-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>spm2 | SPM</sourceName>
+          <destinationName>SPM</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">SPM</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Sr-particulate3 | Sr-particulate</sourceName>
+          <destinationName>Sr_particulate</destinationName>
+          <dataType>double</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="double">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Sr-particulate</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Temp_CTD_1968</sourceName>
+          <destinationName>Temp_CTD_1968</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Temperature</att>
+              <att name="long_name">Temp CTD 1968</att>
+              <att name="sdn_parameter_name">Temperature (IPTS-68) of the water body by CTD or STD</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/TEMPS601/</att>
+              <att name="sdn_parameter_urn">SDN:P01::TEMPS601</att>
+              <att name="units">degree Celsius</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Temp_CTD_1990 | Temperature</sourceName>
+          <destinationName>Temp_CTD_1990</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Temperature</att>
+              <att name="long_name">Temp CTD 1990   Temperature</att>
+              <att name="sdn_parameter_name">Temperature (ITS-90) of the water body by CTD or STD</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/TEMPS901/</att>
+              <att name="sdn_parameter_urn">SDN:P01::TEMPS901</att>
+              <att name="units">degree Celsius</att>
+          </addAttributes>
+      </dataVariable>
+      <!--dataVariable>
+          <sourceName>Temp_CTD_loop | Temperature</sourceName>
+          <destinationName>Temp_CTD_loop</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Temperature</att>
+              <att name="long_name">Temp CTD Loop</att>
+          </addAttributes>
+      </dataVariable-->
+      <!--dataVariable>
+          <sourceName>Temp_RevTherm_Glass | Temperature</sourceName>
+          <destinationName>Temp_RevTherm_Glass</destinationName>
+          <dataType>float</dataType>
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Temperature</att>
+              <att name="long_name">Temp Rev Therm Glass   Temperature</att>
+          </addAttributes>
+      </dataVariable-->
+      <dataVariable>
+          <sourceName>Ti-particulate3 | Ti-particulate</sourceName>
+          <destinationName>Ti_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Ti-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>TIC | CO2 (total)</sourceName>
+          <destinationName>CO2_total</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">CO2</att>
+              <att name="long_name">CO2 (total)</att>
+              <att name="sdn_parameter_name">Concentration of total inorganic carbon {TCO2 CAS 7440-44-0} per unit mass of the water body [dissolved plus reactive particulate phase]</att>
+              <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/TCO2MSXX/</att>
+              <att name="sdn_parameter_urn">SDN:P01::TCO2MSXX</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Tl-particulate3 | Tl-particulate</sourceName>
+          <destinationName>Tl_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Tl-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>U-particulate3 | U-particulate</sourceName>
+          <destinationName>U_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">U-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>V-particulate3 | V-particulate</sourceName>
+          <destinationName>V_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">V-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Zn-filtered5 | Zn</sourceName>
+          <destinationName>Zn</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Zn-filtered5</att>
+          </addAttributes>
+      </dataVariable>
+      <dataVariable>
+          <sourceName>Zn-particulate3 | Zn-particulate</sourceName>
+          <destinationName>Zn_particulate</destinationName>
+          <dataType>float</dataType>
+          <!-- sourceAttributes>
+          </sourceAttributes -->
+          <addAttributes>
+              <att name="_FillValue" type="float">NaN</att>
+              <att name="ioos_category">Unknown</att>
+              <att name="long_name">Zn-particulate3</att>
+          </addAttributes>
+      </dataVariable>
+  </dataset>

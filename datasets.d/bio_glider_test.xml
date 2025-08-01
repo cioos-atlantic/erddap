@@ -1,0 +1,1173 @@
+<dataset type="EDDTableFromNcFiles" datasetID="Margaree_c9c6_e29e_09da" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/dfo/bio/glider/Margaree/</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="_NCProperties">version=2,netcdf=4.9.3-development,hdf5=1.14.2</att>
+        <att name="acknowledgement">Funding from Fisheries and Oceans Canada.</att>
+        <att name="cdm_data_type">Trajectory</att>
+        <att name="contributing_institutions">Bedford Institute of Oceanography, Bedford Institute of Oceanography</att>
+        <att name="contributing_institutions_role">Operator, PI</att>
+        <att name="contributing_institutions_role_vocabulary">http://vocab.nerc.ac.uk/collection/W08/current/CONT0003/, http://vocab.nerc.ac.uk/collection/W08/current/CONT0004/</att>
+        <att name="contributing_institutions_vocabulary">https://edmo.seadatanet.org/report/1811, https://edmo.seadatanet.org/report/1811</att>
+        <att name="contributor_name">David Hebert, Melany Belzile</att>
+        <att name="contributor_role">PI, Operator</att>
+        <att name="contributor_role_vocabulary">http://vocab.nerc.ac.uk/collection/W08/current/CONT0004/, http://vocab.nerc.ac.uk/collection/W08/current/CONT0003/</att>
+        <att name="Conventions">CF-1.8</att>
+        <att name="creator_email">BIO.Datashop@dfo-mpo.gc.ca</att>
+        <att name="creator_name">Bedford Institute of Oceanography</att>
+        <att name="creator_url">https://www.bio.gc.ca/index-en.php</att>
+        <att name="ctd">{&#39;calibration_date&#39;: &#39;2022-01-13&#39;, &#39;calibration_report&#39;: &#39;&quot;GPCTD_0241_20211216_P.pdf, GPCTD_0241_20211221_C_postCruise.pdf, GPCTD_0241_20211221_T_postCruise.pdf, GPCTD_0241_20220113_C.pdf, GPCTD_0241_20220113_T.pdf&quot;&#39;, &#39;comment&#39;: &#39; &#39;, &#39;factory_calibrated&#39;: &#39;yes&#39;, &#39;long_name&#39;: &#39;Glider Payload CTD&#39;, &#39;make&#39;: &#39;Sea-Bird&#39;, &#39;make_model&#39;: &#39;Sea-Bird GPCTD&#39;, &#39;model&#39;: &#39;GPCTD&#39;, &#39;platform&#39;: &#39;platform&#39;, &#39;serial_number&#39;: &#39;&quot;0241&quot;&#39;, &#39;type&#39;: &#39;platform&#39;}</att>
+        <att name="data_mode">P</att>
+        <att name="date_created">2025-01-03T12:59:40Z</att>
+        <att name="date_issued">2025-01-03T12:59:40Z</att>
+        <att name="date_modified">2025-01-03T12:59:56Z</att>
+        <att name="deployment_end">2022-03-24T12:25:04.207000000</att>
+        <att name="deployment_id" type="long">72</att>
+        <att name="deployment_name">dfo-Margaree024-20220303</att>
+        <att name="deployment_start">2022-03-03T12:08:22.879000000</att>
+        <att name="featureType">trajectory</att>
+        <att name="fluorometer">{&#39;calibration_date&#39;: &#39;2017-05-04&#39;, &#39;calibration_report&#39;: &#39;&quot;FLBBCD_4739_20170504.pdf&quot;&#39;, &#39;comment&#39;: &#39; &#39;, &#39;factory_calibrated&#39;: &#39;yes&#39;, &#39;long_name&#39;: &#39;ECO Chlorophyll Fluorometer&#39;, &#39;make&#39;: &#39;Wetlabs&#39;, &#39;make_model&#39;: &#39;Wetlabs FLBBCDEXP&#39;, &#39;model&#39;: &#39;FLBBCDEXP&#39;, &#39;platform&#39;: &#39;platform&#39;, &#39;serial_number&#39;: &#39;&quot;4739&quot;&#39;, &#39;type&#39;: &#39;platform&#39;}</att>
+        <att name="format_version">IOOS_Glider_NetCDF_v2.0.nc</att>
+        <att name="geospatial_lat_max" type="double">44.528000000000006</att>
+        <att name="geospatial_lat_min" type="double">42.80695000000001</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-61.70401666666667</att>
+        <att name="geospatial_lon_min" type="double">-63.43788333333334</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="glider_instrument_name">SeaExplorer</att>
+        <att name="glider_model">SeaExplorer</att>
+        <att name="glider_name">Margaree</att>
+        <att name="glider_serial">024</att>
+        <att name="glider_wmo" type="long">4800994</att>
+        <att name="history">CPROOF glider toolbox version: pre-tag</att>
+        <att name="id">Margaree024-20220303T1208</att>
+        <att name="institution">Bedford Institute of Oceanography</att>
+        <att name="institution_vocabulary">https://edmo.seadatanet.org/report/1811</att>
+        <att name="internal_mission_identifier">GLI2022_SEA024_72</att>
+        <att name="keywords">Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Dissolved Gases, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, AUVS &gt; Autonomous Underwater Vehicles</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">Open Government Licence - Canada</att>
+        <att name="Metadata_Conventions">CF-1.6, Unidata Dataset Discovery v1.0</att>
+        <att name="netcdf_version">4.0</att>
+        <att name="network">OceanGliders &gt; BOON &gt; Northwest Atlantic Ocean &gt; Atlantic Zone Monitoring Program</att>
+        <att name="oxygen">{&#39;calibration_date&#39;: &#39;2022-02-05&#39;, &#39;calibration_report&#39;: &#39;&quot;SEA032_RINKO_calib_files_SN0020_2022&quot;&#39;, &#39;comment&#39;: &#39; &#39;, &#39;factory_calibrated&#39;: &#39;yes&#39;, &#39;long_name&#39;: &#39;Fast optical DO&#39;, &#39;make&#39;: &#39;JFE Advantech Co., Ltd.&#39;, &#39;make_model&#39;: &#39;JFE Advantech Co., Ltd. AROD-FT-CE&#39;, &#39;model&#39;: &#39;AROD-FT-CE&#39;, &#39;platform&#39;: &#39;platform&#39;, &#39;serial_number&#39;: &#39;&quot;0020&quot;&#39;, &#39;type&#39;: &#39;platform&#39;}</att>
+        <att name="platform">sub-surface gliders</att>
+        <att name="platform_model">SeaExplorer</att>
+        <att name="platform_name">Margaree</att>
+        <att name="platform_serial_number">024</att>
+        <att name="platform_type">SeaExplorer Glider</att>
+        <att name="platform_vocabulary">https://vocab.nerc.ac.uk/collection/L06/current/27/</att>
+        <att name="processing_level">Level 0 (L0) processed data timeseries; no corrections or data screening</att>
+        <att name="project">Atlantic Zone Monitoring Program</att>
+        <att name="publisher_email">BIO.Datashop@dfo-mpo.gc.ca</att>
+        <att name="publisher_name">Bedford Institute of Oceanography</att>
+        <att name="publisher_url">https://www.bio.gc.ca/index-en.php</att>
+        <att name="sea_name">Northwest Atlantic Ocean (limit-40 W)</att>
+        <att name="source">Observational data from a profiling glider.</att>
+        <att name="standard_name_vocabulary">CF STandard Name Table v72</att>
+        <att name="summary">The Atlantic Zone Monitoring Program (AZMP) was implemented in year 1998 by the four Atlantic regions of Fisheries and Oceans Canada to collect and analyze the biological, chemical, and physical oceanographic field data to characterize and understand the causes of oceanic variability at various time scales, provide multidisciplinary datasets to establish relationships among variables, and provide adequate data to support the development of ocean activities. Ocean gliders were acquired by Fisheries and Oceans Canada in year 2017 and 2018 for both the West and East coast. On the East coast, they have been used to monitor hydrographic sections associated with the AZMP. Here, the AZMP Halifax line is occupied from outside the mouth of Halifax harbor, Nova Scotia Canada at (44.267N, 63.317W) in the off-shelf direction approximately 135 nautical miles to deep waters off the continental slope at (42.475N, 61.433W).</att>
+        <att name="time_coverage_end">2022-03-24T12:25:04.207000000</att>
+        <att name="time_coverage_start">2022-03-03T12:08:22.879000000</att>
+        <att name="title">Margaree024-20220303T1208</att>
+        <att name="uvFluorometer">{&#39;calibration_date&#39;: &#39;2020-03-16&#39;, &#39;calibration_report&#39;: &#39;&quot;MFLUV1_7_20200316.pdf&quot;&#39;, &#39;comment&#39;: &#39; &#39;, &#39;factory_calibrated&#39;: &#39;yes&#39;, &#39;long_name&#39;: &#39;MiniFluo UV1&#39;, &#39;make&#39;: &#39;Alseamar&#39;, &#39;make_model&#39;: &#39;Alseamar MFL#27&#39;, &#39;model&#39;: &#39;MFL#27&#39;, &#39;platform&#39;: &#39;platform&#39;, &#39;serial_number&#39;: &#39;&quot;MFL-01-M-10000-ENS-001-SN7&quot;&#39;, &#39;type&#39;: &#39;platform&#39;}</att>
+        <att name="wmo_id" type="long">4800994</att>
+        <att name="wmo_identifier" type="long">4800994</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="_NCProperties">null</att>
+        <att name="cdm_trajectory_variables">trajectory</att>
+        <att name="contributing_institutions_role_vocabulary">https://vocab.nerc.ac.uk/collection/W08/current/CONT0003/, https://vocab.nerc.ac.uk/collection/W08/current/CONT0004/</att>
+        <att name="contributor_role_vocabulary">https://vocab.nerc.ac.uk/collection/W08/current/CONT0004/, https://vocab.nerc.ac.uk/collection/W08/current/CONT0003/</att>
+        <att name="Conventions">CF-1.10, COARDS, ACDD-1.3</att>
+        <att name="infoUrl">https://www.bio.gc.ca/index-en.php</att>
+        <att name="institution">DFO</att>
+        <att name="keywords">20220303t1208, angle, autonomous, auvs, AUVS &gt; Autonomous Underwater Vehicles, averaged, backscattering, BBP700, bedford, CDOM, center, chemistry, chlorophyll, chlorophyll-a, circulation, CNDC, color, colored, coloured, compass, concentration, concentration_of_chlorophyll_in_sea_water, conductivity, conductivity_qc, ctd, currents, data, density, density_qc, department, deployment, depth, depth-averaged, depth_qc, dfo, direction, dissolved, dissolved o2, DOXY, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Dissolved Gases, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Oxygen, Earth Science &gt; Oceans &gt; Ocean Circulation &gt; Ocean Currents, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, east, eastward, eastward_sea_water_velocity, electrical, equals, fisheries, flag, fluorescence, FLUORESCENCE_CHLA, gases, glider, GLIDER_HEADING, GLIDER_PITCH, GLIDER_ROLL, heading, horizontal, identifier, in-situ, inclinometer, index, initial, institute, instrument_ctd, its, its-90, lat_qc, lat_uv, latitude, level, lon_qc, lon_uv, longitude, magnetic, margaree, margaree024, margaree024-20220303t1208, matter, measurement, mfluv1, MFLUV1_NAPH_SCALED, MFLUV1_PHE_SCALED, MFLUV1_TMP, MFLUV1_TRY_SCALED, mole, mole_concentration_of_dissolved_molecular_oxygen_in_sea_water, molecular, name, nanometers, naph, north, northward, northward_sea_water_velocity, O2, ocean, ocean color, oceanography, oceans, organic, orientation, oxygen, particle, payload, phe, pitch, platform, platform_pitch, platform_roll, practical, PRES, pressure, pressure_qc, profile, profile_direction, profile_id, profile_index, profile_lat, profile_lon, profile_time, PSAL, quality, quality_flag, relative, roll, salinity, salinity/density, salinity_qc, scale, scaled, science, sea, sea level, sea-level, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_temperature, seaexplorermargaree024, seawater, sensor, signal, situ, sonde, speed, TEMP, TEMP_DOXY, temperature, temperature_of_sensor_for_oxygen_in_sea_water, temperature_qc, test, time, time_uv, tmp, trajectory, trajectory/deployment, try, u, underwater, v, varname, vehicles, velocity, vertical, water</att>
+        <att name="Metadata_Conventions">null</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="subsetVariables">GLIDER_HEADING, GLIDER_PITCH, GLIDER_ROLL, profile_index, profile_direction, temperature_qc, pressure_qc, conductivity_qc, salinity_qc, density_qc, lon_qc, lat_qc, depth_qc, trajectory, u, v, profile_id, profile_time, profile_lon, profile_lat, platform, lat_uv, lon_uv, time_uv, instrument_ctd</att>
+        <att name="summary">Margaree024-20220303T1208. Department of Fisheries and Oceans (DFO) test. DFO data from a local source.</att>
+        <att name="time_coverage_end">2022-03-24T12:25:04.207000000Z</att>
+        <att name="time_coverage_start">2022-03-03T12:08:22.879000000Z</att>
+        <att name="title">Margaree024-20220303T1208 (DFO Margaree Glider test)</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="long_name">Time</att>
+            <att name="observation_type">measured</att>
+            <att name="source">Timestamp</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>BBP700</sourceName>
+        <destinationName>BBP700</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_fluorometer</att>
+            <att name="long_name">Particle backscattering at 700 nanometers</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">FLBBCD_BB_700_SCALED</att>
+            <att name="units">/m/sr</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/PMSR/</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/BBP700/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/PMSR/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/BBP700/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CDOM</sourceName>
+        <destinationName>CDOM</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_fluorometer</att>
+            <att name="long_name">Concentration of coloured dissolved organic matter in sea water</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">FLBBCD_CDOM_SCALED</att>
+            <att name="units">ppb</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UPPB/</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/CDOM/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UPPB/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/CDOM/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DOXY</sourceName>
+        <destinationName>DOXY</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">2.0</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_oxygen</att>
+            <att name="long_name">Dissolved oxygen</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="resolution" type="double">0.01</att>
+            <att name="source">AROD_FT_DO</att>
+            <att name="standard_name">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</att>
+            <att name="units">umol/kg</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/KGUM/</att>
+            <att name="valid_max" type="double">425.0</att>
+            <att name="valid_min" type="double">0.0</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/DOXY/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">500.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="resolution">null</att>
+            <att name="units">µmole/kg</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/KGUM/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/DOXY/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>FLUORESCENCE_CHLA</sourceName>
+        <destinationName>FLUORESCENCE_CHLA</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_fluorometer</att>
+            <att name="long_name">Chlorophyll-A signal from fluorescence sensor</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">FLBBCD_CHL_SCALED</att>
+            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">Dmnless</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UUUU/</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/FLUOCHLA/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.03</att>
+            <att name="colorBarScale">Log</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Ocean Color</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UUUU/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/FLUOCHLA/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>GLIDER_HEADING</sourceName>
+        <destinationName>GLIDER_HEADING</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="long_name">Orientation (horizontal relative to magnetic north) of measurement platform {heading} by compass</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">Heading</att>
+            <att name="units">deg</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/HEADING/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/HEADING/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>GLIDER_PITCH</sourceName>
+        <destinationName>GLIDER_PITCH</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="long_name">Orientation (pitch) of measurement platform by inclinometer</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">Pitch</att>
+            <att name="standard_name">platform_pitch</att>
+            <att name="units">deg</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/PITCH/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/PITCH/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>GLIDER_ROLL</sourceName>
+        <destinationName>GLIDER_ROLL</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="long_name">Orientation (roll angle) of measurement platform by inclinometer</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">Roll</att>
+            <att name="standard_name">platform_roll</att>
+            <att name="units">deg</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/ROLL/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/ROLL/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>MFLUV1_NAPH_SCALED</sourceName>
+        <destinationName>MFLUV1_NAPH_SCALED</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_uvFluorometer</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">MFLUV1_NAPH_SCALED</att>
+            <att name="units">ug l-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">MFLUV1 NAPH SCALED</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>MFLUV1_PHE_SCALED</sourceName>
+        <destinationName>MFLUV1_PHE_SCALED</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_uvFluorometer</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">MFLUV1_PHE_SCALED</att>
+            <att name="units">ug l-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">MFLUV1 PHE SCALED</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>MFLUV1_TMP</sourceName>
+        <destinationName>MFLUV1_TMP</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_uvFluorometer</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">MFLUV1_TMP</att>
+            <att name="units">Celsius</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">MFLUV1 TMP</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">degree_C</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>MFLUV1_TRY_SCALED</sourceName>
+        <destinationName>MFLUV1_TRY_SCALED</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_uvFluorometer</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="source">MFLUV1_TRY_SCALED</att>
+            <att name="units">ug l-1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">MFLUV1 TRY SCALED</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TEMP_DOXY</sourceName>
+        <destinationName>TEMP_DOXY</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">0.01</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_oxygen</att>
+            <att name="long_name">Sea temperature from oxygen sensor ITS-90 scale</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="resolution" type="double">0.001</att>
+            <att name="source">AROD_FT_TEMP</att>
+            <att name="standard_name">temperature_of_sensor_for_oxygen_in_sea_water</att>
+            <att name="units">degC</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UPAA/</att>
+            <att name="valid_max" type="double">45.0</att>
+            <att name="valid_min" type="double">-3.0</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/TEMPDOXY/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">500.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="resolution">null</att>
+            <att name="units">degree_C</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UPAA/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/TEMPDOXY/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CNDC</sourceName>
+        <destinationName>CNDC</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">3.0E-4</att>
+            <att name="ancillary_variables">conductivity_qc</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_ctd</att>
+            <att name="long_name">Electrical conductivity</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="replaceName">CNDC</att>
+            <att name="resolution" type="double">1.0E-5</att>
+            <att name="source">GPCTD_CONDUCTIVITY</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">S m-1</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UECA/</att>
+            <att name="valid_max" type="double">9.0</att>
+            <att name="valid_min" type="double">0.0</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/CNDC/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">30.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="resolution">null</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UECA/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/CNDC/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="axis">Y</att>
+            <att name="conversion">nmea2deg</att>
+            <att name="coordinate_reference_frame">urn: ogc:crs: EPSG::4326</att>
+            <att name="long_name">Latitude north</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="reference">WGS84</att>
+            <att name="source">NAV_LATITUDE</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/DEGN/</att>
+            <att name="valid_max">90.00</att>
+            <att name="valid_min">-90.00</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/LAT/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="reference">null</att>
+            <att name="references">WGS84</att>
+            <att name="units">degrees_north</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/DEGN/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/LAT/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="axis">X</att>
+            <att name="conversion">nmea2deg</att>
+            <att name="coordinate_reference_frame">urn: ogc:crs: EPSG::4326</att>
+            <att name="long_name">Longitude east</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="reference">WGS84</att>
+            <att name="source">NAV_LONGITUDE</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degree_east</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/DEGE/</att>
+            <att name="valid_max">180.00</att>
+            <att name="valid_min">-180.00</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/LON/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="reference">null</att>
+            <att name="references">WGS84</att>
+            <att name="units">degrees_east</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/DEGE/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/LON/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PRES</sourceName>
+        <destinationName>PRES</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">0.1</att>
+            <att name="ancillary_variables">pressure_qc</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_ctd</att>
+            <att name="long_name">Sea water pressure, equals 0 at sea-level</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="positive">down</att>
+            <att name="reference_datum">sea-surface</att>
+            <att name="replaceName">PRES</att>
+            <att name="resolution" type="double">0.002</att>
+            <att name="source">GPCTD_PRESSURE</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dbar</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UPDB/</att>
+            <att name="valid_max" type="double">1000.0</att>
+            <att name="valid_min" type="double">0.0</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/PRES/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">5000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Sea Level</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="resolution">null</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UPDB/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/PRES/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TEMP</sourceName>
+        <destinationName>TEMP</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">0.002</att>
+            <att name="ancillary_variables">temperature_qc</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_ctd</att>
+            <att name="long_name">Sea temperature in-situ ITS-90 scale</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="replaceName">TEMP</att>
+            <att name="resolution" type="double">0.001</att>
+            <att name="source">GPCTD_TEMPERATURE</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degC</att>
+            <att name="unitsvocabulary">http://vocab.nerc.ac.uk/collection/P06/current/UPAA/</att>
+            <att name="valid_max" type="double">42.0</att>
+            <att name="valid_min" type="double">-5.0</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/TEMP/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">32.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="resolution">null</att>
+            <att name="units">degree_C</att>
+            <att name="unitsvocabulary">https://vocab.nerc.ac.uk/collection/P06/current/UPAA/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/TEMP/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">1.0</att>
+            <att name="ancillary_variables">depth_qc</att>
+            <att name="comment">from science pressure and interpolated</att>
+            <att name="instrument">instrument_ctd</att>
+            <att name="long_name">glider depth</att>
+            <att name="observation_type">calulated</att>
+            <att name="platform">platform</att>
+            <att name="positive">down</att>
+            <att name="precision" type="double">2.0</att>
+            <att name="reference_datum">surface</att>
+            <att name="resolution" type="double">0.02</att>
+            <att name="source">pressure</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+            <att name="valid_max" type="double">2000.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+            <att name="ioos_category">Location</att>
+            <att name="resolution">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>profile_index</sourceName>
+        <destinationName>profile_index</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="comment">N = inside profile N, N + 0.5 = between profiles N and N + 1</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="filt_length" type="long">19</att>
+            <att name="long_name">profile index</att>
+            <att name="method">get_profiles_new</att>
+            <att name="min_dp" type="double">10.0</att>
+            <att name="min_nsamples" type="long">98</att>
+            <att name="sources">time pressure</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>profile_direction</sourceName>
+        <destinationName>profile_direction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="comment">-1 = ascending, 0 = inflecting or stalled, 1 = descending</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="long_name">glider vertical speed direction</att>
+            <att name="method">get_profiles_new</att>
+            <att name="sources">time pressure</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">360.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Currents</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PSAL</sourceName>
+        <destinationName>PSAL</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accuracy" type="double">0.01</att>
+            <att name="ancillary_variables">salinity_qc</att>
+            <att name="comment">raw, uncorrected salinity</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="instrument">instrument_ctd</att>
+            <att name="long_name">water salinity</att>
+            <att name="method">get_derived_eos_raw</att>
+            <att name="observation_type">calulated</att>
+            <att name="platform">platform</att>
+            <att name="precision" type="double">0.01</att>
+            <att name="resolution" type="double">0.001</att>
+            <att name="sources">conductivity temperature pressure</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">1e-3</att>
+            <att name="valid_max" type="double">40.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">37.0</att>
+            <att name="colorBarMinimum" type="double">32.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="resolution">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>lat</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">lat_qc</att>
+            <att name="axis">Y</att>
+            <att name="conversion">nmea2deg</att>
+            <att name="coordinate_reference_frame">urn: ogc:crs: EPSG::4326</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="long_name">Latitude north</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="reference">WGS84</att>
+            <att name="source">NAV_LATITUDE</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/DEGN/</att>
+            <att name="valid_max">90.00</att>
+            <att name="valid_min">-90.00</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/LAT/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+            <att name="reference">null</att>
+            <att name="references">WGS84</att>
+            <att name="units">degrees_north</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/DEGN/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/LAT/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>lon</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">lon_qc</att>
+            <att name="axis">X</att>
+            <att name="conversion">nmea2deg</att>
+            <att name="coordinate_reference_frame">urn: ogc:crs: EPSG::4326</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="long_name">Longitude east</att>
+            <att name="observation_type">measured</att>
+            <att name="platform">platform</att>
+            <att name="reference">WGS84</att>
+            <att name="source">NAV_LONGITUDE</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degree_east</att>
+            <att name="unitsVocabulary">http://vocab.nerc.ac.uk/collection/P06/current/DEGE/</att>
+            <att name="valid_max">180.00</att>
+            <att name="valid_min">-180.00</att>
+            <att name="vocabulary">http://vocab.nerc.ac.uk/collection/OG1/current/LON/</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+            <att name="reference">null</att>
+            <att name="references">WGS84</att>
+            <att name="units">degrees_east</att>
+            <att name="unitsVocabulary">https://vocab.nerc.ac.uk/collection/P06/current/DEGE/</att>
+            <att name="vocabulary">https://vocab.nerc.ac.uk/collection/OG1/current/LON/</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>temperature_qc</sourceName>
+        <destinationName>temperature_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pressure_qc</sourceName>
+        <destinationName>pressure_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>conductivity_qc</sourceName>
+        <destinationName>conductivity_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>salinity_qc</sourceName>
+        <destinationName>salinity_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>density_qc</sourceName>
+        <destinationName>density_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lon_qc</sourceName>
+        <destinationName>lon_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lat_qc</sourceName>
+        <destinationName>lat_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth_qc</sourceName>
+        <destinationName>depth_qc</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">PASS NOT_EVALUATED SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="long_name">Initial flag for {varname}</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="units">1</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+            <att name="standard_name">depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>trajectory</sourceName>
+        <destinationName>trajectory</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="comment">A trajectory is a singledeployment of a glider and may span multiple data files.</att>
+            <att name="long_name">Trajectory/Deployment Name</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="cf_role">trajectory_id</att>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>u</sourceName>
+        <destinationName>u</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Depth-Averaged Eastward Sea Water Velocity</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">eastward_sea_water_velocity</att>
+            <att name="units">m s-1</att>
+            <att name="valid_max" type="long">10</att>
+            <att name="valid_min" type="long">-10</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>v</sourceName>
+        <destinationName>v</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Depth-Averaged Northward Sea Water Velocity</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">northward_sea_water_velocity</att>
+            <att name="units">m s-1</att>
+            <att name="valid_max" type="long">10</att>
+            <att name="valid_min" type="long">-10</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">0.5</att>
+            <att name="colorBarMinimum" type="double">-0.5</att>
+            <att name="ioos_category">Currents</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>profile_id</sourceName>
+        <destinationName>profile_id</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-1</att>
+            <att name="long_name">Profile ID</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="valid_max" type="int">2147483647</att>
+            <att name="valid_min" type="int">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">2.5E9</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Identifier</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>profile_time</sourceName>
+        <destinationName>profile_time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-99999.0</att>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="long_name">Profile Center Time</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>profile_lon</sourceName>
+        <destinationName>profile_lon</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Profile Center Longitude</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degree_east</att>
+            <att name="valid_max">180.00</att>
+            <att name="valid_min">-180.00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>profile_lat</sourceName>
+        <destinationName>profile_lat</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Profile Center Latitude</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+            <att name="valid_max">90.00</att>
+            <att name="valid_min">-90.00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>platform</sourceName>
+        <destinationName>platform</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-1</att>
+            <att name="comment">SeaExplorer operated by Bedford Institute of Oceanography</att>
+            <att name="id">Margaree024</att>
+            <att name="instrument">instrument_ctd</att>
+            <att name="long_name">SeaExplorerMargaree024</att>
+            <att name="type">platform</att>
+            <att name="wmo_id" type="long">4800994</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lat_uv</sourceName>
+        <destinationName>lat_uv</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Depth-Averaged Latitude</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degree_north</att>
+            <att name="valid_max">90.00</att>
+            <att name="valid_min">-90.00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lon_uv</sourceName>
+        <destinationName>lon_uv</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Depth-Averaged Longitude</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degree_east</att>
+            <att name="valid_max">180.00</att>
+            <att name="valid_min">-180.00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time_uv</sourceName>
+        <destinationName>time_uv</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="long_name">Depth-Averaged Time</att>
+            <att name="observation_type">calculated</att>
+            <att name="platform">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>instrument_ctd</sourceName>
+        <destinationName>instrument_ctd</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-1</att>
+            <att name="calibration_date">2022-01-13</att>
+            <att name="calibration_report">&quot;GPCTD_0241_20211216_P.pdf, GPCTD_0241_20211221_C_postCruise.pdf, GPCTD_0241_20211221_T_postCruise.pdf, GPCTD_0241_20220113_C.pdf, GPCTD_0241_20220113_T.pdf&quot;</att>
+            <att name="factory_calibrated">yes</att>
+            <att name="long_name">Glider Payload CTD</att>
+            <att name="make">Sea-Bird</att>
+            <att name="make_model">Sea-Bird GPCTD</att>
+            <att name="model">GPCTD</att>
+            <att name="platform">platform</att>
+            <att name="serial_number">&quot;0241&quot;</att>
+            <att name="type">platform</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+
+
