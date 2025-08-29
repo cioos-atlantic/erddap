@@ -150,6 +150,7 @@
     <addAttributes>
       <att name="ioos_category">Location</att>
       <att name="long_name">Deployment sounding depth</att>
+      <att name="positive">down</att>
       <att name="standard_name">depth</att>
       <att name="units">m</att>
     </addAttributes>
@@ -259,6 +260,7 @@
     <addAttributes>
       <att name="ioos_category">Location</att>
       <att name="long_name">Sensor depth below surface</att>
+      <att name="positive">down</att>
       <att name="standard_name">depth</att>
       <att name="units">m</att>
     </addAttributes>
