@@ -1,8 +1,8 @@
   <!-- BIO AZMP BOTTLE TEST: START -->
-  <dataset type="EDDTableFromAsciiFiles" datasetID="bio_atlantic_zone_monitoring_program_bottle" active="true">
+  <dataset type="EDDTableFromAsciiFiles" datasetID="bio_bedford_basin_bottle_data" active="true">
       <reloadEveryNMinutes>10080</reloadEveryNMinutes>
       <updateEveryNMillis>10000</updateEveryNMillis>
-      <fileDir>/datasets/dfo/bio/bottle/</fileDir>
+      <fileDir>/datasets/dfo/bio/bottle/Bedford Basin</fileDir>
       <fileNameRegex>.*</fileNameRegex>
       <recursive>true</recursive>
       <pathRegex>.*</pathRegex>
@@ -260,36 +260,36 @@
               <att name="long_name">QC</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>Ag-particulate2 | Ag-particulate</sourceName>
           <destinationName>Ag_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Ag-particulate2</att>
           </addAttributes>
       </dataVariable>
+      -->
+      <!--
       <dataVariable>
           <sourceName>Al-particulate4 | Al-particulate</sourceName>
           <destinationName>Al_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Al-particulate4</att>
           </addAttributes>
       </dataVariable>
-      <dataVariable>
+      -->
+      <!--dataVariable>
           <sourceName>Alkalinity | Alkalinity</sourceName>
           <destinationName>Alkalinity</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
+          <sourceAttributes>
+          </sourceAttributes>
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">CO2</att>
@@ -299,13 +299,11 @@
               <att name="sdn_parameter_urn">SDN:P01::MDMAP014</att>
               <att name="units">µmol/kg</att>
           </addAttributes>
-      </dataVariable>
-      <dataVariable>
+      </dataVariable -->
+      <!--dataVariable>
           <sourceName>Alkalinity_umol/kg | Alkalinity</sourceName>
           <destinationName>Alkalinity_umol_kg</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">CO2</att>
@@ -315,13 +313,12 @@
               <att name="sdn_parameter_urn">SDN:P01::MDMAP014</att>
               <att name="units">µmol/kg</att>
           </addAttributes>
-      </dataVariable>
+      </dataVariable-->
+      <!--
       <dataVariable>
           <sourceName>As-particulate4 | As-particulate</sourceName>
           <destinationName>As_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -332,8 +329,6 @@
           <sourceName>Ba-particulate4 | Ba-particulate</sourceName>
           <destinationName>Ba_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -344,8 +339,6 @@
           <sourceName>Be-particulate4 | Be-particulate</sourceName>
           <destinationName>Be_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -356,8 +349,6 @@
           <sourceName>Bi-particulate2 | Bi-particulate</sourceName>
           <destinationName>Bi_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -368,8 +359,6 @@
           <sourceName>Ca-particulate4 | Ca-particulate</sourceName>
           <destinationName>Ca_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -380,8 +369,6 @@
           <sourceName>Cd-filtered5 | Cd</sourceName>
           <destinationName>Cd</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -392,14 +379,13 @@
           <sourceName>Cd-particulate3 | Cd-particulate</sourceName>
           <destinationName>Cd_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Cd-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
       <!--dataVariable>
           <sourceName>Chl_a | Chlorophyll A</sourceName>
           <destinationName>Chlorophyll_A</destinationName>
@@ -451,30 +437,30 @@
               <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
           </addAttributes>
       </dataVariable-->
+      <!--
       <dataVariable>
           <sourceName>Chl_Fluor_Voltage | CHL-SENSOR insitu</sourceName>
           <destinationName>CHL_SENSOR_insitu</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Optical Properties</att>
               <att name="long_name">Chl Fluor Voltage</att>
           </addAttributes>
       </dataVariable>
+      -->
+      <!--
       <dataVariable>
           <sourceName>Co-particulate3 | Co-particulate</sourceName>
           <destinationName>Co_particulate3</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Co-particulate</att>
           </addAttributes>
       </dataVariable>
+      -->
       <dataVariable>
           <sourceName>conductivity_CTD | conductivity_CTD</sourceName>
           <destinationName>conductivity_CTD</destinationName>
@@ -494,12 +480,11 @@
               <att name="units">S/m</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>Cr-particulate3 | Cr-particulate</sourceName>
           <destinationName>Cr_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -510,8 +495,6 @@
           <sourceName>Cu-filtered6 | Cu</sourceName>
           <destinationName>Cu</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -522,8 +505,6 @@
           <sourceName>Cu-particulate3 | Cu-particulate</sourceName>
           <destinationName>Cu_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -534,8 +515,6 @@
           <sourceName>Fe-filtered5 | Fe</sourceName>
           <destinationName>Fe</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -546,14 +525,13 @@
           <sourceName>Fe-particulate3 | Fe-particulate</sourceName>
           <destinationName>Fe_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Fe-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
       <dataVariable>
           <sourceName>HPLC_ACAROT | HPLC_ACAROT</sourceName>
           <destinationName>HPLC_ACAROT</destinationName>
@@ -629,18 +607,18 @@
               <att name="sdn_parameter_urn">SDN:P01::BUTAHPP1</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>HPLC_BUTLIKE | HPLC_BUTLIKE</sourceName>
           <destinationName>HPLC_BUTLIKE</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">HPLC BUTLIKE</att>
           </addAttributes>
       </dataVariable>
+      -->
       <dataVariable>
           <sourceName>HPLC_CHLA | HPLC_CHLA</sourceName>
           <destinationName>HPLC_CHLA</destinationName>
@@ -653,7 +631,7 @@
               <att name="colorBarMinimum" type="double">0.03</att>
               <att name="colorBarScale">Log</att>
               <att name="ioos_category">Ocean Color</att>
-              <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+              <att name="long_name">Concentration Of Chlorophyll-a In Sea Water</att>
               <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
               <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
               <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CPHLHPP1/</att>
@@ -669,7 +647,7 @@
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC CHLB</att>
+              <att name="long_name">HPLC_CHLB (chlorophyll-b)</att>
               <att name="sdn_parameter_name">Concentration of chlorophyll-b {chl-b CAS 519-62-0} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
               <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CHLBHPP1/</att>
               <att name="sdn_parameter_urn">SDN:P01::CHLBHPP1</att>
@@ -714,7 +692,7 @@
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC CHLIDEA</att>
+              <att name="long_name">HPLC CHLIDEA (Chlorophyllide)</att>
               <att name="sdn_parameter_name">Concentration of chlorophyllide-a {CAS 14897-06-4} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
               <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/CIDAHPP1/</att>
               <att name="sdn_parameter_urn">SDN:P01::CIDAHPP1</att>
@@ -722,7 +700,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_DIADINOX | HPLC_DIADINOX</sourceName>
-          <destinationName>HPLC_DIADINOX_HPLC_DIADINOX</destinationName>
+          <destinationName>HPLC_DIADINOX</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -789,18 +767,17 @@
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC HEXLIKE</att>
+              <att name="long_name">HPLC HEXLIKE (hexanoyloxyfucoxanthin-like pigment)</att>
               <att name="sdn_parameter_name">Concentration of hexanoyloxyfucoxanthin-like pigment per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
               <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/HEXLHPP1/</att>
               <att name="sdn_parameter_urn">SDN:P01::HEXLHPP1</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>HPLC_HEXLIKE2</sourceName>
           <destinationName>HPLC_HEXLIKE2</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -810,6 +787,7 @@
               <att name="sdn_parameter_urn">SDN:P01::HEXLHPP1</att>
           </addAttributes>
       </dataVariable>
+      -->
       <dataVariable>
           <sourceName>HPLC_PERID | HPLC_PERID</sourceName>
           <destinationName>HPLC_PERID</destinationName>
@@ -842,26 +820,29 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_PRASINOX | HPLC_PRASINOX</sourceName>
-          <destinationName>HPLC_PRASINOX_HPLC_PRASINOX</destinationName>
+          <destinationName>HPLC_PRASINOX</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC PRASINOX   HPLC PRASINOX</att>
+              <att name="long_name">HPLC PRASINOX (prasinoxanthin)</att>
           </addAttributes>
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_PYROPHAE | HPLC_PYROPHAE</sourceName>
-          <destinationName>HPLC_PYROPHAE_HPLC_PYROPHAE</destinationName>
+          <destinationName>HPLC_PYROPHAE</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC PYROPHAE   HPLC PYROPHAE</att>
+              <att name="long_name">HPLC_PYROPHAE (pyrophaeophorbide)</att>
+              <att name="sdn_parameter_name">The amount (mass or moles) of the specified pigment determined by HPLC assay of a sample collected by dissolution in acetone of the residue collected by GF/F filtration of a known volume of any water body. The quoted value either results from a single determination or the average of replicate determinations.</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/PYPBHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PYPBHPP1</att>
           </addAttributes>
       </dataVariable>
       <dataVariable>
@@ -874,6 +855,9 @@
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">HPLC VIOLAX   HPLC VIOLAX</att>
+              <att name="sdn_parameter_name">Concentration of violaxanthin {CAS 126-29-4} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/VILXHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::VILXHPP1</att>
           </addAttributes>
       </dataVariable>
       <dataVariable>
@@ -891,12 +875,11 @@
               <att name="sdn_parameter_urn">SDN:P01::ZEOXHPP1</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>K-particulate3 | K-particulate</sourceName>
           <destinationName>K_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -907,8 +890,6 @@
           <sourceName>Li-particulate3 | Li-particulate</sourceName>
           <destinationName>Li_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -919,8 +900,6 @@
           <sourceName>Mg-particulate3 | Mg-particulate</sourceName>
           <destinationName>Mg_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -931,8 +910,6 @@
           <sourceName>Mn-filtered4 | Mn</sourceName>
           <destinationName>Mn_filtered4</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -943,8 +920,6 @@
           <sourceName>Mn-filtered5 | Mn</sourceName>
           <destinationName>Mn_filtered5</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -955,8 +930,6 @@
           <sourceName>Mn-particulate3 | Mn-particulate</sourceName>
           <destinationName>Mn_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -967,8 +940,6 @@
           <sourceName>Mo-particulate3 | Mo-particulate</sourceName>
           <destinationName>Mo_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -979,14 +950,13 @@
           <sourceName>Na-particulate3 | Na-particulate</sourceName>
           <destinationName>Na_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Na-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
       <!--dataVariable>
           <sourceName>NH3_0 | Ammonia</sourceName>
           <destinationName>Ammonia</destinationName>
@@ -1003,9 +973,9 @@
               <att name="standard_name">mole_concentration_of_ammonium_in_sea_water</att>
           </addAttributes>
       </dataVariable-->
-      <!--dataVariable>
+      <dataVariable>
           <sourceName>NH3_3 | Ammonia</sourceName>
-          <destinationName>Ammonia_3</destinationName>
+          <destinationName>Ammonia</destinationName>
           <dataType>float</dataType>
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
@@ -1018,13 +988,12 @@
               <att name="sdn_parameter_urn">SDN:P01::AMONAATX</att>
               <att name="standard_name">mole_concentration_of_ammonium_in_sea_water</att>
           </addAttributes>
-      </dataVariable-->
+      </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>NH3_Tech_F | Ammonia</sourceName>
           <destinationName>Ammonia</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="colorBarMaximum" type="double">5.0</att>
@@ -1042,8 +1011,6 @@
           <sourceName>Ni-filtered5 | Ni</sourceName>
           <destinationName>Ni</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1054,14 +1021,13 @@
           <sourceName>Ni-particulate3 | Ni-particulate</sourceName>
           <destinationName>Ni_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Ni-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
       <!--dataVariable>
           <sourceName>NO2_0 | Nitrite</sourceName>
           <destinationName>Nitrite</destinationName>
@@ -1150,7 +1116,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>O2_CTD_mLL | O2</sourceName>
-          <destinationName>O2_CTD_mLL</destinationName>
+          <destinationName>Oxygen_CTD_mLL (ml/L)</destinationName>
           <dataType>double</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -1209,7 +1175,7 @@
       </dataVariable-->
       <dataVariable>
           <sourceName>O2_Winkler_Auto | O2</sourceName>
-          <destinationName>O2_Winkler_Auto</destinationName>
+          <destinationName>Oxygen_Winkler_Auto</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -1223,12 +1189,11 @@
               <att name="units">ml/L</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>P-particulate3 | P-particulate</sourceName>
           <destinationName>P_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1239,8 +1204,6 @@
           <sourceName>PAR | PAR</sourceName>
           <destinationName>PAR</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Optical Properties</att>
@@ -1255,8 +1218,6 @@
           <sourceName>PAR_4pi_Index1 | PAR_4pi_Index</sourceName>
           <destinationName>PAR_4pi_Index</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Optical Properties</att>
@@ -1271,8 +1232,6 @@
           <sourceName>PAR_on_Deck | PAR</sourceName>
           <destinationName>PAR_on_Deck</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Optical Properties</att>
@@ -1287,8 +1246,6 @@
           <sourceName>Pb-filtered4 | Pb</sourceName>
           <destinationName>Pb</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1299,20 +1256,17 @@
           <sourceName>Pb-particulate3 | Pb-particulate</sourceName>
           <destinationName>Pb_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Pb-particulate3</att>
           </addAttributes>
       </dataVariable>
-      <dataVariable>
+      -->
+      <!--dataVariable>
           <sourceName>pCO2 | CO2 (pH)</sourceName>
           <destinationName>CO2_pH</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">CO2</att>
@@ -1322,13 +1276,11 @@
               <att name="sdn_parameter_urn">SDN:P01::PCO2GC01</att>
               <att name="units">µatm</att>
           </addAttributes>
-      </dataVariable>
-      <dataVariable>
+      </dataVariable-->
+      <!--dataVariable>
           <sourceName>pH_CTD_nocal | pH</sourceName>
           <destinationName>pH_CTD_nocal</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Salinity</att>
@@ -1338,7 +1290,7 @@
               <att name="sdn_parameter_urn">SDN:P01::PHXXPR01</att>
               <att name="units">pH</att>
           </addAttributes>
-      </dataVariable>
+      </dataVariable-->
       <!--dataVariable>
           <sourceName>pH_invitro_temp | pH_invitro_temp</sourceName>
           <destinationName>pH_invitro_temp</destinationName>
@@ -1404,7 +1356,7 @@
       </dataVariable-->
       <dataVariable>
           <sourceName>PO4_Tech_F | Phosphate</sourceName>
-          <destinationName>Phosphate_Tech_F</destinationName>
+          <destinationName>Phosphate</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -1475,18 +1427,18 @@
               <att name="long_name">Pressure</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>Ru-particulate3 | Ru-particulate</sourceName>
           <destinationName>Ru_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Ru-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
       <dataVariable>
           <sourceName>Salinity_CTD | Salinity</sourceName>
           <destinationName>Salinity_CTD</destinationName>
@@ -1543,7 +1495,7 @@
       </dataVariable-->
       <dataVariable>
           <sourceName>Salinity_Sal_PSS | Salinity</sourceName>
-          <destinationName>Salinity_Sal_PSS</destinationName>
+          <destinationName>Salinity_PSS</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -1578,18 +1530,18 @@
               <att name="sdn_parameter_urn">SDN:P01::SSALBSTX</att>
           </addAttributes>
       </dataVariable-->
+      <!--
       <dataVariable>
           <sourceName>Sb-particulate3 | Sb-particulate</sourceName>
           <destinationName>Sb_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Sb-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
       <!--dataVariable>
           <sourceName>SiO4_0 | Silicate</sourceName>
           <destinationName>Silicate</destinationName>
@@ -1620,10 +1572,8 @@
       </dataVariable-->
       <dataVariable>
           <sourceName>SiO4_Tech_F | Silicate</sourceName>
-          <destinationName>Silicate_Tech_F</destinationName>
+          <destinationName>Silicate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Dissolved Nutrients</att>
@@ -1635,12 +1585,11 @@
               <att name="units">µmol/L</att>
           </addAttributes>
       </dataVariable>
+      <!--
       <dataVariable>
           <sourceName>Sn-particulate3 | Sn-particulate</sourceName>
           <destinationName>Sn_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1651,8 +1600,6 @@
           <sourceName>spm2 | SPM</sourceName>
           <destinationName>SPM</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1663,20 +1610,17 @@
           <sourceName>Sr-particulate3 | Sr-particulate</sourceName>
           <destinationName>Sr_particulate</destinationName>
           <dataType>double</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="double">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Sr-particulate</att>
           </addAttributes>
       </dataVariable>
+      -->
       <dataVariable>
           <sourceName>Temp_CTD_1968</sourceName>
-          <destinationName>Temp_CTD_1968</destinationName>
+          <destinationName>Temperature_CTD_1968</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Temperature</att>
@@ -1696,7 +1640,7 @@
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Temperature</att>
-              <att name="long_name">Temp CTD 1990   Temperature</att>
+              <att name="long_name">Temperature_CTD_1990 (degree Celsius)</att>
               <att name="sdn_parameter_name">Temperature (ITS-90) of the water body by CTD or STD</att>
               <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/TEMPS901/</att>
               <att name="sdn_parameter_urn">SDN:P01::TEMPS901</att>
@@ -1723,12 +1667,11 @@
               <att name="long_name">Temp Rev Therm Glass   Temperature</att>
           </addAttributes>
       </dataVariable-->
+      <!--
       <dataVariable>
           <sourceName>Ti-particulate3 | Ti-particulate</sourceName>
           <destinationName>Ti_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1739,8 +1682,6 @@
           <sourceName>TIC | CO2 (total)</sourceName>
           <destinationName>CO2_total</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">CO2</att>
@@ -1754,8 +1695,6 @@
           <sourceName>Tl-particulate3 | Tl-particulate</sourceName>
           <destinationName>Tl_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1766,8 +1705,6 @@
           <sourceName>U-particulate3 | U-particulate</sourceName>
           <destinationName>U_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1778,8 +1715,6 @@
           <sourceName>V-particulate3 | V-particulate</sourceName>
           <destinationName>V_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1790,8 +1725,6 @@
           <sourceName>Zn-filtered5 | Zn</sourceName>
           <destinationName>Zn</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
@@ -1802,12 +1735,11 @@
           <sourceName>Zn-particulate3 | Zn-particulate</sourceName>
           <destinationName>Zn_particulate</destinationName>
           <dataType>float</dataType>
-          <!-- sourceAttributes>
-          </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">Zn-particulate3</att>
           </addAttributes>
       </dataVariable>
+      -->
   </dataset>
