@@ -437,18 +437,21 @@
               <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
           </addAttributes>
       </dataVariable-->
-      <!--
       <dataVariable>
-          <sourceName>Chl_Fluor_Voltage | CHL-SENSOR insitu</sourceName>
+          <sourceName>Chl_CTD | CHL-SENSOR insitu</sourceName>
           <destinationName>CHL_SENSOR_insitu</destinationName>
           <dataType>float</dataType>
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
-              <att name="ioos_category">Optical Properties</att>
-              <att name="long_name">Chl Fluor Voltage</att>
+              <att name="ioos_category">Ocean Color</att>
+              <att name="long_name">Concentration of chlorophyll-a by in-situ chlorophyll fluorometer</att>
+              <att name="sdn_parameter_name">Concentration of chlorophyll-a {chl-a CAS 479-61-8} per unit volume of the water body [particulate >unknown phase] by in-situ chlorophyll fluorometer</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/CPHLPR01/</att>
+              <att name="sdn_parameter_urn">SDN:P01::CPHLPR01</att>
+              <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+              <att name="units">ug/L</att>
           </addAttributes>
       </dataVariable>
-      -->
       <!--
       <dataVariable>
           <sourceName>Co-particulate3 | Co-particulate</sourceName>
@@ -534,7 +537,7 @@
       -->
       <dataVariable>
           <sourceName>HPLC_ACAROT | HPLC_ACAROT</sourceName>
-          <destinationName>HPLC_ACAROT</destinationName>
+          <destinationName>HPLC_alpha_Carotene</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -549,7 +552,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_ALLOX | HPLC_ALLOX</sourceName>
-          <destinationName>HPLC_ALLOX</destinationName>
+          <destinationName>HPLC_alloxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -564,14 +567,14 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_ASTAX | HPLC_ASTAX</sourceName>
-          <destinationName>HPLC_ASTAX</destinationName>
+          <destinationName>HPLC_astaxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC ASTAX</att>
+              <att name="long_name">HPLC ASTAX (astaxanthin)</att>
               <att name="sdn_parameter_name">Concentration standard deviation of astaxanthin {CAS 472-61-7} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
               <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/ASTAXHSD/</att>
               <att name="sdn_parameter_urn">SDN:P01::ASTAXHSD</att>
@@ -579,7 +582,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_BCAROT | HPLC_BCAROT</sourceName>
-          <destinationName>HPLC_BCAROT</destinationName>
+          <destinationName>HPLC_beta_carotene</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -594,7 +597,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_BUT19 | HPLC_BUT19</sourceName>
-          <destinationName>HPLC_BUT19</destinationName>
+          <destinationName>HPLC_19_butanoyloxyfucoxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -621,7 +624,7 @@
       -->
       <dataVariable>
           <sourceName>HPLC_CHLA | HPLC_CHLA</sourceName>
-          <destinationName>HPLC_CHLA</destinationName>
+          <destinationName>HPLC_chlorophyll_a</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -640,7 +643,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_CHLB | HPLC_CHLB</sourceName>
-          <destinationName>HPLC_CHLB</destinationName>
+          <destinationName>HPLC_chlorophyll_b</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -655,7 +658,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_CHLC12 | HPLC_CHLC12</sourceName>
-          <destinationName>HPLC_CHLC12</destinationName>
+          <destinationName>HPLC_Chlorophyll_c1_c2</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -670,7 +673,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_CHLC3 | HPLC_CHLC3</sourceName>
-          <destinationName>HPLC_CHLC3</destinationName>
+          <destinationName>HPLC_Chlorophyll_c3</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -685,7 +688,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_CHLIDEA | HPLC_CHLIDEA</sourceName>
-          <destinationName>HPLC_CHLIDEA</destinationName>
+          <destinationName>HPLC_Chlorophyllide</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -700,7 +703,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_DIADINOX | HPLC_DIADINOX</sourceName>
-          <destinationName>HPLC_DIADINOX</destinationName>
+          <destinationName>HPLC_diadinoxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -715,7 +718,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_DIATOX | HPLC_DIATOX</sourceName>
-          <destinationName>HPLC_DIATOX</destinationName>
+          <destinationName>HPLC_diatoxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -730,7 +733,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_FUCOX | HPLC_FUCOX</sourceName>
-          <destinationName>HPLC_FUCOX</destinationName>
+          <destinationName>HPLC_fucoxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -745,7 +748,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_HEX19 | HPLC_HEX19</sourceName>
-          <destinationName>HPLC_HEX19</destinationName>
+          <destinationName>HPLC_19_hexanoyloxyfucoxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -790,7 +793,7 @@
       -->
       <dataVariable>
           <sourceName>HPLC_PERID | HPLC_PERID</sourceName>
-          <destinationName>HPLC_PERID</destinationName>
+          <destinationName>HPLC_peridinin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -805,7 +808,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_PHAEO | HPLC_PHAEO</sourceName>
-          <destinationName>HPLC_PHAEO</destinationName>
+          <destinationName>HPLC_phaeophorbide_Phaeophytin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -820,7 +823,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_PRASINOX | HPLC_PRASINOX</sourceName>
-          <destinationName>HPLC_PRASINOX</destinationName>
+          <destinationName>HPLC_prasinoxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -828,11 +831,14 @@
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
               <att name="long_name">HPLC PRASINOX (prasinoxanthin)</att>
+              <att name="sdn_parameter_name">Concentration of prasinoxanthin {CAS 94705-97-2} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
+              <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/PRSXHPP1/</att>
+              <att name="sdn_parameter_urn">SDN:P01::PRSXHPP1</att>
           </addAttributes>
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_PYROPHAE | HPLC_PYROPHAE</sourceName>
-          <destinationName>HPLC_PYROPHAE</destinationName>
+          <destinationName>HPLC_pyrophaeophorbide</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -847,14 +853,14 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_VIOLAX | HPLC_VIOLAX</sourceName>
-          <destinationName>HPLC_VIOLAX_HPLC_VIOLAX</destinationName>
+          <destinationName>HPLC_violaxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
           <addAttributes>
               <att name="_FillValue" type="float">NaN</att>
               <att name="ioos_category">Unknown</att>
-              <att name="long_name">HPLC VIOLAX   HPLC VIOLAX</att>
+              <att name="long_name">HPLC VIOLAX (violaxanthin)</att>
               <att name="sdn_parameter_name">Concentration of violaxanthin {CAS 126-29-4} per unit volume of the water body [particulate >GF/F phase] by filtration, acetone extraction and high performance liquid chromatography (HPLC)</att>
               <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/VILXHPP1/</att>
               <att name="sdn_parameter_urn">SDN:P01::VILXHPP1</att>
@@ -862,7 +868,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>HPLC_ZEA | HPLC_ZEA</sourceName>
-          <destinationName>HPLC_ZEA</destinationName>
+          <destinationName>HPLC_zeaxanthin</destinationName>
           <dataType>float</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
@@ -1116,7 +1122,7 @@
       </dataVariable>
       <dataVariable>
           <sourceName>O2_CTD_mLL | O2</sourceName>
-          <destinationName>Oxygen_CTD_mLL (ml/L)</destinationName>
+          <destinationName>Oxygen_CTD_mLL</destinationName>
           <dataType>double</dataType>
           <!-- sourceAttributes>
           </sourceAttributes -->
