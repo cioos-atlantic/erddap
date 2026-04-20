@@ -1,0 +1,331 @@
+<dataset type="EDDTableFromAsciiFiles" datasetID="sail_for_science_ctd" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/sail_for_science/</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>UTF-8</charset>
+    <columnSeparator></columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>3</firstDataRow>
+    <sortedColumnSourceName>Time</sortedColumnSourceName>
+    <sortFilesBySourceNames>Time</sortFilesBySourceNames>
+    <defaultDataQuery>&amp;time&gt;=min(time)</defaultDataQuery>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+        <att name="cdm_data_type">Profile</att>
+        <att name="cdm_profile_variables">Label, latitude, longitude</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="institution">Sail for Science</att>
+        <att name="title">Oceanographic data collected onboard SV Oceanolog during the Sail for Science - 2023 expedition in the Gulf of St. Lawrence</att>
+        <att name="summary">Presented collected with RBRconcertoCTD a set of oceanographic data, including variables: conductivity, temperature, practical salinity, specific density, dissolved oxygen, transmittance, chlorophyll-a, fDOM at sampling rate 8Hz in the Gulf of St. Lawrence at the moorings of SV Oceanolog on the route: Rivière-du-Loup - Gaspe - Magdalen Is. - Cape North. This is a pilot stage's set of high-accuracy and resolution oceanographic data collected during the citizen science project Sail for Science underway to the Caribbean: www.sailforscience.com</att>
+        <att name="comment">##Limitations: No limitations</att>
+        <att name="progress">completed</att>
+        <att name="keywords">water temperature,salinity,conductivity,dissolved oxygen,transmittance,chlorophyll a,fDOM,CIOOS:oxygen,CIOOS:particulateMatter,CIOOS:seaSurfaceSalinity,CIOOS:subSurfaceTemperature,CIOOS:subSurfaceSalinity,CIOOS:seaSurfaceTemperature,CIOOS:other,CIOOS:dissolvedOrganicCarbon</att>
+        <att name="keywords_vocabulary">CIOOS: CIOOS Essential Ocean Variables Vocabulary</att>
+        <att name="id">55a55292-716b-426a-8bce-a0a079a1074b</att>
+        <att name="naming_authority">ca.cioos</att>
+        <att name="date_modified">2026-01-08T21:11:31.892Z</att>
+        <att name="product_version">1.1</att>
+        <att name="license">https://creativecommons.org/licenses/by-sa/4.0/</att>
+        <att name="creator_name">Shkvorets, Igor</att>
+        <att name="creator_email">ishkvorets@gmail.com</att>
+        <att name="creator_orcid">https://orcid.org/0009-0009-9728-1331</att>
+        <att name="creator_type">person</att>
+        <att name="creator_institution">Sail for Science</att>
+        <att name="creator_address">1 Harrogate Pl.</att>
+        <att name="creator_city">Ottawa</att>
+        <att name="creator_country">Canada</att>
+        <att name="creator_url">www.sailforscience.com</att>
+        <att name="infoUrl">www.sailforscience.com</att>
+        <att name="contributor_name">Shkvorets, Igor;Troshyna, Iryna</att>
+        <att name="contributor_role">owner,custodian,principalInvestigator,distributor;coAuthor,editor</att>
+        <att name="geospatial_lat_max">49.3027</att>
+        <att name="geospatial_lat_min">47.00721</att>
+        <att name="geospatial_lon_max">-63.7</att>
+        <att name="geospatial_lon_min">-69.56934</att>
+        <att name="instrument">RBRconcerto³-210470</att>
+        <att name="metadata_form">https://cioos-siooc.github.io/metadata-entry-form#/en/atlantic/Ax18d8AulhTzQPzB9J3X5JG2Son2/-Od48XG-0i3iqxVT7VGm</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="subsetVariables">Label, Instrument_Serial, Instrument_Model, Sensor_Serial, QC_flag</att>
+    </addAttributes>
+      <dataVariable>
+        <sourceName>Label</sourceName>
+        <destinationName>Label</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="cf_role">profile_id</att>
+            <att name="ioos_category">Other</att>
+            <att name="long_name">Location label</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Instrument Serial</sourceName>
+        <destinationName>Instrument_Serial</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Other</att>
+            <att name="long_name">Instrument Serial</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Instrument Model</sourceName>
+        <destinationName>Instrument_Model</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Other</att>
+            <att name="long_name">Instrument Model</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Sensor Serial</sourceName>
+        <destinationName>Sensor_Serial</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Other</att>
+            <att name="long_name">Sensor Serial</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Time</att>
+            <att name="source_name">Time</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01T00:00:00Z</att>
+            <!--att name="time_zone">Etc/GMT+4</att-->
+            <att name="units">yyyy-MM-dd'T'HH:mm:ss'Z'</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Conductivity</sourceName>
+        <destinationName>Conductivity</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="calibration_date">2023-06-01T17:15:53Z</att>
+            <att name="channel_index">1</att>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">30.0</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Electrical Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">mS/cm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Temperature</sourceName>
+        <destinationName>Temperature</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="calibration_date">2023-05-29T17:00:15Z</att>
+            <att name="channel_index">2, 4, 15, 16</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Temperature</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree Celsius</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DO concentration</sourceName>
+        <destinationName>DO_Concentration</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="calibration_date">2023-05-29T23:34:52Z</att>
+            <att name="channel_index">4</att>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</att>
+            <att name="units">µmol/L</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Backscatter</sourceName>
+        <destinationName>Backscatter</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="calibration_date">2023-05-29T23:34:52Z</att>
+            <att name="channel_index">6</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Backscatter</att>
+            <att name="units">m⁻¹sr⁻¹</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Chlorophyll-a</sourceName>
+        <destinationName>Chlorophyll_a</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="calibration_date">2023-05-29T23:34:52Z</att>
+            <att name="channel_index">7</att>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.03</att>
+            <att name="colorBarScale">Log</att>
+            <att name="ioos_category">Ocean Color</att>
+            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+            <att name="units">ug/L</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>FDOM</sourceName>
+        <destinationName>FDOM</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="calibration_date">2023-05-29T23:34:52Z</att>
+            <att name="channel_index">8</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Fluorescent Dissolved Organic Matter</att>
+            <att name="units">ppb</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Sea pressure</sourceName>
+        <destinationName>Sea_pressure</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="channel_index">9</att>
+            <att name="ioos_category">Pressure</att>
+            <att name="long_name">Sea Pressure</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dbar</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="channel_index">10</att>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Depth</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Salinity</sourceName>
+        <destinationName>Salinity</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="channel_index">11</att>
+            <att name="colorBarMaximum" type="double">37.0</att>
+            <att name="colorBarMinimum" type="double">32.0</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Practical Salinity</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DO saturation</sourceName>
+        <destinationName>DO_saturation</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="channel_index">14</att>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="long_name">Dissolved oxygen saturation</att>
+            <att name="standard_name">volume_fraction_of_oxygen_in_sea_water</att>
+            <att name="units">%</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Density anomaly</sourceName>
+        <destinationName>Density_anomaly</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="channel_index">17</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">-10.0</att>
+            <att name="ioos_category">Physical Oceanography</att>
+            <att name="long_name">Density Anomaly</att>
+            <att name="units">kg/m³</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>QC flag</sourceName>
+        <destinationName>QC_flag</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Quality control flag</att>
+            <att name="standard_name">quality_flag</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
