@@ -2,7 +2,7 @@
 <dataset active="true" datasetID="5daj-5icy" type="EDDTableFromAsciiFiles">
   <reloadEveryNMinutes>10080</reloadEveryNMinutes>
   <updateEveryNMillis>10000</updateEveryNMillis>
-  <fileDir>/datasets/cmar/nsodp-sensor-strings/5daj-5icy/</fileDir>
+  <fileDir>/datasets/cmar/nsodp-sensor-strings/5daj-5icy/final_output/</fileDir>
   <fileNameRegex>.*[0-9][0-9]\.csv</fileNameRegex>
   <recursive>true</recursive>
   <pathRegex>.*</pathRegex>
