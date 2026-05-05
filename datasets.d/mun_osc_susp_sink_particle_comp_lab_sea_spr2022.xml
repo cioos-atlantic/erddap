@@ -1,0 +1,804 @@
+<dataset type="EDDTableFromNcFiles" datasetID="mun_osc_susp_sink_particle_comp_lab_sea_spr2022" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/mun/ocean_science_centre/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="Conventions">CF-1.8, ACDD-1.3, IOOS-1.2</att>
+        <att name="creator_institution">Ocean Science Centre, Memorial University of Newfoundland; Institute of Environmental Engineering, ETH Zurich</att>
+        <att name="creator_name">Carolina Cisternas-Novoa, Elisa Romanelli, and Uta Passow</att>
+        <att name="creator_type">person</att>
+        <att name="description">Concentrations of parameters determined from discrete water samples collected at three MSC sections by filtering seawater through pre-combusted glass fiber filters. Processed in laboratory using parameter-specific analytical methods. No continuous sensors utilized.</att>
+        <att name="featureType">TimeSeries</att>
+        <att name="geospatial_lat_max" type="double">58.817</att>
+        <att name="geospatial_lat_min" type="double">56.652</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_vertical_max" type="double">500.0</att>
+        <att name="geospatial_vertical_min" type="double">60.0</att>
+        <att name="geospatial_vertical_positive">down</att>
+        <att name="geospatial_vertical_units">m</att>
+        <att name="history">Metadata derived from 260325_BELAS1_Lab_Sea_MSC_metadata.csv and msc_particles_biogeochem_BELAS1_Labrador_Sea_2022.docx.</att>
+        <att name="institution">Ocean Science Centre, Memorial University of Newfoundland</att>
+        <att name="processing_level">Quality Controlled (QARTOD)</att>
+        <att name="project">BELAS-1</att>
+        <att name="quality_control_procedures">Data was evaluated using IOOS QARTOD methodologies. A Gross Range Test was applied to all spatial and biochemical variables. For geographic coordinates and depth, standard physical limits were applied (e.g., Latitude [-90, 90], Depth [0, 10000]). For biochemical parameters (POC, PON, BSi, TEP, CSP, PIC), the absolute &#39;Fail&#39; span was set to [0.0, 99999.0]. The 0.0 minimum prevents physically impossible negative biological mass, while the 99999.0 ceiling acts as a fail-safe to catch catastrophic transcription errors. The &#39;Suspect&#39; span was dynamically calculated using a 3-sigma (3 standard deviations) statistical threshold derived from the dataset&#39;s own mean to accurately identify statistical outliers requiring human review before reusing.</att>
+        <att name="region">Labrador Sea</att>
+        <att name="source">Discrete water samples processed via laboratory analytical methods.</att>
+        <att name="summary">Particulate carbon, nitrogen, exopolymeric particles, and biogenic silica measurements from MSC measurements during BELAS-1 expedition in Labrador Sea, April-May 2022. Data includes values and standard deviations for POC, PON, BSi, TEP, CSP, and PIC. Samples were evaluated natively through filtration and rigorous ex-situ analytical precision techniques, eliminating the requirement for instrument calibration logs.</att>
+        <att name="time_coverage_end">2022-06-02T23:59:59Z</att>
+        <att name="time_coverage_start">2022-05-20T00:00:00Z</att>
+        <att name="title">Suspended and sinking particle composition in the Labrador Sea in Spring 2022</att>
+    </sourceAttributes -->
+    <addAttributes>
+        <att name="cdm_data_type">TimeSeries</att>
+        <att name="cdm_timeseries_variables">platform_id, latitude, longitude</att>
+        <att name="Conventions">CF-1.10, ACDD-1.3, IOOS-1.2, COARDS</att>
+        <att name="infoUrl">???</att>
+        <att name="keywords">acids, amino, area, biology, bloom, bloom/export, bloom_export_stage, bsi, carbon, categorical, centre, color, composition, concentration, cruise, csp, data, decimal, degrees, department, depth, depth_id, depth_qartod_gross_range_test, deviation, export, fisheries, flag, fraction, gross, gross_range_test_quality_flag, hydrolyzable, identifier, labrador, latitude, latitude_qartod_gross_range_test, level, longitude, longitude_qartod_gross_range_test, mass_concentration_of_coomassie_stainable_particles_in_fraction, mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test, mass_concentration_of_transparent_exopolymer_particle_in_fraction, mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test, measurement, memorial, meters, mole, mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction, mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction_qartod_gross_range_test, mole_concentration_of_particulate_organic_carbon_in_fraction, mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test, mole_concentration_of_particulate_organic_carbon_in_sea_water, mole_concentration_of_particulate_organic_nitrogen_in_fraction, mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test, moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction, moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction_qartod_gross_range_test, moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3, moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3_qartod_gross_range_test, name, negative, newfoundland, north, numeric, ocean, ocean color, oceans, organic, particle, particulate, platform, platform_id, poc, pon, positive, quality, quality_flag, range, region, sampling, science, sea, seawater, sinking, spring, stage, standard, standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction, standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test, standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction, standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test, standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction, standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test, standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction, standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test, station, statistics, suspended, tep, test, time, university, value, water, west</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="subsetVariables">cruise, region, platform_id, depth_id, fraction, bloom_export_stage, latitude_qartod_gross_range_test, longitude_qartod_gross_range_test, depth_qartod_gross_range_test, mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test, mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test, moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction_qartod_gross_range_test, mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test, mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test, moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3_qartod_gross_range_test, mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction_qartod_gross_range_test, standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test, standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test, standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test, standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Time</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>cruise</sourceName>
+        <destinationName>cruise</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Cruise identifier</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>region</sourceName>
+        <destinationName>region</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Name of the sampling area or region</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>platform_id</sourceName>
+        <destinationName>platform_id</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-9999</att>
+            <att name="cf_role">timeseries_id</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station identifier</att>
+            <att name="standard_name">platform_id</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_CoordinateAxisType">Lat</att>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">latitude_qartod_gross_range_test</att>
+            <att name="axis">Y</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude in decimal degrees (north positive)</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="valid_max" type="double">90.0</att>
+            <att name="valid_min" type="double">-90.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_CoordinateAxisType">Lon</att>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">longitude_qartod_gross_range_test</att>
+            <att name="axis">X</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude in decimal degrees (west negative)</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="valid_max" type="double">180.0</att>
+            <att name="valid_min" type="double">-180.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth</sourceName>
+        <destinationName>depth</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_CoordinateAxisType">Height</att>
+            <att name="_CoordinateZisPositive">down</att>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">depth_qartod_gross_range_test</att>
+            <att name="axis">Z</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Numeric depth in meters</att>
+            <att name="positive">down</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">8000.0</att>
+            <att name="colorBarMinimum" type="double">-8000.0</att>
+            <att name="colorBarPalette">TopographyDepth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth_id</sourceName>
+        <destinationName>depth_id</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">auxiliaryInformation</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Categorical depth level</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="standard_name">depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fraction</sourceName>
+        <destinationName>fraction</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">auxiliaryInformation</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Particle fraction</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>bloom_export_stage</sourceName>
+        <destinationName>bloom_export_stage</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">auxiliaryInformation</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Bloom/export stage</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Biology</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mole_concentration_of_particulate_organic_carbon_in_fraction</sourceName>
+        <destinationName>mole_concentration_of_particulate_organic_carbon_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="analytical_precision">±0.4&#37;</att>
+            <att name="ancillary_variables">mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test</att>
+            <att name="calibration">Calibrated with acetanilide standards (Parsons et al., 1984)</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="instrument">PerkinElmer 2400 CHN analyzer</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="laboratory_method">Determined from replicated samples collected at the top, base, and tray of the marine snow catcher by filtration onto pre-combusted (450 °C, 6 h) 25 mm GF/F filters (Whatman). Filtered volumes were 1 L, 0.75 L, and 0.2 L, respectively. Filters were dried onboard at 40 °C for 12 h and stored at room temperature until analysis. POC was measured following acid fuming (10&#37; HCl).</att>
+            <att name="long_name">Measurement value for POC</att>
+            <att name="standard_name">mole_concentration_of_particulate_organic_carbon_in_sea_water</att>
+            <att name="units">mmol m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Ocean Color</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction</sourceName>
+        <destinationName>standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">qualityInformation</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Standard deviation for POC</att>
+            <att name="units">mmol m-3</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mole_concentration_of_particulate_organic_nitrogen_in_fraction</sourceName>
+        <destinationName>mole_concentration_of_particulate_organic_nitrogen_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="analytical_precision">±0.4&#37;</att>
+            <att name="ancillary_variables">mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test</att>
+            <att name="calibration">Calibrated with acetanilide standards (Parsons et al., 1984)</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="instrument">PerkinElmer 2400 CHN analyzer</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="laboratory_method">Measured following acid fuming (10&#37; HCl) using a PerkinElmer 2400 CHN analyzer calibrated with acetanilide standards (Parsons et al., 1984).</att>
+            <att name="long_name">Measurement value for PON</att>
+            <att name="units">mmol m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction</sourceName>
+        <destinationName>standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">qualityInformation</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Standard deviation for PON</att>
+            <att name="units">mmol m-3</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction</sourceName>
+        <destinationName>moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="laboratory_method">Measured by filtering 0.1–1 L of sample onto 47 mm polycarbonate filters (0.6 µm pore size, Millipore). Filters were dried at 40 °C for 12 h. Samples were digested in 0.2 N NaOH at 95 °C for 40 min, cooled, diluted with Milli-Q water, and analyzed spectrophotometrically using the molybdosilicic acid method (Strickland &amp; Parsons, 1968).</att>
+            <att name="long_name">Measurement value for BSi</att>
+            <att name="units">mmol m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mass_concentration_of_transparent_exopolymer_particle_in_fraction</sourceName>
+        <destinationName>mass_concentration_of_transparent_exopolymer_particle_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="laboratory_method">Quantified from replicated samples by filtration (0.1–1 L) onto 25 mm polycarbonate filters (0.4 µm pore size, Whatman). Filters were stained onboard immediately after collection using Alcian Blue (0.02&#37;, pH 2.5), following established protocols (Passow &amp; Alldredge, 1995; Cisternas-Novoa et al., 2014).</att>
+            <att name="long_name">Measurement value for TEP</att>
+            <att name="units">mg XG eq m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction</sourceName>
+        <destinationName>standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">qualityInformation</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Standard deviation for TEP</att>
+            <att name="units">mg XG eq m-3</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mass_concentration_of_coomassie_stainable_particles_in_fraction</sourceName>
+        <destinationName>mass_concentration_of_coomassie_stainable_particles_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="laboratory_method">Quantified from replicated samples by filtration (0.1–1 L) onto 25 mm polycarbonate filters (0.4 µm pore size, Whatman). Filters were stained onboard immediately after collection using Coomassie Brilliant Blue G-250 (0.04&#37;, pH 7.4), following established protocols (Passow &amp; Alldredge, 1995; Cisternas-Novoa et al., 2014).</att>
+            <att name="long_name">Measurement value for CSP</att>
+            <att name="units">mg BSA eq m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction</sourceName>
+        <destinationName>standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">qualityInformation</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Standard deviation for CSP</att>
+            <att name="units">mg BSA eq m-3</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm-3</sourceName>
+        <destinationName>moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="laboratory_method">Calculated as the difference between Total Particulate Carbon (TPC) and Particulate Organic Carbon (POC). TPC was measured using the same procedure as POC without acidification.</att>
+            <att name="long_name">Measurement value for PIC</att>
+            <att name="standard_name">moles_of_particulate_inorganic_carbon_per_unit_mass_in_sea_water</att>
+            <att name="units">mmol m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Ocean Color</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction</sourceName>
+        <destinationName>mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Ocean Chemistry</att>
+            <att name="long_name">Measurement value for Particulate Hydrolyzable Amino Acids</att>
+            <att name="units">mmol m-3</att>
+            <att name="valid_max" type="double">99999.0</att>
+            <att name="valid_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="missing_value" type="double">NaN</att>
+            <att name="units">MMol&#39; &#39;M-3</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude_qartod_gross_range_test</sourceName>
+        <destinationName>latitude_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-90.0, 90.0], &quot;suspect_span&quot;: [56.17199735272624, 60.41575264727375]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">latitude</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude_qartod_gross_range_test</sourceName>
+        <destinationName>longitude_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-180.0, 180.0], &quot;suspect_span&quot;: [-54.165510221511056, -44.81048977848894]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">longitude</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>depth_qartod_gross_range_test</sourceName>
+        <destinationName>depth_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 10000.0], &quot;suspect_span&quot;: [0.0, 660.9087069061907]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">depth</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+            <att name="standard_name">depth</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 12.324698509718019]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mole_concentration_of_particulate_organic_carbon_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 2.160619013340769]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mole_concentration_of_particulate_organic_nitrogen_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 0.6220709930305836]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">moles_of_particulate_biogenic_silica_per_unit_volume_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 176.8721326560116]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mass_concentration_of_transparent_exopolymer_particle_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 68.63625340828348]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mass_concentration_of_coomassie_stainable_particles_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3_qartod_gross_range_test</sourceName>
+        <destinationName>moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm_3_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 52.157611560786904]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">moles_of_particulate_inorganic_carbon_per_unit_volume_in_fraction_mmolm-3</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 99999.0], &quot;suspect_span&quot;: [0.0, 0.8941809475443491]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mole_concentration_of_particulate_hydrolyzable_amino_acids_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">standard_deviation_for_mole_concentration_of_particulate_organic_carbon_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">standard_deviation_for_mole_concentration_of_particulate_organic_nitrogen_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">standard_deviation_for_mass_concentration_of_transparent_exopolymer_particle_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</sourceName>
+        <destinationName>standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction_qartod_gross_range_test</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">standard_deviation_for_mass_concentration_of_coomassie_stainable_particles_in_fraction</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">10.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
