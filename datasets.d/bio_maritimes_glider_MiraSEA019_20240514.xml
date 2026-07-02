@@ -1,4 +1,4 @@
-<dataset type="EDDTableFromNcFiles" datasetID="bio_maritimes_glider_MiraSEA019_20230908" active="true">
+<dataset type="EDDTableFromNcFiles" datasetID="bio_maritimes_glider_MiraSEA019_20240514" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
     <fileDir>/datasets/dfo/bio/glider/MiraSEA019-20240514/</fileDir>

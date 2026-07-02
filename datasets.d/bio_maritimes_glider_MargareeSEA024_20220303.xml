@@ -106,7 +106,7 @@
         <att name="subsetVariables">DeadReckoning, GLIDER_HEADING, GLIDER_PITCH, GLIDER_ROLL, NavState, profile_index, PROFILE_DIRECTION, LONGITUDE_GPS, LATITUDE_GPS, profile_id</att>
         <att name="time_coverage_end">2022-03-24T12:25:04.207000000Z</att>
         <att name="time_coverage_start">2022-03-03T12:30:17.842000000Z</att>
-        <att name="title"></att>
+        <att name="title">Maritimes Region Glider Delayed Mode Data Margaree-SEA024 Halifax Line 20220303</att>
     </addAttributes>
     <dataVariable>
         <sourceName>time</sourceName>
