@@ -1,0 +1,1630 @@
+ <dataset type="EDDTableFromNcFiles" datasetID="ofi_BELAS-1_ctd" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/tca/roberts_m/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="_NCProperties">version=2,netcdf=4.9.3,hdf5=1.14.6</att>
+        <att name="cast_number_max" type="int">99</att>
+        <att name="cast_number_min" type="int">1</att>
+        <att name="cdm_data_type">Profile</att>
+        <att name="contributor_name">Erin Bertrand; Zoe Finkel; Stephanie Kienast; Carly Buchwald</att>
+        <att name="contributor_role">Principal Investigators</att>
+        <att name="Conventions">CF-1.8, ACDD-1.3, IOOS-1.2</att>
+        <att name="creator_institution">Marine Institute (Galway), in partnership with Dalhousie University</att>
+        <att name="creator_name">Ocean Frontier Institute; Marine Institute (Galway); Dalhousie University</att>
+        <att name="creator_type">group</att>
+        <att name="cruise">CE22009</att>
+        <att name="description">Vertical profile data from Sea-Bird SBE 911plus/917plus CTD casts. Measurements are organized by CTD cast start time and depth, with sensor configuration and calibration details extracted from the Sea-Bird XMLCON hardware file.</att>
+        <att name="event_number_max" type="int">121</att>
+        <att name="event_number_min" type="int">1</att>
+        <att name="featureType">Profile</att>
+        <att name="geospatial_lat_max" type="double">59.507</att>
+        <att name="geospatial_lat_min" type="double">56.6515</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-48.61583333</att>
+        <att name="geospatial_lon_min" type="double">-52.47033333</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="geospatial_vertical_max" type="double">3516.0</att>
+        <att name="geospatial_vertical_min" type="double">2.0</att>
+        <att name="geospatial_vertical_positive">down</att>
+        <att name="geospatial_vertical_units">m</att>
+        <att name="history">Source data loaded from CE22009_CTD_master_250224.xlsx; column names and units standardized to CF/UDUNITS conventions; missing values normalized; datetime columns coerced; IOOS QARTOD gross range and spike tests applied where configured; Sea-Bird hardware initialization values extracted from CE2022-05-09-MasterConFile.xmlcon.</att>
+        <att name="institution">Ocean Frontier Institute</att>
+        <att name="instrument">Sea-Bird SBE 911plus/917plus CTD</att>
+        <att name="instrument_calibration_details">Sea-Bird CTD Hardware Configuration: ; Ch 0 | TemperatureSensor | SN: 4929 | Cal: 10-Dec-21 ; Ch 1 | ConductivitySensor | SN: 2796 | Cal: 14-Dec-21 ; Ch 2 | PressureSensor | SN: 0902 | Cal: 03-Dec-20 ; Ch 3 | TemperatureSensor | SN: 4922 | Cal: 10-Dec-21 ; Ch 4 | ConductivitySensor | SN: 3387 | Cal: 14-Dec-21 ; Ch 5 | FluoroWetlabWetstarSensor | SN: 5497 | Cal: 11-Feb-2019 ; Ch 6 | TurbidityMeter | SN: 5497 | Cal: 11-Feb-2019 ; Ch 7 | OxygenSensor | SN: 1716 | Cal: 20-Nov-21 ; Ch 8 | WET_LabsCStar | SN: CST-1101DR | Cal: 29-SEP-2021 ; Ch 9 | AltimeterSensor | SN: 75725 | Cal: 30-MAR-20211 ; Ch 11 | OxygenSensor | SN: 3339 | Cal: 08-Apr-22 ; Ch 14 | SPAR_Sensor | SN: SQR2200-20345 | Cal: 090528</att>
+        <att name="instrument_vocabulary">Sea-Bird Scientific instrument configuration</att>
+        <att name="keywords">CTD, vertical profile, temperature, salinity, conductivity, pressure, dissolved oxygen, turbidity, fluorescence, chlorophyll, Celtic Explorer, CE22009</att>
+        <att name="metadata_file">CE2022-05-09-MasterConFile.xmlcon</att>
+        <att name="platform">R/V Celtic Explorer</att>
+        <att name="platform_id">CE22009</att>
+        <att name="processing_level">Quality Controlled (QARTOD)</att>
+        <att name="program">Safe and Sustainable Development of the Ocean Frontier</att>
+        <att name="project">BELAS-1, part of the Northwest Atlantic Biological Carbon Pump (NWA-BCP)</att>
+        <att name="quality_control_procedures">Data were evaluated using IOOS QARTOD-style quality control. Gross range tests used standard geographic limits, CTD hardware-informed physical limits, and variable-specific thresholds for temperature, salinity, conductivity, pressure, depth, turbidity, chlorophyll, and dissolved oxygen. Variables without defensible automated thresholds were routed to not-evaluated flags rather than assigned unsupported pass/fail decisions.</att>
+        <att name="sea_floor_depth_max" type="double">3634.0</att>
+        <att name="sea_floor_depth_min" type="double">82.0</att>
+        <att name="source">Shipborne CTD profiler observations processed from CE22009_CTD_master_250224.xlsx and Sea-Bird XMLCON hardware metadata.</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table</att>
+        <att name="station_count" type="int">23</att>
+        <att name="summary">Quality-controlled shipborne CTD profile observations collected during cruise CE22009 aboard the R/V Celtic Explorer from 2022-05-18 to 2022-06-02. The dataset includes cast identifiers, station names, location, time, depth, pressure, dual-channel temperature, conductivity, salinity, potential temperature, sigma-theta, sound velocity, dissolved oxygen, turbidity, fluorescence, transmissometer/voltage channels, and corrected chlorophyll.</att>
+        <att name="time_coverage_end">2022-06-02T18:09:00Z</att>
+        <att name="time_coverage_start">2022-05-18T03:20:00Z</att>
+        <att name="title">BELAS-1 CTD vertical profiles</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_profile_variables">cast_number</att>
+      <att name="Conventions">CF-1.10, ACDD-1.3, IOOS-1.2, COARDS</att>
+      <att name="creator_url">https://www.ofi.ca/ssdof/project/the-northwest-atlantic-biological-carbon-pump</att>
+      <att name="infoUrl">https://www.ofi.ca/ssdof/project/the-northwest-atlantic-biological-carbon-pump</att>
+      <att name="keywords">acoustic, acoustics, altimeter, bathymetry, belas, belas-1, below, calibrated, cast, cast_number, ce22009, celtic explorer, check, chemistry, chlorophyll, chlorophyll-a, chlorophyll_a, chlorophyll_a_qartod_gross_range_test, concentration, conductivity, control, cruise, cruise_id, ctd, currents, data, date, deck, density, depth, depth_qartod_gross_range_test, dissolved, dissolved o2, dissolved oxygen, earth, Earth Science &gt; Oceans &gt; Bathymetry/Seafloor Topography &gt; Bathymetry, Earth Science &gt; Oceans &gt; Ocean Acoustics &gt; Acoustic Velocity, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Oxygen, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Potential Temperature, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Density, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, event, event_number, flag, floor, fluorescence, fluorescence_raw, fluorescence_raw_qartod_gross_range_test, fluorometer, frontier, gross, gross_range_test_quality_flag, identifier, institute, instrument, instrument_id, latitude, latitude_qartod_gross_range_test, longitude, longitude_qartod_gross_range_test, mass, mass_concentration_of_chlorophyll_a_in_sea_water, mole, mole_concentration_of_dissolved_molecular_oxygen_in_sea_water, mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_qartod_gross_range_test, mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated, mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated_qartod_gross_range_test, molecular, name, normalized, number, O2, ocean, oceanography, oceans, optical, optical properties, oxygen, physical, physical oceanography, potential, practical, pressure, profiles, properties, quality, quality_flag, range, raw, salinity, science, sea, sea_floor_depth_below_sea_surface, sea_floor_depth_below_sea_surface_qartod_gross_range_test, sea_water_electrical_conductivity, sea_water_electrical_conductivity_1, sea_water_electrical_conductivity_1_qartod_gross_range_test, sea_water_electrical_conductivity_2, sea_water_electrical_conductivity_2_qartod_gross_range_test, sea_water_electrical_conductivity_qartod_gross_range_test, sea_water_potential_temperature, sea_water_potential_temperature_1, sea_water_potential_temperature_1_qartod_gross_range_test, sea_water_potential_temperature_2, sea_water_potential_temperature_2_qartod_gross_range_test, sea_water_potential_temperature_qartod_gross_range_test, sea_water_practical_salinity, sea_water_practical_salinity_1, sea_water_practical_salinity_1_qartod_gross_range_test, sea_water_practical_salinity_2, sea_water_practical_salinity_2_qartod_gross_range_test, sea_water_practical_salinity_qartod_gross_range_test, sea_water_pressure, sea_water_pressure_qartod_gross_range_test, sea_water_sigma_theta, sea_water_sigma_theta_1, sea_water_sigma_theta_1_qartod_gross_range_test, sea_water_sigma_theta_2, sea_water_sigma_theta_2_qartod_gross_range_test, sea_water_sigma_theta_qartod_gross_range_test, sea_water_temperature, sea_water_temperature_1, sea_water_temperature_1_qartod_gross_range_test, sea_water_temperature_2, sea_water_temperature_2_qartod_gross_range_test, sea_water_temperature_qartod_gross_range_test, sea_water_turbidity, sea_water_turbidity_qartod_gross_range_test, seafloor, seawater, sensor, sigma, sonde, sound, speed, speed_of_sound_in_sea_water, speed_of_sound_in_sea_water_1, speed_of_sound_in_sea_water_1_qartod_gross_range_test, speed_of_sound_in_sea_water_2, speed_of_sound_in_sea_water_2_qartod_gross_range_test, speed_of_sound_in_sea_water_qartod_gross_range_test, station, station_name, surface, survey, survey_normalized_time, survey_normalized_time_qartod_gross_range_test, temperature, test, theta, time, time_deck_check, topography, transmissometer, turbidity, uncalibrated, velocity, vertical, vertical profile, voltage, voltage_altimeter, voltage_fluorometer, voltage_oxygen_1, voltage_oxygen_2, voltage_oxygen_calibrated, voltage_transmissometer, voltage_turbidity, water</att>
+      <att name="keywords_vocabulary">GCMD Science Keywords</att>
+      <att name="license">[standard]</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">cruise_id, latitude_qartod_gross_range_test, longitude_qartod_gross_range_test, depth_qartod_gross_range_test, sea_water_pressure_qartod_gross_range_test, survey_normalized_time_qartod_gross_range_test, sea_floor_depth_below_sea_surface_qartod_gross_range_test, sea_water_sigma_theta_qartod_gross_range_test, speed_of_sound_in_sea_water_qartod_gross_range_test, fluorescence_raw_qartod_gross_range_test, sea_water_sigma_theta_1_qartod_gross_range_test, sea_water_sigma_theta_2_qartod_gross_range_test, speed_of_sound_in_sea_water_1_qartod_gross_range_test, speed_of_sound_in_sea_water_2_qartod_gross_range_test</att>
+      <att name="summary">Quality-controlled shipborne Conductivity, Temperature, Depth (CTD) profile observations collected during cruise CE22009 aboard the R/V Celtic Explorer from 2022-05-18 to 2022-06-02. The dataset includes cast identifiers, station names, location, time, depth, pressure, dual-channel temperature, conductivity, salinity, potential temperature, sigma-theta, sound velocity, dissolved oxygen, turbidity, fluorescence, transmissometer/voltage channels, and corrected chlorophyll.</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="axis">T</att>
+            <att name="calendar">gregorian</att>
+            <att name="standard_name">time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="ioos_category">Time</att>
+        <att name="long_name">Time</att>
+        <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>instrument_id</sourceName>
+      <destinationName>instrument_id</destinationName>
+      <dataType>String</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Instrument Identifier</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>cruise_id</sourceName>
+      <destinationName>cruise_id</destinationName>
+      <dataType>String</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Cruise Identifier</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>station_name</sourceName>
+      <destinationName>station_name</destinationName>
+      <dataType>String</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station Name</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>event_number</sourceName>
+      <destinationName>event_number</destinationName>
+      <dataType>int</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-9999</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Event Number</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">100.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>cast_number</sourceName>
+      <destinationName>cast_number</destinationName>
+      <dataType>int</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="int">-9999</att>
+            <att name="cf_role">profile_id</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Cast Number</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">100.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>survey_normalized_time</sourceName>
+      <destinationName>survey_normalized_time</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">survey_normalized_time_qartod_gross_range_test</att>
+            <att name="comment">Expressed as a dimensionless fraction [0, 1] of the total survey duration.</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">auxiliaryInformation</att>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Survey Normalized Time</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>time_deck_check</sourceName>
+      <destinationName>time_deck_check</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="calendar">gregorian</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Time of Instrument Deck Check</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="standard_name">time</att>
+        <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Date</sourceName>
+      <destinationName>Date</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="calendar">gregorian</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Time</att>
+        <att name="long_name">Date</att>
+        <att name="standard_name">time</att>
+        <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_floor_depth_below_sea_surface</sourceName>
+      <destinationName>sea_floor_depth_below_sea_surface</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_floor_depth_below_sea_surface_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">referenceInformation</att>
+            <att name="ioos_category">Bathymetry</att>
+            <att name="long_name">Sea Floor Depth Below Sea Surface</att>
+            <att name="standard_name">sea_floor_depth_below_sea_surface</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">8000.0</att>
+        <att name="colorBarMinimum" type="double">-8000.0</att>
+        <att name="colorBarPalette">TopographyDepth</att>
+        <att name="coordinates">null</att>
+        <att name="missing_value" type="double">NaN</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_pressure</sourceName>
+      <destinationName>sea_water_pressure</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_pressure_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Pressure</att>
+            <att name="long_name">Sea Water Pressure</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dbar</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">5000.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_temperature</sourceName>
+      <destinationName>sea_water_temperature</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_temperature_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">32.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_practical_salinity</sourceName>
+      <destinationName>sea_water_practical_salinity</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_practical_salinity_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Practical Salinity</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">37.0</att>
+        <att name="colorBarMinimum" type="double">32.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_electrical_conductivity</sourceName>
+      <destinationName>sea_water_electrical_conductivity</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_electrical_conductivity_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Electrical Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">S m-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">40.0</att>
+        <att name="colorBarMinimum" type="double">30.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_potential_temperature</sourceName>
+      <destinationName>sea_water_potential_temperature</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_potential_temperature_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Potential Temperature</att>
+            <att name="standard_name">sea_water_potential_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">32.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_sigma_theta</sourceName>
+      <destinationName>sea_water_sigma_theta</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_sigma_theta_qartod_gross_range_test</att>
+            <att name="comment">Derived physical property.</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Sigma Theta</att>
+            <att name="standard_name">sea_water_sigma_theta</att>
+            <att name="units">kg m-3</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">200.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>speed_of_sound_in_sea_water</sourceName>
+      <destinationName>speed_of_sound_in_sea_water</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">speed_of_sound_in_sea_water_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Speed of Sound in Sea Water</att>
+            <att name="standard_name">speed_of_sound_in_sea_water</att>
+            <att name="units">m s-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Currents</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>fluorescence_raw</sourceName>
+      <destinationName>fluorescence_raw</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">fluorescence_raw_qartod_gross_range_test</att>
+            <att name="comment">Values are in Relative Fluorescence Units (RFU). Stored as dimensionless.</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Optical Properties</att>
+            <att name="long_name">Raw Fluorescence</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_turbidity</sourceName>
+      <destinationName>sea_water_turbidity</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_turbidity_qartod_gross_range_test</att>
+            <att name="comment">Original instrument unit is Nephelometric Turbidity Units (NTU).</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Optical Properties</att>
+            <att name="long_name">Sea Water Turbidity</att>
+            <att name="standard_name">sea_water_turbidity</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated</sourceName>
+      <destinationName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated_qartod_gross_range_test</att>
+            <att name="comment">Uncalibrated data. Originally recorded in umol L-1. Conversion to umol kg-1 requires in-situ density.</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="long_name">Uncalibrated Dissolved Oxygen Concentration</att>
+            <att name="standard_name">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</att>
+            <att name="units">umol kg-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">500.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</sourceName>
+      <destinationName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_qartod_gross_range_test</att>
+            <att name="comment">Post-processed data. Includes Winkler correction factor (x0.95).</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="long_name">Dissolved Oxygen Concentration</att>
+            <att name="standard_name">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</att>
+            <att name="units">umol kg-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">500.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_temperature_1</sourceName>
+      <destinationName>sea_water_temperature_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_temperature_1_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Temperature (Sensor 1)</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">32.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_electrical_conductivity_1</sourceName>
+      <destinationName>sea_water_electrical_conductivity_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_electrical_conductivity_1_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Electrical Conductivity (Sensor 1)</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">S m-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">40.0</att>
+        <att name="colorBarMinimum" type="double">30.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_temperature_2</sourceName>
+      <destinationName>sea_water_temperature_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_temperature_2_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Temperature (Sensor 2)</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">32.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_electrical_conductivity_2</sourceName>
+      <destinationName>sea_water_electrical_conductivity_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_electrical_conductivity_2_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Electrical Conductivity (Sensor 2)</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">S m-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">40.0</att>
+        <att name="colorBarMinimum" type="double">30.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_practical_salinity_1</sourceName>
+      <destinationName>sea_water_practical_salinity_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_practical_salinity_1_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Practical Salinity (Sensor 1)</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">37.0</att>
+        <att name="colorBarMinimum" type="double">32.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_practical_salinity_2</sourceName>
+      <destinationName>sea_water_practical_salinity_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_practical_salinity_2_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Practical Salinity (Sensor 2)</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">37.0</att>
+        <att name="colorBarMinimum" type="double">32.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_potential_temperature_1</sourceName>
+      <destinationName>sea_water_potential_temperature_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_potential_temperature_1_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Potential Temperature (Sensor 1)</att>
+            <att name="standard_name">sea_water_potential_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">32.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_potential_temperature_2</sourceName>
+      <destinationName>sea_water_potential_temperature_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_potential_temperature_2_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Potential Temperature (Sensor 2)</att>
+            <att name="standard_name">sea_water_potential_temperature</att>
+            <att name="units">degree_Celsius</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">32.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_sigma_theta_1</sourceName>
+      <destinationName>sea_water_sigma_theta_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_sigma_theta_1_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Sigma Theta (Sensor 1)</att>
+            <att name="standard_name">sea_water_sigma_theta</att>
+            <att name="units">kg m-3</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">200.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_sigma_theta_2</sourceName>
+      <destinationName>sea_water_sigma_theta_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">sea_water_sigma_theta_2_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Sigma Theta (Sensor 2)</att>
+            <att name="standard_name">sea_water_sigma_theta</att>
+            <att name="units">kg m-3</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">200.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>speed_of_sound_in_sea_water_1</sourceName>
+      <destinationName>speed_of_sound_in_sea_water_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">speed_of_sound_in_sea_water_1_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Speed of Sound in Sea Water (Sensor 1)</att>
+            <att name="standard_name">speed_of_sound_in_sea_water</att>
+            <att name="units">m s-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Currents</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>speed_of_sound_in_sea_water_2</sourceName>
+      <destinationName>speed_of_sound_in_sea_water_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">speed_of_sound_in_sea_water_2_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Speed of Sound in Sea Water (Sensor 2)</att>
+            <att name="standard_name">speed_of_sound_in_sea_water</att>
+            <att name="units">m s-1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Currents</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_oxygen_calibrated</sourceName>
+      <destinationName>voltage_oxygen_calibrated</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Calibrated Oxygen Sensor Voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Dissolved O2</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_fluorometer</sourceName>
+      <destinationName>voltage_fluorometer</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Fluorometer Sensor Voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Optical Properties</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_turbidity</sourceName>
+      <destinationName>voltage_turbidity</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Turbidity Sensor Voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_oxygen_1</sourceName>
+      <destinationName>voltage_oxygen_1</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Oxygen Sensor Voltage (Sensor 1)</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Dissolved O2</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_oxygen_2</sourceName>
+      <destinationName>voltage_oxygen_2</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Oxygen Sensor Voltage (Sensor 2)</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Dissolved O2</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_transmissometer</sourceName>
+      <destinationName>voltage_transmissometer</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Transmissometer Sensor Voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>voltage_altimeter</sourceName>
+      <destinationName>voltage_altimeter</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Altimeter Sensor Voltage</att>
+            <att name="units">V</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="coordinates">null</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>chlorophyll_a</sourceName>
+      <destinationName>chlorophyll_a</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">chlorophyll_a_qartod_gross_range_test</att>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="ioos_category">Optical Properties</att>
+            <att name="long_name">Chlorophyll-a Concentration</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+            <att name="units">mg m-3</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">30.0</att>
+        <att name="colorBarMinimum" type="double">0.03</att>
+        <att name="colorBarScale">Log</att>
+        <att name="coordinates">null</att>
+        <att name="missing_value" type="double">NaN</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude_qartod_gross_range_test</sourceName>
+      <destinationName>latitude_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-90.0, 90.0], &quot;suspect_span&quot;: [55.75667146230969, 60.85906169392161]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">latitude</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+        <att name="standard_name">latitude</att>
+        <att name="units">degrees_north</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude_qartod_gross_range_test</sourceName>
+      <destinationName>longitude_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-180.0, 180.0], &quot;suspect_span&quot;: [-53.172756213826574, -46.58631656815385]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">longitude</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+        <att name="standard_name">longitude</att>
+        <att name="units">degrees_east</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth_qartod_gross_range_test</sourceName>
+      <destinationName>depth_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-2.0, 6800.0], &quot;suspect_span&quot;: [-2.0, 3607.4760639550436]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">depth</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+        <att name="standard_name">depth</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_pressure_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_pressure_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-2.0, 6800.0], &quot;suspect_span&quot;: [-2.0, 3662.7863580748103]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_pressure</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_temperature_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_temperature_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-5.0, 35.0], &quot;suspect_span&quot;: [2.42102178481358, 4.305770909823489]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_temperature</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_practical_salinity_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_practical_salinity_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 42.0], &quot;suspect_span&quot;: [34.539900332602336, 35.11402362385575]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_practical_salinity</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_electrical_conductivity_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_electrical_conductivity_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 7.0], &quot;suspect_span&quot;: [3.130084109498124, 3.3345716283564246]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_electrical_conductivity</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_potential_temperature_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_potential_temperature_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-5.0, 35.0], &quot;suspect_span&quot;: [2.1953389839746063, 4.363728638212247]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_potential_temperature</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_turbidity_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_turbidity_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 25.0], &quot;suspect_span&quot;: [0.0, 0.3718379782552536]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_turbidity</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated_qartod_gross_range_test</sourceName>
+      <destinationName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 600.0], &quot;suspect_span&quot;: [236.1952333645952, 337.26086397526547]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_uncalibrated</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_qartod_gross_range_test</sourceName>
+      <destinationName>mole_concentration_of_dissolved_molecular_oxygen_in_sea_water_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 600.0], &quot;suspect_span&quot;: [245.1212982785213, 351.5061726055426]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">mole_concentration_of_dissolved_molecular_oxygen_in_sea_water</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_temperature_1_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_temperature_1_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-5.0, 35.0], &quot;suspect_span&quot;: [2.4200906765589663, 4.304877216012253]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_temperature_1</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_electrical_conductivity_1_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_electrical_conductivity_1_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 7.0], &quot;suspect_span&quot;: [3.1298949705087105, 3.3343846208904977]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_electrical_conductivity_1</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_temperature_2_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_temperature_2_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-5.0, 35.0], &quot;suspect_span&quot;: [2.4219492521433104, 4.306668244559457]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_temperature_2</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_electrical_conductivity_2_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_electrical_conductivity_2_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 7.0], &quot;suspect_span&quot;: [3.1302718081791365, 3.3347600761313547]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_electrical_conductivity_2</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_practical_salinity_1_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_practical_salinity_1_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 42.0], &quot;suspect_span&quot;: [34.5382911159535, 35.11306375661309]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_practical_salinity_1</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_practical_salinity_2_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_practical_salinity_2_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 42.0], &quot;suspect_span&quot;: [34.54143465343358, 35.11505838683614]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_practical_salinity_2</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_potential_temperature_1_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_potential_temperature_1_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-5.0, 35.0], &quot;suspect_span&quot;: [2.194375673301055, 4.362888007800433]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_potential_temperature_1</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_potential_temperature_2_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_potential_temperature_2_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [-5.0, 35.0], &quot;suspect_span&quot;: [2.1962991587865277, 4.364572404485992]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_potential_temperature_2</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>chlorophyll_a_qartod_gross_range_test</sourceName>
+      <destinationName>chlorophyll_a_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">GOOD UNKNOWN SUSPECT FAIL MISSING</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_config">{&quot;fail_span&quot;: [0.0, 50.0], &quot;suspect_span&quot;: [0.0, 1.5763338960144684]}</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">chlorophyll_a</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">gross_range_test_quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>survey_normalized_time_qartod_gross_range_test</sourceName>
+      <destinationName>survey_normalized_time_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">survey_normalized_time</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_floor_depth_below_sea_surface_qartod_gross_range_test</sourceName>
+      <destinationName>sea_floor_depth_below_sea_surface_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_floor_depth_below_sea_surface</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_sigma_theta_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_sigma_theta_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_sigma_theta</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Physical Oceanography</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>speed_of_sound_in_sea_water_qartod_gross_range_test</sourceName>
+      <destinationName>speed_of_sound_in_sea_water_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">speed_of_sound_in_sea_water</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>fluorescence_raw_qartod_gross_range_test</sourceName>
+      <destinationName>fluorescence_raw_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">fluorescence_raw</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_sigma_theta_1_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_sigma_theta_1_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_sigma_theta_1</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Physical Oceanography</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sea_water_sigma_theta_2_qartod_gross_range_test</sourceName>
+      <destinationName>sea_water_sigma_theta_2_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">sea_water_sigma_theta_2</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Physical Oceanography</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>speed_of_sound_in_sea_water_1_qartod_gross_range_test</sourceName>
+      <destinationName>speed_of_sound_in_sea_water_1_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">speed_of_sound_in_sea_water_1</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>speed_of_sound_in_sea_water_2_qartod_gross_range_test</sourceName>
+      <destinationName>speed_of_sound_in_sea_water_2_qartod_gross_range_test</destinationName>
+      <dataType>byte</dataType>
+      <!-- sourceAttributes>
+            <att name="coordinates">depth latitude longitude</att>
+            <att name="flag_meanings">pass not_evaluated suspect fail missing_data</att>
+            <att name="flag_values" type="byteList">1 2 3 4 9</att>
+            <att name="ioos_qc_module">qartod</att>
+            <att name="ioos_qc_target">speed_of_sound_in_sea_water_2</att>
+            <att name="ioos_qc_test">gross_range_test</att>
+            <att name="long_name">Gross Range Test Quality Flag</att>
+            <att name="standard_name">quality_flag</att>
+            <att name="valid_max" type="byte">9</att>
+            <att name="valid_min" type="byte">1</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="_FillValue" type="byte">127</att>
+        <att name="colorBarMaximum" type="double">10.0</att>
+        <att name="colorBarMinimum" type="double">0.0</att>
+        <att name="coordinates">null</att>
+        <att name="ioos_category">Quality</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">latitude_qartod_gross_range_test</att>
+            <att name="axis">Y</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="valid_max" type="double">90.0</att>
+            <att name="valid_min" type="double">-90.0</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">90.0</att>
+        <att name="colorBarMinimum" type="double">-90.0</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">longitude_qartod_gross_range_test</att>
+            <att name="axis">X</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="valid_max" type="double">180.0</att>
+            <att name="valid_min" type="double">-180.0</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">180.0</att>
+        <att name="colorBarMinimum" type="double">-180.0</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ancillary_variables">depth_qartod_gross_range_test</att>
+            <att name="axis">Z</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Depth</att>
+            <att name="positive">down</att>
+            <att name="standard_name">depth</att>
+            <att name="units">m</att>
+        </sourceAttributes -->
+      <addAttributes>
+        <att name="colorBarMaximum" type="double">8000.0</att>
+        <att name="colorBarMinimum" type="double">-8000.0</att>
+        <att name="colorBarPalette">TopographyDepth</att>
+      </addAttributes>
+    </dataVariable>
+  </dataset>
