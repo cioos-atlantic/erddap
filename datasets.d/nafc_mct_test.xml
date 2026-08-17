@@ -1,0 +1,422 @@
+<dataset type="EDDTableFromNcFiles" datasetID="nafc_mct_ctd_test" active="false">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/dfo/nafc/ctd/MCT/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="_NCProperties">version=2,netcdf=4.10.0,hdf5=2.1.0</att>
+        <att name="bad_flag">-9.990e-29</att>
+        <att name="conductivity_sn">8208</att>
+        <att name="creator_institution">Fisheries and Oceans Canada</att>
+        <att name="creator_url">https://meds-sdmm.dfo-mpo.gc.ca/</att>
+        <att name="data_xml">{&quot;ApplicationData&quot;: {&quot;SeatermAF&quot;: {&quot;SoftwareVersion&quot;: &quot;2.1.4&quot;, &quot;BuildDate&quot;: &quot;11-Sep-2013 15:42:25 GMT&quot;}}, &quot;#text&quot;: &quot;* DATE/TIME: 2025-06-24 20:58:00\n* LATITUDE: 48 34.30 N\n* LONGITUDE: 49 20.64 W\n* FORMAT: V\n* STATION: NNS-19-20250624\n* Original filename: nens-ctd-06242025_st19-fired001001_excelmeta.pcnv\n* QA Applied: 2m of surface removed\n* QA Applied: Drop upcast, Keep downcast only.\n cast   1 24 Jun 2025 13:20:08 samples 1 to 9991, avg = 1, stop = mag switch&quot;}</att>
+        <att name="dfo_nafc_platform_name">Unknown</att>
+        <att name="file_type">ascii</att>
+        <att name="filename">C:\Users\Administrator\Desktop\Rosette\rosette_data\NENS2025\NENS_CTD_Data\NENS-CTD-06242025_St19-fired001001.hex</att>
+        <att name="format">V</att>
+        <att name="geospatial_lat_max" type="double">48.571666666666665</att>
+        <att name="geospatial_lat_min" type="double">48.571666666666665</att>
+        <att name="geospatial_lat_units">degrees_north</att>
+        <att name="geospatial_lon_max" type="double">-49.344</att>
+        <att name="geospatial_lon_min" type="double">-49.344</att>
+        <att name="geospatial_lon_units">degrees_east</att>
+        <att name="history">[&quot;0000-00-00T00:00:00 Processing step: {\&quot;module\&quot;: \&quot;cast\&quot;, \&quot;message\&quot;: \&quot;cast   1 24 Jun 2025 13:20:08 samples 1 to 9991, avg = 1, stop = mag switch\\n\&quot;}&quot;, &quot;2026-07-03T11:48:12 SBEDataProcessing: {\&quot;module\&quot;: \&quot;datcnv\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:12\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129 [datcnv_vars = 5]\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.hex C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\SBE19plusV2_8208.xmlcon\&quot;, \&quot;skipover\&quot;: \&quot;0\&quot;}&quot;, &quot;2026-07-03T11:48:14 SBEDataProcessing: {\&quot;module\&quot;: \&quot;filter\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:14\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;low_pass_tc_A\&quot;: \&quot;1.000\&quot;, \&quot;low_pass_tc_B\&quot;: \&quot;0.500\&quot;, \&quot;low_pass_A_vars\&quot;: \&quot;prdM flECO-AFL\&quot;, \&quot;low_pass_B_vars\&quot;: \&quot;tv290C c0S/m\&quot;}&quot;, &quot;2026-07-03T11:48:14 SBEDataProcessing: {\&quot;module\&quot;: \&quot;alignctd\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:14\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;adv\&quot;: \&quot;tv290C 0.500, c0S/m 0.100\&quot;}&quot;, &quot;2026-07-03T11:48:15 SBEDataProcessing: {\&quot;module\&quot;: \&quot;celltm\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:15\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;alpha\&quot;: \&quot;0.0400, 0.0000\&quot;, \&quot;tau\&quot;: \&quot;8.0000, 0.0000\&quot;, \&quot;temp_sensor_use_for_cond\&quot;: \&quot;primary,\&quot;}&quot;, &quot;2026-07-03T11:48:15 SBEDataProcessing: {\&quot;module\&quot;: \&quot;loopedit\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:15\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;minVelocity\&quot;: \&quot;0.250\&quot;, \&quot;surfaceSoak\&quot;: \&quot;do not remove\&quot;, \&quot;excl_bad_scans\&quot;: \&quot;yes\&quot;}&quot;, &quot;2026-07-03T11:48:15 SBEDataProcessing: {\&quot;module\&quot;: \&quot;Derive\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:15\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129 [derive_vars = 2]\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\SBE19plusV2_8208.xmlcon\&quot;}&quot;, &quot;2&quot;, &quot;0&quot;, &quot;2&quot;, &quot;6&quot;, &quot;-&quot;, &quot;0&quot;, &quot;7&quot;, &quot;-&quot;, &quot;2&quot;, &quot;3&quot;, &quot;T&quot;, &quot;1&quot;, &quot;4&quot;, &quot;:&quot;, &quot;2&quot;, &quot;8&quot;, &quot;:&quot;, &quot;1&quot;, &quot;9&quot;, &quot;.&quot;, &quot;0&quot;, &quot;5&quot;, &quot;1&quot;, &quot;5&quot;, &quot;3&quot;, &quot;7&quot;, &quot; &quot;, &quot;G&quot;, &quot;e&quot;, &quot;n&quot;, &quot;e&quot;, &quot;r&quot;, &quot;a&quot;, &quot;t&quot;, &quot;e&quot;, &quot;d&quot;, &quot; &quot;, &quot;w&quot;, &quot;i&quot;, &quot;t&quot;, &quot;h&quot;, &quot; &quot;, &quot;o&quot;, &quot;c&quot;, &quot;e&quot;, &quot;a&quot;, &quot;n&quot;, &quot;_&quot;, &quot;d&quot;, &quot;a&quot;, &quot;t&quot;, &quot;a&quot;, &quot;_&quot;, &quot;p&quot;, &quot;a&quot;, &quot;r&quot;, &quot;s&quot;, &quot;e&quot;, &quot;r&quot;, &quot; &quot;, &quot;v&quot;, &quot;0&quot;, &quot;.&quot;, &quot;1&quot;, &quot;\n&quot;]2026-07-23T14:28:19.089976 Generated with ocean_data_parser v0.1
+</att>
+        <att name="id">e4ac21ff-414c-40e0-a943-21f664c92e7e</att>
+        <att name="institution">DFO NAFC</att>
+        <att name="instrument_type">SBE19plus </att>
+        <att name="instrument_xml">{&quot;Sensors&quot;: {&quot;@count&quot;: &quot;4&quot;, &quot;sensor&quot;: [{&quot;@Channel&quot;: &quot;1&quot;, &quot;TemperatureSensor&quot;: {&quot;@SensorID&quot;: &quot;58&quot;, &quot;SerialNumber&quot;: &quot;8208&quot;, &quot;CalibrationDate&quot;: &quot;03-Aug-22&quot;, &quot;A0&quot;: &quot;1.23845351e-003&quot;, &quot;A1&quot;: &quot;2.73016007e-004&quot;, &quot;A2&quot;: &quot;-5.87962395e-007&quot;, &quot;A3&quot;: &quot;1.58281660e-007&quot;, &quot;Slope&quot;: &quot;1.00000000&quot;, &quot;Offset&quot;: &quot;0.0000&quot;}}, {&quot;@Channel&quot;: &quot;2&quot;, &quot;ConductivitySensor&quot;: {&quot;@SensorID&quot;: &quot;3&quot;, &quot;SerialNumber&quot;: &quot;8208&quot;, &quot;CalibrationDate&quot;: &quot;03-Aug-22&quot;, &quot;UseG_J&quot;: &quot;1&quot;, &quot;SeriesR&quot;: &quot;0.0000&quot;, &quot;CellConst&quot;: &quot;2000.0000&quot;, &quot;ConductivityType&quot;: &quot;0&quot;, &quot;Coefficients&quot;: [{&quot;@equation&quot;: &quot;0&quot;, &quot;A&quot;: &quot;0.00000000e+000&quot;, &quot;B&quot;: &quot;0.00000000e+000&quot;, &quot;C&quot;: &quot;0.00000000e+000&quot;, &quot;D&quot;: &quot;0.00000000e+000&quot;, &quot;M&quot;: &quot;0.0&quot;, &quot;CPcor&quot;: &quot;-9.57000000e-008&quot;}, {&quot;@equation&quot;: &quot;1&quot;, &quot;G&quot;: &quot;-1.00886605e+000&quot;, &quot;H&quot;: &quot;1.47651022e-001&quot;, &quot;I&quot;: &quot;-2.04376994e-004&quot;, &quot;J&quot;: &quot;4.16316547e-005&quot;, &quot;CPcor&quot;: &quot;-9.57000000e-008&quot;, &quot;CTcor&quot;: &quot;3.2500e-006&quot;, &quot;WBOTC&quot;: &quot;0.00000000e+000&quot;}], &quot;Slope&quot;: &quot;1.00000000&quot;, &quot;Offset&quot;: &quot;0.00000&quot;}}, {&quot;@Channel&quot;: &quot;3&quot;, &quot;PressureSensor&quot;: {&quot;@SensorID&quot;: &quot;46&quot;, &quot;SerialNumber&quot;: &quot;8208&quot;, &quot;CalibrationDate&quot;: &quot;19-Jul-22&quot;, &quot;PA0&quot;: &quot;1.08213274e-001&quot;, &quot;PA1&quot;: &quot;1.56695258e-002&quot;, &quot;PA2&quot;: &quot;-6.37664373e-010&quot;, &quot;PTEMPA0&quot;: &quot;-5.94154048e+001&quot;, &quot;PTEMPA1&quot;: &quot;4.88403959e+001&quot;, &quot;PTEMPA2&quot;: &quot;5.23333986e-001&quot;, &quot;PTCA0&quot;: &quot;5.24773164e+005&quot;, &quot;PTCA1&quot;: &quot;2.17438276e+000&quot;, &quot;PTCA2&quot;: &quot;-8.15847834e-002&quot;, &quot;PTCB0&quot;: &quot;2.51332864e+001&quot;, &quot;PTCB1&quot;: &quot;7.53768844e-005&quot;, &quot;PTCB2&quot;: &quot;0.00000000e+000&quot;, &quot;Offset&quot;: &quot;0.000000&quot;}}, {&quot;@Channel&quot;: &quot;4&quot;, &quot;FluoroWetlabECO_AFL_FL_Sensor&quot;: {&quot;@SensorID&quot;: &quot;20&quot;, &quot;SerialNumber&quot;: &quot;FLRTD-7646&quot;, &quot;CalibrationDate&quot;: &quot;7/13/2022&quot;, &quot;ScaleFactor&quot;: &quot;2.50000000e+001&quot;, &quot;Vblank&quot;: &quot;0.0200&quot;}}]}}</att>
+        <att name="interval">seconds: 0.25</att>
+        <att name="keywords">oceanographic missions,climate change,atmospheric pressure,chlorophyll a,fluorescence,physical-chemical,salinity,water density,water temperature,Northwest Atlantic Ocean,Newfoundland and Labrador</att>
+        <att name="latitude" type="double">48.571666666666665</att>
+        <att name="license">https://open.canada.ca/en/open-government-licence-canada</att>
+        <att name="longitude" type="double">-49.344</att>
+        <att name="naming_authority">ca.cioos</att>
+        <att name="nquan">8</att>
+        <att name="nvalues">9991</att>
+        <att name="ocean_data_parser_version">0.1</att>
+        <att name="original_filename">nens-ctd-06242025_st19-fired001001_excelmeta.pcnv</att>
+        <att name="platform">ship</att>
+        <att name="platform_vocabulary">http://vocab.nerc.ac.uk/collection/L06/current/</att>
+        <att name="processing">[{&quot;module&quot;: &quot;cast&quot;, &quot;message&quot;: &quot;cast   1 24 Jun 2025 13:20:08 samples 1 to 9991, avg = 1, stop = mag switch\n&quot;}, {&quot;module&quot;: &quot;datcnv&quot;, &quot;date&quot;: &quot;Jul 03 2026 11:48:12&quot;, &quot;version&quot;: &quot; 7.26.7.129 [datcnv_vars = 5]&quot;, &quot;in&quot;: &quot;C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\nens-ctd-06242025_st19-fired001001.hex C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\SBE19plusV2_8208.xmlcon&quot;, &quot;skipover&quot;: &quot;0&quot;}, {&quot;module&quot;: &quot;filter&quot;, &quot;date&quot;: &quot;Jul 03 2026 11:48:14&quot;, &quot;version&quot;: &quot; 7.26.7.129&quot;, &quot;in&quot;: &quot;C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\nens-ctd-06242025_st19-fired001001.cnv&quot;, &quot;low_pass_tc_A&quot;: &quot;1.000&quot;, &quot;low_pass_tc_B&quot;: &quot;0.500&quot;, &quot;low_pass_A_vars&quot;: &quot;prdM flECO-AFL&quot;, &quot;low_pass_B_vars&quot;: &quot;tv290C c0S/m&quot;}, {&quot;module&quot;: &quot;alignctd&quot;, &quot;date&quot;: &quot;Jul 03 2026 11:48:14&quot;, &quot;version&quot;: &quot; 7.26.7.129&quot;, &quot;in&quot;: &quot;C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\nens-ctd-06242025_st19-fired001001.cnv&quot;, &quot;adv&quot;: &quot;tv290C 0.500, c0S/m 0.100&quot;}, {&quot;module&quot;: &quot;celltm&quot;, &quot;date&quot;: &quot;Jul 03 2026 11:48:15&quot;, &quot;version&quot;: &quot; 7.26.7.129&quot;, &quot;in&quot;: &quot;C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\nens-ctd-06242025_st19-fired001001.cnv&quot;, &quot;alpha&quot;: &quot;0.0400, 0.0000&quot;, &quot;tau&quot;: &quot;8.0000, 0.0000&quot;, &quot;temp_sensor_use_for_cond&quot;: &quot;primary,&quot;}, {&quot;module&quot;: &quot;loopedit&quot;, &quot;date&quot;: &quot;Jul 03 2026 11:48:15&quot;, &quot;version&quot;: &quot; 7.26.7.129&quot;, &quot;in&quot;: &quot;C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\nens-ctd-06242025_st19-fired001001.cnv&quot;, &quot;minVelocity&quot;: &quot;0.250&quot;, &quot;surfaceSoak&quot;: &quot;do not remove&quot;, &quot;excl_bad_scans&quot;: &quot;yes&quot;}, {&quot;module&quot;: &quot;Derive&quot;, &quot;date&quot;: &quot;Jul 03 2026 11:48:15&quot;, &quot;version&quot;: &quot; 7.26.7.129 [derive_vars = 2]&quot;, &quot;in&quot;: &quot;C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\nens-ctd-06242025_st19-fired001001.cnv C:\\Users\\BISHOPC\\Desktop\\MCT_CTD\\Seabird_batch_conversion\\MCT-NENS-2025\\SBE19plusV2_8208.xmlcon&quot;}]</att>
+        <att name="publisher_institution">Fisheries and Oceans Canada</att>
+        <att name="publisher_url">https://www.dfo-mpo.gc.ca/index-eng.html</att>
+        <att name="qa_applied">2m of surface removed
+Drop upcast, Keep downcast only.</att>
+        <att name="software_version">2.3.0 SB_Terminal.dll</att>
+        <att name="start_time">2025-06-24T13:20:08</att>
+        <att name="start_time_comment">[Instrument&#39;s time stamp, header]</att>
+        <att name="system_upload_time">2025-06-24T21:56:35</att>
+        <att name="temperature_sn">8208</att>
+        <att name="time">2025-06-24T20:58:00Z</att>
+        <att name="time_coverage_duration">P0DT0H0M0S</att>
+        <att name="time_coverage_end">2025-06-24T20:58:00Z</att>
+        <att name="time_coverage_start">2025-06-24T20:58:00Z</att>
+        <att name="title">Newfoundland and Labrador Region MCT (Marine Conservation Targets) Program CTD Vertical Profiles</att>
+        <att name="units">specified</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="_NCProperties">null</att>
+        <att name="cdm_data_type">Point</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="creator_name">DFO NAFC</att>
+        <att name="creator_type">institution</att>
+        <att name="dfo_nafc_platform_name">null</att>
+        <att name="format">null</att>
+        <att name="history">[&quot;0000-00-00T00:00:00 Processing step: {\&quot;module\&quot;: \&quot;cast\&quot;, \&quot;message\&quot;: \&quot;cast   1 24 Jun 2025 13:20:08 samples 1 to 9991, avg = 1, stop = mag switch\\n\&quot;}&quot;, &quot;2026-07-03T11:48:12 SBEDataProcessing: {\&quot;module\&quot;: \&quot;datcnv\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:12\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129 [datcnv_vars = 5]\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.hex C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\SBE19plusV2_8208.xmlcon\&quot;, \&quot;skipover\&quot;: \&quot;0\&quot;}&quot;, &quot;2026-07-03T11:48:14 SBEDataProcessing: {\&quot;module\&quot;: \&quot;filter\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:14\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;low_pass_tc_A\&quot;: \&quot;1.000\&quot;, \&quot;low_pass_tc_B\&quot;: \&quot;0.500\&quot;, \&quot;low_pass_A_vars\&quot;: \&quot;prdM flECO-AFL\&quot;, \&quot;low_pass_B_vars\&quot;: \&quot;tv290C c0S/m\&quot;}&quot;, &quot;2026-07-03T11:48:14 SBEDataProcessing: {\&quot;module\&quot;: \&quot;alignctd\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:14\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;adv\&quot;: \&quot;tv290C 0.500, c0S/m 0.100\&quot;}&quot;, &quot;2026-07-03T11:48:15 SBEDataProcessing: {\&quot;module\&quot;: \&quot;celltm\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:15\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;alpha\&quot;: \&quot;0.0400, 0.0000\&quot;, \&quot;tau\&quot;: \&quot;8.0000, 0.0000\&quot;, \&quot;temp_sensor_use_for_cond\&quot;: \&quot;primary,\&quot;}&quot;, &quot;2026-07-03T11:48:15 SBEDataProcessing: {\&quot;module\&quot;: \&quot;loopedit\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:15\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv\&quot;, \&quot;minVelocity\&quot;: \&quot;0.250\&quot;, \&quot;surfaceSoak\&quot;: \&quot;do not remove\&quot;, \&quot;excl_bad_scans\&quot;: \&quot;yes\&quot;}&quot;, &quot;2026-07-03T11:48:15 SBEDataProcessing: {\&quot;module\&quot;: \&quot;Derive\&quot;, \&quot;date\&quot;: \&quot;Jul 03 2026 11:48:15\&quot;, \&quot;version\&quot;: \&quot; 7.26.7.129 [derive_vars = 2]\&quot;, \&quot;in\&quot;: \&quot;C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\nens-ctd-06242025_st19-fired001001.cnv C:\\\\Users\\\\BISHOPC\\\\Desktop\\\\MCT_CTD\\\\Seabird_batch_conversion\\\\MCT-NENS-2025\\\\SBE19plusV2_8208.xmlcon\&quot;}&quot;, &quot;2&quot;, &quot;0&quot;, &quot;2&quot;, &quot;6&quot;, &quot;-&quot;, &quot;0&quot;, &quot;7&quot;, &quot;-&quot;, &quot;2&quot;, &quot;3&quot;, &quot;T&quot;, &quot;1&quot;, &quot;4&quot;, &quot;:&quot;, &quot;2&quot;, &quot;8&quot;, &quot;:&quot;, &quot;1&quot;, &quot;9&quot;, &quot;.&quot;, &quot;0&quot;, &quot;5&quot;, &quot;1&quot;, &quot;5&quot;, &quot;3&quot;, &quot;7&quot;, &quot; &quot;, &quot;G&quot;, &quot;e&quot;, &quot;n&quot;, &quot;e&quot;, &quot;r&quot;, &quot;a&quot;, &quot;t&quot;, &quot;e&quot;, &quot;d&quot;, &quot; &quot;, &quot;w&quot;, &quot;i&quot;, &quot;t&quot;, &quot;h&quot;, &quot; &quot;, &quot;o&quot;, &quot;c&quot;, &quot;e&quot;, &quot;a&quot;, &quot;n&quot;, &quot;_&quot;, &quot;d&quot;, &quot;a&quot;, &quot;t&quot;, &quot;a&quot;, &quot;_&quot;, &quot;p&quot;, &quot;a&quot;, &quot;r&quot;, &quot;s&quot;, &quot;e&quot;, &quot;r&quot;, &quot; &quot;, &quot;v&quot;, &quot;0&quot;, &quot;.&quot;, &quot;1&quot;, &quot;\n&quot;]2026-07-23T14:28:19.089976 Generated with ocean_data_parser v0.1</att>
+        <att name="infoUrl">https://meds-sdmm.dfo-mpo.gc.ca/</att>
+        <att name="instrument_type">SBE19plus</att>
+        <att name="keywords">atmospheric pressure, chlorophyll a, climate change, CNDCST01, color, conductivity, conservation, count, ctd, data, density, department, depth, dfo, earth, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Density, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, fisheries, flag, flECO_AFL, fluorescence, gauge, index, its, its-90, labrador, latitude, longitude, marine, mct, nafc, newfoundland, newfoundland and labrador, northwest atlantic ocean, ocean, ocean color, oceanographic missions, oceans, physical-chemical, practical, PRESPR01, pressure, profiles, program, PSALST01, quality, region, salinity, scan, science, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_sigma_t, sea_water_temperature, seawater, sigma, SIGTEQST, sonde, statistics, strain, targets, temperature, TEMPS901, time, vertical, water, water density, water temperature</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="platform_vocabulary">https://vocab.nerc.ac.uk/collection/L06/current/</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="start_time">null</att>
+        <att name="subsetVariables">time, latitude, longitude</att>
+        <att name="summary">Newfoundland and Labrador Region MCT (Marine Conservation Targets) Program Conductivity, Temperature, Depth (CTD) Vertical Profiles</att>
+        <att name="units">null</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>index</sourceName>
+        <destinationName>index</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="actual_range" type="longList">0 5206</att>
+            <att name="coverage_content_type">auxiliaryInformation</att>
+            <att name="legacy_p_code">index</att>
+            <att name="long_name">index</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="colorBarMaximum" type="double">6000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Unknown</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>scan</sourceName>
+        <destinationName>scan</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+            <att name="actual_range" type="longList">302 5508</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="id">0</att>
+            <att name="legacy_p_code">scan</att>
+            <att name="long_name">Scan Count</att>
+            <att name="sbe_variable">scan</att>
+            <att name="seabird_name">scan</att>
+            <att name="value_max" type="double">9991.0</att>
+            <att name="value_min" type="double">1.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Statistics</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PRESPR01</sourceName>
+        <destinationName>PRESPR01</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">2.065 1162.852</att>
+            <att name="bodc_alternative_label">Pres_Z</att>
+            <att name="comments">Digiquartz pressure sensor</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="definition">The force per unit area exerted by the water column on a mobile sensor located in the water column.</att>
+            <att name="id">1</att>
+            <att name="instrument">Digiquartz</att>
+            <att name="legacy_p_code">pres</att>
+            <att name="long_name">Pressure, Strain Gauge</att>
+            <att name="sbe_variable">prdM</att>
+            <att name="sdn_parameter_name">Pressure (spatial coordinate) exerted by the water body by profiling pressure sensor and correction to read zero at sea level</att>
+            <att name="sdn_parameter_urn">SDN:P01::PRESPR01</att>
+            <att name="sdn_uom_name">Decibars</att>
+            <att name="sdn_uom_urn">SDN:P06::UPDB</att>
+            <att name="seabird_name">prDM</att>
+            <att name="standard_name">sea_water_pressure</att>
+            <att name="units">dbar</att>
+            <att name="value_max" type="double">1181.888</att>
+            <att name="value_min" type="double">-0.432</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">5000.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Pressure</att>
+            <att name="sdn_P02_urn">SDN:P02::AHGT</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>TEMPS901</sourceName>
+        <destinationName>TEMPS901</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">-0.541 5.7675</att>
+            <att name="bodc_alternative_label">CTDTmp90</att>
+            <att name="comments">1st sensor</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="id">2</att>
+            <att name="legacy_p_code">temp</att>
+            <att name="long_name">Temperature [ITS-90]</att>
+            <att name="sbe_variable">tv290C</att>
+            <att name="sdn_parameter_name">Temperature (ITS-90) of the water body by CTD or STD</att>
+            <att name="sdn_parameter_urn">SDN:P01::TEMPS901</att>
+            <att name="sdn_uom_name">Degrees Celsius</att>
+            <att name="sdn_uom_urn">SDN:P06::UPAA</att>
+            <att name="seabird_name">t090C</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">degrees_celsius</att>
+            <att name="value_max" type="double">7.8242</att>
+            <att name="value_min" type="double">-0.541</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">32.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="sdn_P02_urn">SDN:P02::TEMP</att>
+            <att name="units">degree_C</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CNDCST01</sourceName>
+        <destinationName>CNDCST01</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">2.78323 3.380651</att>
+            <att name="bodc_alternative_label">CTDCond</att>
+            <att name="comments">1st sensor</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="id">3</att>
+            <att name="legacy_p_code">cond</att>
+            <att name="long_name">Conductivity</att>
+            <att name="name">c0SPerm</att>
+            <att name="sbe_variable">c0S/m</att>
+            <att name="sdn_parameter_name">Electrical conductivity of the water body by CTD</att>
+            <att name="sdn_parameter_urn">SDN:P01::CNDCST01</att>
+            <att name="sdn_uom_name">Siemens per metre</att>
+            <att name="sdn_uom_urn">SDN:P06::UECA</att>
+            <att name="seabird_name">c0S/m</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+            <att name="units">S/m</att>
+            <att name="value_max" type="double">3.380651</att>
+            <att name="value_min" type="double">-7.64E-4</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">30.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="sdn_P02_urn">SDN:P02::CNDC</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>flECO-AFL</sourceName>
+        <destinationName>flECO_AFL</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="accepted_instruments">WET Labs ECO-AFL/FL</att>
+            <att name="actual_range" type="doubleList">-0.0032 2.8864</att>
+            <att name="comments">1st sensor</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="id">4</att>
+            <att name="instrument">WET Labs ECO-AFL/FL</att>
+            <att name="legacy_p_code">flor</att>
+            <att name="long_name">Fluorescence, Wet Labs Eco-Afl/Fl</att>
+            <att name="sbe_variable">flECO-AFL</att>
+            <att name="sdn_uom_name">Milligrams per cubic metre</att>
+            <att name="sdn_uom_urn">SDN:P06::UMMC</att>
+            <att name="seabird_name">flECO-AFL</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_a_in_sea_water</att>
+            <att name="units">mg/m^3</att>
+            <att name="value_max" type="double">4.3307</att>
+            <att name="value_min" type="double">-0.0494</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.03</att>
+            <att name="colorBarScale">Log</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Ocean Color</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PSALST01</sourceName>
+        <destinationName>PSALST01</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">33.4508 35.9412</att>
+            <att name="bodc_alternative_label">P_sal_CTD</att>
+            <att name="comments">1st sensor</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="definition">This is the preferred term for this definition. Alternative term PSALST02 is included to cover cases where there are two sensors of the same type contributing to the data set and referential integrity considerations prevent a usage of a single code.</att>
+            <att name="id">5</att>
+            <att name="legacy_p_code">sal</att>
+            <att name="long_name">Salinity, Practical</att>
+            <att name="sbe_variable">sal00</att>
+            <att name="sdn_parameter_name">Practical salinity of the water body by CTD and computation using UNESCO 1983 algorithm</att>
+            <att name="sdn_parameter_urn">SDN:P01::PSALST01</att>
+            <att name="sdn_uom_name">Dimensionless</att>
+            <att name="sdn_uom_urn">SDN:P06::UUUU</att>
+            <att name="seabird_name">sal00</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+            <att name="value_max" type="double">35.9412</att>
+            <att name="value_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">37.0</att>
+            <att name="colorBarMinimum" type="double">32.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="sdn_P02_urn">SDN:P02::PSAL</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SIGTEQST</sourceName>
+        <destinationName>SIGTEQST</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">26.4047 28.5572</att>
+            <att name="bodc_alternative_label">Sigma-T</att>
+            <att name="comments">1st sensor</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">physicalMeasurement</att>
+            <att name="definition">Computed by UNESCO SVAN function using in-situ temperature</att>
+            <att name="id">6</att>
+            <att name="legacy_p_code">sig</att>
+            <att name="long_name">Density</att>
+            <att name="sbe_variable">sigma-t00</att>
+            <att name="sdn_parameter_name">Sigma-T of the water body by computation from salinity and temperature using UNESCO algorithm</att>
+            <att name="sdn_parameter_urn">SDN:P01::SIGTEQST</att>
+            <att name="sdn_uom_name">Kilograms per cubic metre</att>
+            <att name="sdn_uom_urn">SDN:P06::UKMC</att>
+            <att name="seabird_name">sigma-t00</att>
+            <att name="standard_name">sea_water_sigma_t</att>
+            <att name="units">kg/m^3</att>
+            <att name="value_max" type="double">28.5572</att>
+            <att name="value_min" type="double">-0.1382</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">200.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="sdn_P02_urn">SDN:P02::SIGT</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>flag</sourceName>
+        <destinationName>flag</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">0.0 0.0</att>
+            <att name="coordinates">latitude longitude time</att>
+            <att name="coverage_content_type">qualityInformation</att>
+            <att name="id">7</att>
+            <att name="legacy_p_code">flag</att>
+            <att name="long_name">Flag</att>
+            <att name="sbe_variable">flag</att>
+            <att name="value_max" type="double">0.0</att>
+            <att name="value_min" type="double">0.0</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Quality</att>
+            <att name="missing_value" type="double">NaN</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="calendar">proleptic_gregorian</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="legacy_p_code">time</att>
+            <att name="long_name">Time</att>
+            <att name="standard_name">time</att>
+            <att name="timezone">UTC</att>
+            <att name="units">seconds since 1970-01-01T00:00:00+00:00</att>
+            <att name="variable_name">time</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="units">seconds since 1970-01-01T00:00:00Z</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>latitude</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">48.571666666666665 48.571666666666665</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="legacy_p_code">latitude</att>
+            <att name="long_name">Latitude</att>
+            <att name="sdn_uom_name">Degrees north</att>
+            <att name="sdn_uom_urn">SDN:P06::DEGN</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+            <att name="variable_name">latitude</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>longitude</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="actual_range" type="doubleList">-49.344 -49.344</att>
+            <att name="coverage_content_type">coordinate</att>
+            <att name="legacy_p_code">longitude</att>
+            <att name="long_name">Longitude</att>
+            <att name="sdn_uom_name">Degrees east</att>
+            <att name="sdn_uom_urn">SDN:P06::DEGE</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+            <att name="variable_name">longitude</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
