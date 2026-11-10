@@ -162,8 +162,10 @@ Wed Aug 22 14:19:15 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/
     <att name="subsetVariables">station_id, longitude, latitude</att>
 -->
     <addAttributes>
-      <att name="cdm_data_type">TimeSeries</att>
-      <att name="cdm_timeseries_variables">station,latitude,longitude,deployment_platform_name,inst_type,instrument,instrument_model, mooring_number, program, sdn_instrument_id, filename, cruise_name,cruise_number,chief_scientist,project</att>
+      <att name="cdm_data_type">TimeSeriesProfile</att>
+      <!--att name="cdm_timeseries_variables">station,latitude,longitude,deployment_platform_name,inst_type,instrument,instrument_model, mooring_number, program, sdn_instrument_id, filename, cruise_name,cruise_number,chief_scientist, project</att-->
+      <att name="cdm_timeseries_variables">station</att>
+      <att name="cdm_profile_variables">time</att>
       <att name="Conventions">CF-1.7, COARDS, ACDD-1.3</att>
       <att name="infoUrl">???</att>
       <att name="keywords">bedford, conductivity, CRAT_01, data, density, department, dfo, dtut8601, earth, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Density, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, fisheries, identifier, institute, latitude, local, longitude, name, ocean, oceanography, oceans, physical, physical oceanography, platform, platform_name, POTM_01, practical, PRES_01, pressure, PSAL_01, salinity, science, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, sea_water_pressure, sea_water_sigma_theta, seawater, sigma, sigmatheta, SIGP_01, source, station, TE90_01, temperature, theta, time, time_string, water</att>
@@ -486,6 +488,7 @@ Wed Aug 22 14:19:15 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/
         <att name="units">seconds since 1970-01-01T00:00:00Z</att>
     </sourceAttributes -->
       <addAttributes>
+        <att name="cf_role">profile_id</att>
         <att name="ioos_category">Time</att>
         <att name="standard_name">time</att>
       </addAttributes>
