@@ -303,6 +303,7 @@ Wed Aug 22 14:19:15 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/
       <att name="ODF_INSTRUMENT_header">null</att>
       <att name="platform_id">null</att>
       <att name="platform_name">null</att>
+      <att name="instrument_depth">null</att>
     </addAttributes>
     <dataVariable>
       <sourceName>***fileName,(.*),1</sourceName>
@@ -379,9 +380,10 @@ Wed Aug 22 14:19:15 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/
     <dataVariable>
       <sourceName>global:instrument_offbottom_depth</sourceName>
       <destinationName>instrument_offbottom_depth</destinationName>
-      <dataType>String</dataType>
+      <dataType>float</dataType>
       <addAttributes>
-        <att name="ioos_category">Identifier</att>
+        <att name="ioos_category">Location</att>
+        <att name="units">m</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -430,6 +432,8 @@ Wed Aug 22 14:19:15 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/
     </sourceAttributes -->
       <addAttributes>
         <att name="ioos_category">Identifier</att>
+        <att name="latitude">null</att>
+        <att name="longitude">null</att>
         <att name="units">null</att>
       </addAttributes>
     </dataVariable>
@@ -493,19 +497,13 @@ Wed Aug 22 14:19:15 2018: C:\nco\ncatted.exe -a _FillValue,global,d,, -O C:/nco/
       </addAttributes>
     </dataVariable>
     <dataVariable>
-      <sourceName>variable:TE90_01:sensor_depth</sourceName>
+      <sourceName>depth</sourceName>
       <destinationName>depth</destinationName>
       <dataType>double</dataType>
-      <!-- sourceAttributes>
-        <att name="calendar">gregorian</att>
-        <att name="long_name">time</att>
-        <att name="units">seconds since 1970-01-01T00:00:00Z</att>
-    </sourceAttributes -->
       <addAttributes>
         <att name="ioos_category">depth</att>
         <att name="standard_name">depth</att>
         <att name="units">m</att>
-        <att name="positive">down</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
