@@ -1,7 +1,7 @@
 <dataset type="EDDGridFromNcFilesUnpacked" datasetID="bio_remote_sensing_modis_aqua_chl_poly4" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/dfo/bio/rsg/modis_aqua_poly4/</fileDir>
+    <fileDir>/datasets/dfo/bio/rsg/modis_aqua_poly4_v2/</fileDir>
     <fileNameRegex>.*\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
@@ -65,7 +65,8 @@
         <att name="creator_url">https://bio-rsg.github.io/</att>
         <att name="data_maximum">null</att>
         <att name="data_minimum">null</att>
-        <att name="date_created">2024-02-26T13:42:26Z</att>
+        <att name="date_created">2002-07-04</att>
+        <att name="date_modified">2025-01-28</att>
         <att name="easternmost_longitude">null</att>
         <att name="keywords">agencies, agencies-non-us, aqua, atlantic, based, bio, ca/dfo/bio, canada, chemistry, chl, chlor_a, chlorophyll, chlorophyll-a, coefficients, color, concentration, data, department, dfo, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Pigments &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Ocean Optics &gt; Chlorophyll &gt; Chlorophyll Concentration, fisheries, government, imaging, latitude, longitude, mass, mass_concentration_of_chlorophyll_a_in_sea_water, model, moderate, modis, modis-aqua, non, northwest, nwa, observation, ocean, ocean color, oceans, optics, optimized, pigments, platforms, Platforms &gt; Space-based Platforms &gt; Earth Observation Satellites &gt; Aqua, poly4, poly4v2, providers, Providers &gt; GOVERNMENT AGENCIES-NON-US &gt; CANADA &gt; CA/DFO/BIO, resolution, satellites, science, sea, seawater, space, space-based, spectroradiometer, time, water, with</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
@@ -76,6 +77,7 @@
         <att name="reference">null</att>
         <att name="references">Clay, S.; Pe&#241;a, A.; DeTracey, B.; Devred, E. Evaluation of Satellite-Based Algorithms to Retrieve Chlorophyll-a Concentration in the Canadian Atlantic and Pacific Oceans. Remote Sens. 2019, 11, 2609.</att>
         <att name="southernmost_latitude">null</att>
+        <att name="title">POLY4 Chlorophyll-a MODIS-Aqua Data in the Northwest Atlantic, 2002-2023</att>
         <att name="summary">NWA Moderate Resolution Imaging Spectroradiometer (MODIS)-AQUA CHL_POLY4</att>
         <att name="westernmost_longitude">null</att>
     </addAttributes>

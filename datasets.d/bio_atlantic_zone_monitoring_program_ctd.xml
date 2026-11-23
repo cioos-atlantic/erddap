@@ -1216,9 +1216,11 @@
       <sourceName>TURBNTU01</sourceName>
       <destinationName>TURBNTU01</destinationName>
       <dataType>double</dataType>
-      <!-- sourceAttributes>
+      <addAttributes>
         <att name="_FillValue" type="double">NaN</att>
         <att name="actual_range" type="doubleList">7.545393 9.3981276</att>
+        <att name="colorBarMaximum" type="double">9.5</att>
+        <att name="colorBarMinimum" type="double">7.5</att>
         <att name="coordinates">longitude time latitude</att>
         <att name="coverage_content_type">physicalMeasurement</att>
         <att name="ioos_category">Total Suspended Matter</att>
@@ -1231,12 +1233,6 @@
         <att name="sdn_uom_urn">SDN:P06::USTU</att>
         <att name="standard_name">sea_water_turbidity</att>
         <att name="units">NTU</att>
-      </sourceAttributes -->
-      <addAttributes>
-        <att name="colorBarMaximum" type="double">9.5</att>
-        <att name="colorBarMinimum" type="double">7.5</att>
-        <att name="coordinates">null</att>
-        <att name="resolution">null</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>

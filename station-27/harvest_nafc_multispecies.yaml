@@ -6,7 +6,7 @@ dataset: nafc_multispecies_ctd_profiles
 # A list of constraints to be applied to the dataset
 # the format should reflect the conventions of ERDDAPy
 constraints: {
-  time>=: '2023-01-01T00:00:00Z',
+  time>=: '2024-01-01T00:00:00Z',
   latitude>=: 47.534,
   latitude<=: 47.559,
   longitude>=: -52.599,
@@ -45,7 +45,8 @@ file_conventions:
 data_root: /srv/data/erddap/dfo/nafc/ctd/multispecies/__year__
 
 # Root output directory for the generated symlinks
-output_root: ./test-links/station_27_dataset/multispecies/__year__
+# output_root: ./test-links/station_27_dataset/multispecies/__year__
+output_root: /srv/data/erddap/dfo/nafc/ctd/station-27/__year__/Multi-Species
 
 # Valid values can be "symlink" or "ncml", if left blank, "symlink" is assumed as 
 # a default value.

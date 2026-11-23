@@ -1,7 +1,7 @@
 <dataset type="EDDGridFromNcFiles" datasetID="bio_remote_sensing_occci_nwa_poly4_spring_bloom" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/dfo/bio/remote_sensing/gaussian_fit_metrics/</fileDir>
+    <fileDir>/datasets/dfo/bio/rsg/gaussian_fit_metrics/</fileDir>
     <fileNameRegex>.*\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>

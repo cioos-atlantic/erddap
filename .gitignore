@@ -25,3 +25,7 @@ content/setup.xml
 
 # Rebuild datasets.xml with datasetsd.sh
 content/datasets.xml
+
+# Ignore Station 27 test links
+station-27/test-links/
+
